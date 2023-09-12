@@ -1,0 +1,163 @@
+<app-navbar></app-navbar>
+<app-header></app-header>
+<div class="main-content">
+
+  <main>
+
+      <div class="page-header">
+        <h3>Đăng ký học</h3>
+          <nav class="nav justify-content-center text-uppercase">
+            <a class="nav-link text-success" routerLink="/study-register">Đăng ký học</a>
+            <a class="nav-link text-success active"routerLink="/deposit">Đăt cọc</a>
+            <a class="nav-link text-success" routerLink="/tuition">Học phí</a>
+            <a class="nav-link text-success"routerLink="/spending">Các khoảng đã chi</a>
+          </nav>
+      </div>
+
+      <div class="page-content">
+
+          <div class="records table-responsive">
+
+              <div class="record-header">
+                  <div class="add">
+                    <table>
+                      <div  class="td_select">
+                      <td><span>Phương thức</span></td>
+                        <td>
+                          <select name="" id="">
+                            <option value="">Tiền mặt</option>
+                            <option value="">Chuyển khoản</option>
+                          </select>
+                        </td>
+                      <td><span>Mã học viên</span></td>
+                      <td>
+                        <select name="" id="">
+                            <option value="">1</option>
+                        </select></td>
+                      <td><span>Tên học viên</span></td>
+                      <td>
+                        <select name="" id="">
+                            <option value="">Anh Thư</option>
+                        </select>
+                      </td>
+                      <td><span>Khóa học</span></td>
+                      <td>
+                        <select name="" id="">
+                            <option value="">Giao tiếp</option>
+                        </select>
+                      </td>
+                    </div>
+                    </table>
+                  </div>
+              </div>
+              <div class="record-header">
+                <div class="add">
+                  <table>
+                    <div  class="td_select">
+                  <td><span>Tổng phí khác</span></td>
+                  <td><input type="text"></td>
+
+                  <td><span>Học phí</span></td>
+                  <td>
+                    <select name="" id="">
+                        <option value="">Anh Thư</option>
+                    </select>
+                  </td>
+
+                  <td><span>Tiền đặt cọc</span></td>
+                  <td>
+                    <select name="" id="">
+                        <option value="">1tr</option>
+                    </select>
+                  </td>
+
+                  <td><span>Giảm trừ</span></td>
+                  <td>
+                    <input type="text">
+                  </td>
+                </div>
+                  </table>
+                </div>
+            </div>
+            <div class="record-header">
+                <div class="add">
+                  <table>
+                    <div  class="td_select">
+                    <td> <span>Thanh toán</span></td>
+                    <td><select name="" id="">
+                      <option value="">Tiền mặt</option>
+                  </select></td>
+                    <td><span>Còn lại</span></td>
+                    <td><select name="" id="">
+                      <option value="">Anh Thư</option>
+                  </select></td>
+                    <td><span>Hạn đóng</span></td>
+                    <td><input type="datetime-local" name="txtDatetimeLocal" id="txtDatetimeLocal" /></td>
+                    <td><span>Tổng thanh toán</span></td>
+                    <td><input type="text"></td>
+                  </div>
+                  </table>
+
+                </div>
+            </div>
+            <div class="record-header">
+              <div class="add">
+                <table>
+                  <div  class="td_select">
+                  <!-- <td><span>Nội dung</span></td>
+                  <td><textarea name="" id="" cols="30" rows="2"></textarea></td>-->
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><button>Thêm</button></td>
+                </div>
+              </table>
+              </div>
+          </div>
+              <div>
+                  <table width="100%">
+                      <thead>
+                          <tr>
+                              <th>#</th>
+                              <th><span class="las la-sort"></span>Các khoảng thu khác</th>
+                              <th><span class="las la-sort"></span>Đơn giá</th>
+                              <th><span class="las la-sort"></span>Số lượng</th>
+                              <th><span class="las la-sort"></span>Tổng </th>
+                              <!-- <th><span class="las la-sort"></span>Khóa học</th> -->
+                              <th><span class="las la-sort"></span>Thao tác </th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>1</td>
+                              <td>Giáo trình</td>
+                              <td>50,000đ</td>
+                              <td>
+                                <input style="width: 50px;" type="number" class="input-text qty text" step="1" min="1" max="10"
+                                name="quantity">
+                              </td>
+                              <td>50,000đ</td>
+                           <td><input type="checkbox"></td>
+                          </tr>
+                      </tbody>
+                  </table>
+
+              </div>
+              <div class="record-header">
+                <div class="add">
+                    <button>In phiếu</button>
+                </div>
+            </div>
+          </div>
+
+      </div>
+
+  </main>
+
+</div>
+

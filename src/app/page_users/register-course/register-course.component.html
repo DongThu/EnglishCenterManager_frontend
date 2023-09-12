@@ -1,0 +1,64 @@
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto">
+        <a href="index.html">
+          <img  src="../../../assets/img/logo-trung-tam-hsk.png" alt="">
+        </a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="../../../assets/img/img/logo.png" alt="" class="img-fluid"></a> -->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a  routerLink="/home-user">Trang chủ</a></li>
+          <li><a routerLink="/about">Giới thiệu</a></li>
+          <li><a routerLink="/course-user">Các khóa học</a></li>
+          <li><a class="active" routerLink="/register-course">Đăng ký khóa học</a></li>
+          <li><a routerLink="/contact" >Liên hệ</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->
+  <main id="main">
+    <section class="h-100 h-custom" style="background-color: #8fc4b7;">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-lg-8 col-xl-6">
+            <div class="card rounded-3">
+              <div class="card-body p-4 p-md-5">
+                <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2 text-center">Đăng ký khóa học</h3>
+
+                <form (ngSubmit)="onSubmit()" class="px-md-2">
+                  <div class="form-outline mb-4">
+                    <select [(ngModel)]="register.courseType" name="courseType" id="courseType" class="form-select" aria-label="Default select example">
+                        <option value="1" disabled >-- Chọn khóa học --</option>
+                        <option *ngFor="let course of courses"  >{{course.courseType}}</option>
+                    </select>
+                  </div>
+                  <div class="form-outline mb-4">
+                    <input type="text" [(ngModel)]="register.userName" name="userName" id="userName" class="form-control" placeholder="Tên" />
+                  </div>
+                  <div class="form-outline mb-4">
+                    <input type="text" [(ngModel)]="register.address" name="address" id="address" class="form-control" placeholder="Địa chỉ" />
+                  </div>
+                  <div class="form-outline mb-4">
+                    <input type="text" [(ngModel)]="register.phone" name="phone" id="phone" class="form-control" placeholder="Số điện thoại" />
+                  </div>
+                  <div class="form-outline mb-4">
+                    <input type="text" [(ngModel)]="register.email" name="email" id="email" class="form-control" placeholder="Email" />
+                  </div>
+                  <button type="submit" class="btn btn-success btn-lg mb-1">Đăng ký</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main><!-- End #main -->
+<app-footer></app-footer>
+</body>
+

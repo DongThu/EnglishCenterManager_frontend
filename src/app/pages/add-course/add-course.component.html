@@ -1,0 +1,83 @@
+<app-navbar></app-navbar>
+<app-header></app-header>
+<div class="main-content">
+
+  <main>
+
+      <div class="page-header">
+        <h3>Thêm khóa học</h3>
+      </div>
+
+      <div class="page-content">
+
+          <div class="records table-responsive">
+            <form (ngSubmit)="onSubmit()">
+                          <div class="record-header">
+                              <div class="add">
+                                <table>
+                                  <div  class="td_select">
+                                  <td><span>Tên khóa học</span></td>
+                                    <td>
+                                      <input type="text" [(ngModel)]="courses.courseType" name="courseType" id="courseType" >
+                                    </td>
+                                  <td><span>Bắt đầu</span></td>
+                                  <td><input type="text" [(ngModel)]="courses.start_time" name="start_time" id="start_time" >
+                                  </td>
+                                  <td><span>Giờ học</span></td>
+                                  <td>
+                                    <input type="text" [(ngModel)]="courses.period" name="period" id="period" >
+                                  </td>
+                                </div>
+                                </table>
+                              </div>
+                          </div>
+                          <div class="record-header">
+                            <div class="add">
+                              <table>
+                                <div  class="td_select">
+                              <td><span>Học phí</span></td>
+                              <td><input type="text" [(ngModel)]="courses.price" name="price" id="price" >
+                              </td>
+
+                              <td><span>Bậc</span></td>
+                              <td>
+                                <input type="text" [(ngModel)]="courses.level" name="level" id="level" >
+                              </td>
+                              <td><span>Mô tả</span></td>
+                                  <td>
+                                    <input type="text" [(ngModel)]="courses.description" name="description" id="description" >
+                                  </td>
+                              </div>
+                              </table>
+                            </div>
+                        </div>
+                        <div class="record-header">
+                          <div class="add">
+                            <table>
+                              <div  class="td_select">
+                              <!-- <td><span>Nội dung</span></td>
+                              <td><textarea name="" id="" cols="30" rows="2"></textarea></td>-->
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td><button  type="submit">Thêm</button></td>
+                            </div>
+                          </table>
+                          </div>
+                      </div>
+
+            </form>
+
+          </div>
+
+      </div>
+
+  </main>
+
+</div>
+

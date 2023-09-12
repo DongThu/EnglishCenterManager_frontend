@@ -1,0 +1,91 @@
+<app-navbar></app-navbar>
+<app-header></app-header>
+<div class="main-content">
+
+  <main>
+
+      <div class="page-header">
+          <h3>Thu học phí</h3>
+            <nav class="nav justify-content-center text-uppercase">
+              <a class="nav-link text-success" routerLink="/study-register">Đăng ký học</a>
+              <a class="nav-link text-success active"routerLink="/deposit">Đăt cọc</a>
+              <a class="nav-link text-success" routerLink="/tuition">Học phí</a>
+              <!-- <a class="nav-link text-success" href="#">Các khoảng đã thu</a> -->
+              <a class="nav-link text-success" routerLink="/spending">Các khoảng đã chi</a>
+            </nav>
+      </div>
+
+      <div class="page-content">
+
+          <div class="records table-responsive">
+
+              <!-- <div class="record-header">
+                  <div class="add">
+                      <span>Entries</span>
+                      <select name="" id="">
+                          <option value="">ID</option>
+                      </select>
+                      <button>Thêm</button>
+                  </div>
+
+                  <div class="browse">
+                     <input type="search" placeholder="Search" class="record-search">
+                      <select name="" id="">
+                          <option value="">Status</option>
+                      </select>
+                  </div>
+              </div> -->
+
+              <div>
+                  <table width="100%">
+                      <thead>
+                          <tr>
+                              <th>#</th>
+                              <th><span class="las la-sort"></span> TÊN</th>
+                              <th><span class="las la-sort"></span> SỐ TIỀN</th>
+                              <th><span class="las la-sort"></span> NGÀY THU</th>
+                              <th><span class="las la-sort"></span> NỘI DUNG</th>
+                              <th><span class="las la-sort"></span> THAO TÁC</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>#5033</td>
+                              <td>
+                                  <div class="client">
+                                     <div class="client-img bg-img" style="background-image: url(../../../assets/img/3.jpeg)"></div>
+                                      <div class="client-info">
+                                          <h4>Anh Thư</h4>
+                                          <small>dongthu1512@gmail.com</small>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td>
+                                 1,000,000
+                              </td>
+                              <td>
+                                 PT_123
+                              </td>
+                              <td>
+                                  Học phí giao tiếp căn bản
+                              </td>
+                              <td>
+                                  <div class="actions">
+                                    <a href="">
+                                      <button class="btn" type="submit"><span class="las la-edit"></span></button>
+                                    </a>
+                                    <button class="btn" type="submit"><span class="las la-trash-alt"></span></button>
+                                  </div>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+
+          </div>
+
+      </div>
+
+  </main>
+
+</div>

@@ -1,0 +1,59 @@
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto">
+        <a href="index.html">
+          <img  src="../../../assets/img/logo-trung-tam-hsk.png" alt="">
+        </a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="../../../assets/img/img/logo.png" alt="" class="img-fluid"></a> -->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a  routerLink="/home-user">Trang chủ</a></li>
+          <li><a routerLink="/about">Giới thiệu</a></li>
+          <li><a routerLink="/course-user">Các khóa học</a></li>
+          <li><a routerLink="/register-course">Đăng ký khóa học</a></li>
+          <li><a routerLink="/contact" >Liên hệ</a></li>
+          <li><a class="active" routerLink="/login-user" >Đăng nhập</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->
+  <main id="main">
+    <section class="h-100 h-custom" >
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-lg-8 col-xl-6">
+            <div class="card rounded-3">
+              <div class="card-body p-4 p-md-5">
+                <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2 text-center">Đăng nhập</h3>
+
+                <form class="px-md-2">
+                  <div class="form-outline mb-4">
+                    <input type="text" name="email" id="email" class="form-control" placeholder="Email" />
+                  </div>
+                  <div class="form-outline mb-4">
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Password" />
+                  </div>
+                  <div class="form-outline mb-4 row">
+                    <label class="checkbox col"><input class="input" type="checkbox">Ghi nhớ tôi</label>
+                    <label class="col">Nếu chưa có tài khoản vui lòng<a routerLink="/register"> đăng ký tại đây!</a></label>
+                  </div>
+
+                  <button type="submit" class="btn btn-success btn-lg mb-1">Đăng nhập</button>
+                  <i></i>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main><!-- End #main -->
+<app-footer></app-footer>
+</body>
+

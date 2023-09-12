@@ -1,0 +1,88 @@
+<app-navbar></app-navbar>
+<app-header></app-header>
+<div class="main-content">
+
+  <main>
+
+      <div class="page-header">
+          <h1>Quản lý giảng viên</h1>
+          <!-- <small>Home / Dashboard</small> -->
+      </div>
+
+      <div class="page-content">
+
+          <div class="records table-responsive">
+
+              <div class="record-header">
+                  <div class="add">
+                      <span>Entries</span>
+                      <select name="" id="">
+                          <option value="">ID</option>
+                      </select>
+                      <a  routerLink="/add-teacher"><button>Thêm</button></a>
+                  </div>
+
+                  <div class="browse">
+                     <input type="search" placeholder="Search" class="record-search">
+                      <select name="" id="">
+                          <option value="">Status</option>
+                      </select>
+                  </div>
+              </div>
+
+              <div>
+                  <table width="100%">
+                      <thead>
+                          <tr>
+                              <th>#</th>
+                              <th><span class="las la-sort"></span> NGÀY</th>
+                              <th><span class="las la-sort"></span> THỜI GIAN</th>
+                              <th><span class="las la-sort"></span> LỚP</th>
+                              <th><span class="las la-sort"></span> PHÒNG</th>
+                              <th><span class="las la-sort"></span> GIÁO VIÊN</th>
+                              <th><span class="las la-sort"></span> THAO TÁC</th>
+                          </tr>
+                      </thead>
+                      <tbody *ngFor="let teacher of teacher">
+                          <tr>
+                              <td>{{teacher.id}}</td>
+                              <td>
+                                  <div class="client">
+                                     <div class="client-img bg-img" style="background-image: url({{teacher.image}})"></div>
+                                      <div class="client-info">
+                                          <h4>{{teacher.fullName}}</h4>
+                                          <small>{{teacher.email}}</small>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td>
+                                {{teacher.birthDay}}
+                              </td>
+                              <td>
+                                {{teacher.phone}}
+                              </td>
+                              <td>
+                                {{teacher.address}}
+                              </td>
+                              <td>
+                                  15/12/2022
+                              </td>
+                              <td>
+                                  <div class="actions">
+                                    <button (click)="updateTeacher(teacher.id)" class="btn" type="submit"><span class="las la-edit"></span></button>
+                                    <button (click)="onDeleteTeacher(teacher.id)" class="btn" type="submit"><span class="las la-trash-alt"></span></button>
+                                  </div>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+
+          </div>
+
+      </div>
+
+  </main>
+
+</div>
+
