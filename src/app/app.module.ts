@@ -36,8 +36,12 @@ import { LoginUserComponent } from './page_users/login-user/login-user.component
 import { YoungEnglishComponent } from './page_users/young-english/young-english.component';
 import { IeltsComponent } from './page_users/ielts/ielts.component';
 import { ToiecComponent } from './page_users/toiec/toiec.component';
-import { BusinessComponent } from './page_users/business/business.component';
 import { BasicEnglishComponent } from './page_users/basic-english/basic-english.component';
+import { BasicScheduleComponent } from './page_users/basic-schedule/basic-schedule.component';
+import { ToiecScheduleComponent } from './page_users/toiec-schedule/toiec-schedule.component';
+import { IeltsScheduleComponent } from './page_users/ielts-schedule/ielts-schedule.component';
+import { YoungScheduleComponent } from './page_users/young-schedule/young-schedule.component';
+import { ChildScheduleComponent } from './page_users/child-schedule/child-schedule.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -70,8 +74,12 @@ import { BasicEnglishComponent } from './page_users/basic-english/basic-english.
     YoungEnglishComponent,
     IeltsComponent,
     ToiecComponent,
-    BusinessComponent,
-    BasicEnglishComponent
+    BasicEnglishComponent,
+    BasicScheduleComponent,
+    ToiecScheduleComponent,
+    IeltsScheduleComponent,
+    YoungScheduleComponent,
+    ChildScheduleComponent
   ],
   imports: [
     BrowserModule,

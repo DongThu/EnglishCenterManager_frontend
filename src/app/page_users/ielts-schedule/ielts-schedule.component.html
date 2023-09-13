@@ -1,0 +1,139 @@
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto">
+        <a href="index.html">
+          <img  src="../../../assets/img/logo-trung-tam-hsk.png" alt="">
+        </a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="index.html" class="logo me-auto"><img src="../../../assets/img/img/logo.png" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a routerLink="/home-user">Trang chủ</a></li>
+          <li><a routerLink="/about">Giới thiệu</a></li>
+          <li class="dropdown"><a routerLink="/child-english"><span>Chương trình học</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a routerLink="/child-english">Tiếng Anh thiếu nhi</a></li>
+              <li><a routerLink="/young-english">Tiếng Anh thiếu niên</a></li>
+              <li><a routerLink="/ielts">Luyện thi IELTS</a></li>
+              <li><a routerLink="/toiec">Luyện thi TOEFL - TOEIC & CHỨNG CHỈ QUỐC TẾ</a></li>
+              <li><a routerLink="/basic-english">Tiếng Anh Căn Bản - Giao tiếp & Tiếng Anh cho người đi làm</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a routerLink="/child-schedule"><span>Lịch Khai Giảng</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a routerLink="/child-schedule">Tiếng Anh thiếu nhi</a></li>
+              <li><a routerLink="/young-schedule">Tiếng Anh thiếu niên</a></li>
+              <li><a routerLink="/ielts-schedule">Luyện thi IELTS</a></li>
+              <li><a routerLink="/toiec-schedule">Luyện thi TOEFL - TOEIC & CHỨNG CHỈ QUỐC TẾ</a></li>
+              <li><a routerLink="/basic-schedule">Tiếng Anh Căn Bản - Giao tiếp & Tiếng Anh cho người đi làm</a></li>
+            </ul>
+          </li>
+          <li><a routerLink="/contact">Liên hệ</a></li>
+          <li><a routerLink="/login-user">Đăng nhập</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero-child"  class="d-flex justify-content-center align-items-center">
+    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+      <h1>LỊCH KHAI GIẢNG & LỊCH HỌC CÁC LỚP - MẢNG ĐÀO TẠO IELTS</h1>
+    </div>
+  </section><!-- End Hero -->
+    <main id="main">
+
+      <!-- ======= Popular Courses Section ======= -->
+      <section id="popular-courses" class="courses">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <!-- <h2>Khóa học</h2> -->
+            <p>LỊCH KHAI GIẢNG</p>
+          </div>
+
+          <div class="row" data-aos="zoom-in" data-aos-delay="100">
+            <div class="records table-responsive">
+              <div class="record-header">
+                  <div class="browse">
+                     <input type="search" placeholder="Search" class="record-search">
+                  </div>
+              </div>
+            <div>
+              <table width="100%">
+                <thead>
+                    <tr>
+                        <th class="text-center"><span class="las la-sort"></span> CHƯƠNG TRÌNH</th>
+                        <th class="text-center"><span class="las la-sort"></span> CẤP ĐỘ</th>
+                        <th class="text-center"><span class="las la-sort"></span> LỚP</th>
+                        <th class="text-center"><span class="las la-sort"></span> LỊCH HỌC</th>
+                        <th class="text-center"><span class="las la-sort"></span> NGÀY KHAI GIẢNG DỰ KIẾN</th>
+                      </tr>
+                </thead>
+                <!-- <tbody *ngFor="let course of courses">
+                  <tr>
+                     <td>{{course?.id}}</td>
+                     <td>{{course?.courseType}}</td>
+                     <td>{{course?.start_time}}</td>
+                     <td>{{course?.period}}</td>
+                     <td>{{course?.description}}</td>
+                     <td>{{course?.price}}</td>
+                     <td>{{course?.level}}</td>
+                  </tr>
+                </tbody> -->
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="h-100 h-custom">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-8 col-xl-6">
+              <div class="card rounded-3">
+                <div class="card-body p-4 p-md-5">
+                  <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2 text-center">Đăng ký khóa học</h3>
+
+                  <form  class="px-md-2">
+                    <div class="form-outline mb-4">
+                      <select  name="courseType" id="courseType" class="form-select" aria-label="Default select example">
+                          <option value="1" disabled >-- Chọn khóa học --</option>
+                          <option value="2">Pre IELTS</option>
+                          <option value="3">IELTS 4.0</option>
+                          <option value="4">IELTS 5.0</option>
+                          <option value="5">IELTS 5.5</option>
+                          <option value="6">IELTS 6.0</option>
+                          <option value="7">IELTS >6.5</option>
+                      </select>
+                    </div>
+                    <div class="form-outline mb-4">
+                      <input type="text"  name="userName" id="userName" class="form-control" placeholder="Tên" />
+                    </div>
+                    <div class="form-outline mb-4">
+                      <input type="text"  name="address" id="address" class="form-control" placeholder="Địa chỉ" />
+                    </div>
+                    <div class="form-outline mb-4">
+                      <input type="text"  name="phone" id="phone" class="form-control" placeholder="Số điện thoại" />
+                    </div>
+                    <div class="form-outline mb-4">
+                      <input type="text"  name="email" id="email" class="form-control" placeholder="Email" />
+                    </div>
+                    <button type="submit" class="btn btn-success btn-lg mb-1">Đăng ký</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+  </main>
+  <app-footer></app-footer>
+  </body>
+
+
+

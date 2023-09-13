@@ -23,9 +23,13 @@ import { LoginUserComponent } from './page_users/login-user/login-user.component
 import { RegisterComponent } from './page_users/register/register.component';
 import { YoungEnglishComponent } from './page_users/young-english/young-english.component';
 import { ToiecComponent } from './page_users/toiec/toiec.component';
-import { BusinessComponent } from './page_users/business/business.component';
 import { BasicEnglishComponent } from './page_users/basic-english/basic-english.component';
 import { IeltsComponent } from './page_users/ielts/ielts.component';
+import { BasicScheduleComponent } from './page_users/basic-schedule/basic-schedule.component';
+import { YoungScheduleComponent } from './page_users/young-schedule/young-schedule.component';
+import { IeltsScheduleComponent } from './page_users/ielts-schedule/ielts-schedule.component';
+import { ToiecScheduleComponent } from './page_users/toiec-schedule/toiec-schedule.component';
+import { ChildScheduleComponent } from './page_users/child-schedule/child-schedule.component';
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'teacher-manager',component:TeacherManagerComponent},
@@ -50,9 +54,13 @@ const routes: Routes = [
   {path:  'register', component: RegisterComponent},
   {path: 'young-english', component: YoungEnglishComponent},
   {path: 'toiec', component: ToiecComponent},
-  {path: 'business', component: BusinessComponent},
   {path: 'basic-english', component: BasicEnglishComponent},
-  {path: 'ielts', component: IeltsComponent}
+  {path: 'ielts', component: IeltsComponent},
+  {path: 'child-schedule', component: ChildScheduleComponent},
+  {path: 'young-schedule', component: YoungScheduleComponent},
+  {path: 'ielts-schedule', component: IeltsScheduleComponent},
+  {path: 'toiec-schedule', component: ToiecScheduleComponent},
+  {path: 'basic-schedule', component: BasicScheduleComponent}
 ];
 
 @NgModule({

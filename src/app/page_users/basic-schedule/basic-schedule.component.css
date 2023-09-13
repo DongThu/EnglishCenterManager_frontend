@@ -1,7 +1,7 @@
 #hero-child {
   width: 100%;
-  height: 80vh;
-  background: url("https://img.freepik.com/free-vector/hand-drawn-english-book-background_23-2149483336.jpg?size=626&ext=jpg&ga=GA1.2.186812330.1694421726&semt=ais") top center;
+  height: 50vh;
+  background: url("../../../assets/img/back-school-composition-with-letters.jpg") top center;
   background-size: cover;
   position: relative;
 }
