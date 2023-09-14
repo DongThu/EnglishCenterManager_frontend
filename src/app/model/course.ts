@@ -1,21 +1,10 @@
 export class Course{
-  id!: number;
-  start_time!: Date ;
-  description!: String ;
+  course_id!: number;
+  program!: String ;
+  level!: String ;
   price!: number;
-  courseType!: courseType ;
-  level!: level ;
-  period!: period ;
-}
-export class courseType{
-  id!: number;
-  courseTypeName!: String ;
+  schedule!: String;
+  openning!: Date ;
+  time!: Number ;
 }
 
-export class level{
-  id!: number;
-  levelName!: String ;
-}
-export class period{
-  periodName!: String ;
-}

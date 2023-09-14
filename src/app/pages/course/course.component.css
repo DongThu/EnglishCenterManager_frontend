@@ -116,3 +116,8 @@ a:hover {
     left: -100%;
   }
 }
+
+tr td, th{
+  text-align: center;
+}
+

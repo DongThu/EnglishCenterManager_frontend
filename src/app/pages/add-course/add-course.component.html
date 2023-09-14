@@ -11,21 +11,34 @@
       <div class="page-content">
 
           <div class="records table-responsive">
-            <form (ngSubmit)="onSubmit()">
+            <form #f="ngForm" (ngSubmit)="onSubmit()">
                           <div class="record-header">
                               <div class="add">
                                 <table>
                                   <div  class="td_select">
-                                  <td><span>Tên khóa học</span></td>
+                                  <td><span>Chương trình học</span></td>
                                     <td>
-                                      <input type="text" [(ngModel)]="courses.courseType" name="courseType" id="courseType" >
+                                      <!-- <input type="text" [(ngModel)]="courses.program" name="program" id="program" > -->
+                                      <select  [(ngModel)]="courses.program" name="program" id="program" class="form-select" aria-label="Default select example" required>
+                                        <option value="1" disabled >-- Chọn khóa học --</option>
+                                        <option value="KINDER (4-6 tuổi)">KINDER (4-6 tuổi)</option>
+                                        <option value="STARTER (6-8 tuổi)">STARTER (6-8 tuổi)</option>
+                                        <option value="MOVER (8-10 tuổi)">MOVER (8-10 tuổi)</option>
+                                    </select>
                                     </td>
-                                  <td><span>Bắt đầu</span></td>
-                                  <td><input type="text" [(ngModel)]="courses.start_time" name="start_time" id="start_time" >
-                                  </td>
-                                  <td><span>Giờ học</span></td>
+                                  <td><span>Cấp độ</span></td>
                                   <td>
-                                    <input type="text" [(ngModel)]="courses.period" name="period" id="period" >
+                                    <!-- <input type="text" [(ngModel)]="courses.level" name="level" id="level" > -->
+                                    <select [(ngModel)]="courses.level" name="level" id="level" required>
+                                      <option value="PRE (Sơ cấp)">PRE (Sơ cấp)</option>
+                                      <option value="MID (Trung cấp)">MID (Trung cấp)</option>
+                                      <option value="ADV (Nâng cao)">ADV (Nâng cao)</option>
+                                      <option value="HON (Chuyên sâu)">HON (Chuyên sâu)</option>
+                                    </select>
+                                  </td>
+                                  <td><span>Học phí</span></td>
+                                  <td>
+                                    <input type="text" [(ngModel)]="courses.price" name="price" id="price" required>
                                   </td>
                                 </div>
                                 </table>
@@ -35,17 +48,19 @@
                             <div class="add">
                               <table>
                                 <div  class="td_select">
-                              <td><span>Học phí</span></td>
-                              <td><input type="text" [(ngModel)]="courses.price" name="price" id="price" >
+                              <td><span>Lịch học</span></td>
+                              <td><input type="text" [(ngModel)]="courses.schedule" name="schedule" id="schedule"  required >
                               </td>
 
-                              <td><span>Bậc</span></td>
+                              <td><span>Ngày khai giảng dự kiến</span></td>
                               <td>
-                                <input type="text" [(ngModel)]="courses.level" name="level" id="level" >
+                                <input type="datetime-local" [(ngModel)]="courses.openning" name="openning" id="openning" required>
                               </td>
-                              <td><span>Mô tả</span></td>
+                              <td><span>Thời lượng khóa</span></td>
                                   <td>
-                                    <input type="text" [(ngModel)]="courses.description" name="description" id="description" >
+                                    <select [(ngModel)]="courses.time" name="time" id="time" required>
+                                      <option value="12 tuần">12 tuần</option>
+                                    </select>
                                   </td>
                               </div>
                               </table>

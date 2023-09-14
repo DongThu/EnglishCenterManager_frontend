@@ -16,16 +16,16 @@
                               <div class="add">
                                 <table>
                                   <div  class="td_select">
-                                  <td><span>Tên khóa học</span></td>
+                                  <td><span>Chương trình</span></td>
                                     <td>
-                                      <input type="text" [(ngModel)]="courses.courseType" name="courseType" id="courseType" >
+                                      <input type="text" [(ngModel)]="courses.program" name="program" id="program" >
                                     </td>
-                                  <td><span>Bắt đầu</span></td>
-                                  <td><input type="text" [(ngModel)]="courses.start_time" name="start_time" id="start_time" >
+                                  <td><span>Cấp độ</span></td>
+                                  <td><input type="text" [(ngModel)]="courses.level" name="level" id="level" >
                                   </td>
-                                  <td><span>Giờ học</span></td>
+                                  <td><span>Học phí</span></td>
                                   <td>
-                                    <input type="text" [(ngModel)]="courses.period" name="period" id="period" >
+                                    <input type="text" [(ngModel)]="courses.price" name="price" id="price" >
                                   </td>
                                 </div>
                                 </table>
@@ -35,18 +35,18 @@
                             <div class="add">
                               <table>
                                 <div  class="td_select">
-                              <td><span>Học phí</span></td>
-                              <td><input type="text" [(ngModel)]="courses.price" name="price" id="price" >
+                              <td><span>Lịch học</span></td>
+                              <td><input type="text" [(ngModel)]="courses.schedule" name="schedule" id="schedule" >
                               </td>
 
-                              <td><span>Bậc</span></td>
+                              <td><span>Ngày khai giảng dự kiến</span></td>
                               <td>
-                                <input type="text" [(ngModel)]="courses.level" name="level" id="level" >
+                                <input type="text" [(ngModel)]="courses.openning" name="openning" id="openning" >
                               </td>
-                              <td><span>Mô tả</span></td>
+                              <!-- <td><span>Mô tả</span></td>
                                   <td>
                                     <input type="text" [(ngModel)]="courses.description" name="description" id="description" >
-                                  </td>
+                                  </td> -->
                               </div>
                               </table>
                             </div>

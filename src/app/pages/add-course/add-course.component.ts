@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Course } from '../../model/course';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AddCourseService } from 'src/app/service/add-course.service';
+import { NgForm, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-add-course',
@@ -38,5 +39,8 @@ export class AddCourseComponent {
     this.saveCourse();
   }
 
+  getValue(f:FormControl){
+    console.log(f);
+  }
 
 }
