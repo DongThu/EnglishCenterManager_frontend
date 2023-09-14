@@ -30,20 +30,24 @@ import { YoungScheduleComponent } from './page_users/young-schedule/young-schedu
 import { IeltsScheduleComponent } from './page_users/ielts-schedule/ielts-schedule.component';
 import { ToiecScheduleComponent } from './page_users/toiec-schedule/toiec-schedule.component';
 import { ChildScheduleComponent } from './page_users/child-schedule/child-schedule.component';
+import { YoungEnglishAdComponent } from './pages/young-english-ad/young-english-ad.component';
+import { IeltsEnglishAdComponent } from './pages/ielts-english-ad/ielts-english-ad.component';
+import { ToeicEnglishAdComponent } from './pages/toeic-english-ad/toeic-english-ad.component';
+import { BasicEnglishAdComponent } from './pages/basic-english-ad/basic-english-ad.component';
 const routes: Routes = [
   {path:'',component:HomeComponent},
-  {path:'teacher-manager',component:TeacherManagerComponent},
-  {path:'course', component:CourseComponent},
-  {path:'document',component:DocumentComponent},
-  {path:'login', component:LoginComponent},
-  {path:'deposit', component:DepositComponent},
-  {path:'study-register', component:StudyRegisterComponent},
-  {path:'tuition', component:TuitionComponent},
-  {path:'spending', component:SpendingComponent},
-  {path:'home-user', component:HomeUserComponent},
-  {path:'about', component:AboutUserComponent},
-  {path:'child-english', component: CourseUserComponent},
-  {path:'register-course', component: RegisterCourseComponent},
+  {path: 'teacher-manager',component:TeacherManagerComponent},
+  {path: 'course', component:CourseComponent},
+  {path: 'document',component:DocumentComponent},
+  {path: 'login', component:LoginComponent},
+  {path: 'deposit', component:DepositComponent},
+  {path: 'study-register', component:StudyRegisterComponent},
+  {path: 'tuition', component:TuitionComponent},
+  {path: 'spending', component:SpendingComponent},
+  {path: 'home-user', component:HomeUserComponent},
+  {path: 'about', component:AboutUserComponent},
+  {path: 'child-english', component: CourseUserComponent},
+  {path: 'register-course', component: RegisterCourseComponent},
   {path: 'add-course', component: AddCourseComponent},
   {path: 'update-course/:id', component: UpdateCourseComponent},
   {path: 'add-teacher', component: AddTeacherComponent},
@@ -51,7 +55,7 @@ const routes: Routes = [
   {path: 'schedule', component: ScheduleComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'login-user', component: LoginUserComponent},
-  {path:  'register', component: RegisterComponent},
+  {path: 'register', component: RegisterComponent},
   {path: 'young-english', component: YoungEnglishComponent},
   {path: 'toiec', component: ToiecComponent},
   {path: 'basic-english', component: BasicEnglishComponent},
@@ -60,7 +64,11 @@ const routes: Routes = [
   {path: 'young-schedule', component: YoungScheduleComponent},
   {path: 'ielts-schedule', component: IeltsScheduleComponent},
   {path: 'toiec-schedule', component: ToiecScheduleComponent},
-  {path: 'basic-schedule', component: BasicScheduleComponent}
+  {path: 'basic-schedule', component: BasicScheduleComponent},
+  {path: 'young-english-ad', component: YoungEnglishAdComponent},
+  {path: 'ielts-english-ad', component: IeltsEnglishAdComponent},
+  {path: 'toeic-english-ad', component: ToeicEnglishAdComponent},
+  {path: 'basic-english-ad', component: BasicEnglishAdComponent}
 ];
 
 @NgModule({

@@ -3,8 +3,9 @@
 <div class="main-content">
 
   <main>
+
     <div class="page-header">
-      <h3>Quản lý chương trình Tiếng Anh thiếu nhi</h3>
+      <h3>Quản lý chương trình luyện thi</h3>
     </div>
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
@@ -76,7 +77,7 @@
 
                           </tr>
                       </thead>
-                      <tbody *ngFor="let course of courses">
+                      <!-- <tbody *ngFor="let course of courses">
                           <tr>
                               <td>{{course?.id}}</td>
                               <td>
@@ -85,9 +86,6 @@
                               <td>
                                   {{course?.start_time}}
                               </td>
-                              <!-- <td>
-                                  20/11/2023
-                              </td> -->
                               <td>
                                   {{course?.period}}
                               </td>
@@ -97,16 +95,16 @@
                               <td>
                               {{course?.price}}
                              </td>
-                           <td>
+                           <td> -->
                             <div class="actions">
                               <!-- <a> -->
-                                <button (click)="updateCourse(course.id)" class="btn" type="submit"><span class="las la-edit"></span></button>
+                                <!-- <button (click)="updateCourse(course.id)" class="btn" type="submit"><span class="las la-edit"></span></button> -->
                               <!-- </a> -->
-                              <button (click)="onDeleteCourse(course.id)" class="btn" ><span class="las la-trash-alt"></span></button>
+                              <!-- <button (click)="onDeleteCourse(course.id)" class="btn" ><span class="las la-trash-alt"></span></button> -->
                             </div>
-                        </td>
+                        <!-- </td>
                           </tr>
-                      </tbody>
+                      </tbody> -->
                   </table>
               </div>
 

@@ -42,6 +42,10 @@ import { ToiecScheduleComponent } from './page_users/toiec-schedule/toiec-schedu
 import { IeltsScheduleComponent } from './page_users/ielts-schedule/ielts-schedule.component';
 import { YoungScheduleComponent } from './page_users/young-schedule/young-schedule.component';
 import { ChildScheduleComponent } from './page_users/child-schedule/child-schedule.component';
+import { YoungEnglishAdComponent } from './pages/young-english-ad/young-english-ad.component';
+import { IeltsEnglishAdComponent } from './pages/ielts-english-ad/ielts-english-ad.component';
+import { ToeicEnglishAdComponent } from './pages/toeic-english-ad/toeic-english-ad.component';
+import { BasicEnglishAdComponent } from './pages/basic-english-ad/basic-english-ad.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -79,7 +83,11 @@ import { ChildScheduleComponent } from './page_users/child-schedule/child-schedu
     ToiecScheduleComponent,
     IeltsScheduleComponent,
     YoungScheduleComponent,
-    ChildScheduleComponent
+    ChildScheduleComponent,
+    YoungEnglishAdComponent,
+    IeltsEnglishAdComponent,
+    ToeicEnglishAdComponent,
+    BasicEnglishAdComponent
   ],
   imports: [
     BrowserModule,
