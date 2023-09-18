@@ -24,7 +24,7 @@ import { RegisterCourseComponent } from './page_users/register-course/register-c
 import { AddCourseComponent } from './pages/add-course/add-course.component';
 import { AddUserService } from './service/add-user.service';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddCourseService } from './service/add-course.service';
 import { UpdateCourseComponent } from './pages/update-course/update-course.component';
 import { AddTeacherComponent } from './pages/add-teacher/add-teacher.component';
@@ -93,7 +93,8 @@ import { BasicEnglishAdComponent } from './pages/basic-english-ad/basic-english-
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [AddUserService, AddCourseService],
   bootstrap: [AppComponent]

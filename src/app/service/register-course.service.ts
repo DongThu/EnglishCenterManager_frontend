@@ -20,7 +20,7 @@ export class RegisterCourseService {
   }
 
   public Register(register: Register): Observable<Object> {
-    return this.http.post<Register>(`${this.apiServerUrl}/user/register`, register);
+    return this.http.post<Register>(`${this.apiServerUrl}/api/v1/user/register`, register);
   }
   // public getCourseById(id: number): Observable<RegisterCourse>{
   //   return this.http.get<RegisterCourse>(`${this.apiServerUrl}/course/${id}`);

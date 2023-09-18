@@ -48,19 +48,22 @@
               <div class="card-body p-4 p-md-5">
                 <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2 text-center">Đăng nhập</h3>
 
-                <form class="px-md-2">
+                <form [formGroup]="form" class="px-md-2">
                   <div class="form-outline mb-4">
-                    <input type="text" name="email" id="email" class="form-control" placeholder="Email" />
+                    <input type="text" name="username" id="username" class="form-control" formControlName="username"
+                    placeholder="Email" />
                   </div>
                   <div class="form-outline mb-4">
-                    <input type="password" name="password" id="password" class="form-control" placeholder="Password" />
+                    <input type="password" name="password" id="password" class="form-control" formControlName="password" placeholder="Password" />
                   </div>
                   <div class="form-outline mb-4 row">
                     <label class="checkbox col"><input class="input" type="checkbox">Ghi nhớ tôi</label>
                     <label class="col">Nếu chưa có tài khoản vui lòng<a routerLink="/register"> đăng ký tại đây!</a></label>
                   </div>
 
-                  <button type="submit" class="btn btn-success btn-lg mb-1">Đăng nhập</button>
+                  <button [disabled]="form.invalid"
+                  (click)="onSubmit()"
+                  type="submit" class="btn btn-success btn-lg mb-1">Đăng nhập</button>
                   <i></i>
                 </form>
               </div>
