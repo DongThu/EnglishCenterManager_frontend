@@ -5,6 +5,17 @@ export class Course{
   price!: number;
   schedule!: String;
   openning!: Date ;
-  time!: Number ;
+  time!: String ;
 }
+
+export class ChildSchedule{
+  program!: String ;
+  level!: String ;
+  price!: number;
+  schedule!: String;
+  openning!: Date ;
+  time!: String ;
+  email!: String;
+}
+
 

@@ -4,7 +4,7 @@
 
   <main>
     <div class="page-header">
-      <h3>Quản lý chương trình Tiếng Anh thiếu nhi</h3>
+      <h3>Danh sách đăng ký chương trình Tiếng Anh thiếu nhi</h3>
     </div>
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
@@ -71,13 +71,13 @@
                               <th><span class="las la-sort"></span> CẤP ĐỘ</th>
                               <th><span class="las la-sort"></span> HỌC PHÍ</th>
                               <th><span class="las la-sort"></span> LỊCH HỌC</th>
-                              <th><span class="las la-sort"></span> NGÀY KHAI GIẢNG DỰ KIẾN</th>
-                              <th><span class="las la-sort"></span> THỜI LƯỢNG KHÓA</th>
-                              <th><span class="las la-sort"></span> THAO TÁC</th>
+                              <th><span class="las la-sort"></span> NGÀY KHAI GIẢNG</th>
+                              <th><span class="las la-sort"></span> EMAIL</th>
+                              <th><span class="las la-sort"></span> SĐT</th>
 
                           </tr>
                       </thead>
-                      <tbody *ngFor="let course of courses">
+                      <!-- <tbody *ngFor="let course of courses">
                           <tr>
                               <td>{{course?.course_id}}</td>
                               <td>
@@ -86,9 +86,7 @@
                               <td>
                                   {{course?.level}}
                               </td>
-                              <!-- <td>
-                                  20/11/2023
-                              </td> -->
+
                               <td>
                                   {{course?.price | currency:'VND'}}
                               </td>
@@ -103,14 +101,12 @@
                              </td>
                            <td>
                             <div class="actions">
-                              <!-- <a> -->
                                 <button (click)="updateCourse(course.course_id)" class="btn" type="submit"><span class="las la-edit"></span></button>
-                              <!-- </a> -->
                               <button (click)="onDeleteCourse(course.course_id)" class="btn" ><span class="las la-trash-alt"></span></button>
                             </div>
                         </td>
                           </tr>
-                      </tbody>
+                      </tbody> -->
                   </table>
               </div>
 

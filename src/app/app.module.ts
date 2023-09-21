@@ -46,6 +46,11 @@ import { YoungEnglishAdComponent } from './pages/young-english-ad/young-english-
 import { IeltsEnglishAdComponent } from './pages/ielts-english-ad/ielts-english-ad.component';
 import { ToeicEnglishAdComponent } from './pages/toeic-english-ad/toeic-english-ad.component';
 import { BasicEnglishAdComponent } from './pages/basic-english-ad/basic-english-ad.component';
+import { ChildEnglishAdListComponent } from './pages/child-english-ad-list/child-english-ad-list.component';
+import { YoungEnglishAdListComponent } from './pages/young-english-ad-list/young-english-ad-list.component';
+import { IeltsEnglishAdListComponent } from './pages/ielts-english-ad-list/ielts-english-ad-list.component';
+import { ToeicEnglishAdListComponent } from './pages/toeic-english-ad-list/toeic-english-ad-list.component';
+import { BasicEnglishAdListComponent } from './pages/basic-english-ad-list/basic-english-ad-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -87,7 +92,12 @@ import { BasicEnglishAdComponent } from './pages/basic-english-ad/basic-english-
     YoungEnglishAdComponent,
     IeltsEnglishAdComponent,
     ToeicEnglishAdComponent,
-    BasicEnglishAdComponent
+    BasicEnglishAdComponent,
+    ChildEnglishAdListComponent,
+    YoungEnglishAdListComponent,
+    IeltsEnglishAdListComponent,
+    ToeicEnglishAdListComponent,
+    BasicEnglishAdListComponent
   ],
   imports: [
     BrowserModule,

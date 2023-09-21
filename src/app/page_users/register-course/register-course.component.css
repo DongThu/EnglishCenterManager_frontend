@@ -1,5 +1,9 @@
 @media (min-width: 1025px) {
   .h-custom {
-  height: 100vh !important;
+  height: 120vh !important;
   }
+}
+#main
+{
+  background: url("https://img.freepik.com/premium-photo/school-supplies-blue-background-school-teacher-day-concept-wooden-letters-table-with-copy-space_114311-297.jpg?size=626&ext=jpg&ga=GA1.2.186812330.1694421726&semt=ais");
 }

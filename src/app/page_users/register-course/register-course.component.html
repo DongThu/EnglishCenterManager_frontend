@@ -40,7 +40,7 @@
     </div>
   </header><!-- End Header -->
   <main id="main">
-    <section class="h-100 h-custom" style="background-color: #8fc4b7;">
+    <section class="h-100 h-custom">
       <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col-lg-8 col-xl-6">
@@ -49,26 +49,42 @@
                 <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2 text-center">Đăng ký khóa học</h3>
 
                 <form (ngSubmit)="onSubmit()" class="px-md-2">
-                  <div class="form-outline mb-4">
-                    <select [(ngModel)]="register.courseType" name="courseType" id="courseType" class="form-select" aria-label="Default select example">
-                        <option value="1" disabled >-- Chọn khóa học --</option>
-                        <option>a</option>
-                        <option>b</option>
-                        <option>c</option>
-                    </select>
+
+                  <!-- <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <input type="text"  [(ngModel)]="registerChild.program" name="program" id="program" class="form-control" >
+
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <input type="text" [(ngModel)]="registerChild.level" name="level" id="level" class="form-control">
+                    </div>
                   </div>
-                  <div class="form-outline mb-4">
-                    <input type="text" [(ngModel)]="register.userName" name="userName" id="userName" class="form-control" placeholder="Tên" />
+
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                    <input type="text"  [(ngModel)]="registerChild.price" name="price" id="price" class="form-control">
                   </div>
-                  <div class="form-outline mb-4">
-                    <input type="text" [(ngModel)]="register.address" name="address" id="address" class="form-control" placeholder="Địa chỉ" />
+
+                  <div class="col-md-6 mb-4">
+                    <input type="text"  [(ngModel)]="registerChild.schedule" name="schedule" id="schedule" class="form-control">
                   </div>
-                  <div class="form-outline mb-4">
-                    <input type="text" [(ngModel)]="register.phone" name="phone" id="phone" class="form-control" placeholder="Số điện thoại" />
-                  </div>
-                  <div class="form-outline mb-4">
-                    <input type="text" [(ngModel)]="register.email" name="email" id="email" class="form-control" placeholder="Email" />
-                  </div>
+                </div>
+
+
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                  <input type="text" [(ngModel)]="registerChild.openning" name="openning" id="openning" class="form-control">
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <input type="text"  [(ngModel)]="registerChild.time" name="time" id="time" class="form-control">
+                </div>
+              </div> -->
+
+              <div class="form-outline mb-4">
+                  <input type="email"  name="email" id="email" [(ngModel)]="registerChild.email" class="form-control" placeholder="Nhập email">
+                </div>
+
                   <button type="submit" class="btn btn-success btn-lg mb-1">Đăng ký</button>
                 </form>
               </div>

@@ -34,6 +34,11 @@ import { YoungEnglishAdComponent } from './pages/young-english-ad/young-english-
 import { IeltsEnglishAdComponent } from './pages/ielts-english-ad/ielts-english-ad.component';
 import { ToeicEnglishAdComponent } from './pages/toeic-english-ad/toeic-english-ad.component';
 import { BasicEnglishAdComponent } from './pages/basic-english-ad/basic-english-ad.component';
+import { ChildEnglishAdListComponent } from './pages/child-english-ad-list/child-english-ad-list.component';
+import { YoungEnglishAdListComponent } from './pages/young-english-ad-list/young-english-ad-list.component';
+import { IeltsEnglishAdListComponent } from './pages/ielts-english-ad-list/ielts-english-ad-list.component';
+import { ToeicEnglishAdListComponent } from './pages/toeic-english-ad-list/toeic-english-ad-list.component';
+import { BasicEnglishAdListComponent } from './pages/basic-english-ad-list/basic-english-ad-list.component';
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path: 'teacher-manager',component:TeacherManagerComponent},
@@ -47,7 +52,7 @@ const routes: Routes = [
   {path: 'home-user', component:HomeUserComponent},
   {path: 'about', component:AboutUserComponent},
   {path: 'child-english', component: CourseUserComponent},
-  {path: 'register-course', component: RegisterCourseComponent},
+  {path: 'register-course/:id', component: RegisterCourseComponent},
   {path: 'add-course', component: AddCourseComponent},
   {path: 'update-course/:id', component: UpdateCourseComponent},
   {path: 'add-teacher', component: AddTeacherComponent},
@@ -68,7 +73,12 @@ const routes: Routes = [
   {path: 'young-english-ad', component: YoungEnglishAdComponent},
   {path: 'ielts-english-ad', component: IeltsEnglishAdComponent},
   {path: 'toeic-english-ad', component: ToeicEnglishAdComponent},
-  {path: 'basic-english-ad', component: BasicEnglishAdComponent}
+  {path: 'basic-english-ad', component: BasicEnglishAdComponent},
+  {path: 'child-english-ad-list', component: ChildEnglishAdListComponent},
+  {path: 'young-english-ad-list', component: YoungEnglishAdListComponent},
+  {path: 'ielts-english-ad-list', component: IeltsEnglishAdListComponent},
+  {path: 'toeic-english-ad-list', component: ToeicEnglishAdListComponent},
+  {path: 'basic-english-ad-list', component: BasicEnglishAdListComponent}
 ];
 
 @NgModule({
