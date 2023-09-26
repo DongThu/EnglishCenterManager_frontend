@@ -66,7 +66,6 @@
                   <table width="100%">
                       <thead>
                           <tr>
-                              <th>#</th>
                               <th><span class="las la-sort"></span> CHƯƠNG TRÌNH</th>
                               <th><span class="las la-sort"></span> CẤP ĐỘ</th>
                               <th><span class="las la-sort"></span> HỌC PHÍ</th>
@@ -77,36 +76,33 @@
 
                           </tr>
                       </thead>
-                      <!-- <tbody *ngFor="let course of courses">
+                      <tbody *ngFor="let childRegister of childRegisterList">
                           <tr>
-                              <td>{{course?.course_id}}</td>
                               <td>
-                                  {{course?.program}}
+                                  {{childRegister.course.program}}
                               </td>
                               <td>
-                                  {{course?.level}}
+                                  {{childRegister.course.level}}
                               </td>
 
                               <td>
-                                  {{course?.price | currency:'VND'}}
+                                  {{childRegister.course.price | currency:'VND'}}
                               </td>
                               <td>
-                                 {{course?.schedule}}
+                                 {{childRegister.course.schedule}}
                               </td>
                               <td>
-                              {{course?.openning}}
+                              {{childRegister.course.openning}}
+                             </td>
+
+                             <td>
+                              {{childRegister.user.username}}
                              </td>
                              <td>
-                              {{course?.time}}
+                              {{childRegister.user.phone}}
                              </td>
-                           <td>
-                            <div class="actions">
-                                <button (click)="updateCourse(course.course_id)" class="btn" type="submit"><span class="las la-edit"></span></button>
-                              <button (click)="onDeleteCourse(course.course_id)" class="btn" ><span class="las la-trash-alt"></span></button>
-                            </div>
-                        </td>
                           </tr>
-                      </tbody> -->
+                      </tbody>
                   </table>
               </div>
 

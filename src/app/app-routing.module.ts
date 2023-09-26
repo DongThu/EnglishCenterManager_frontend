@@ -39,6 +39,10 @@ import { YoungEnglishAdListComponent } from './pages/young-english-ad-list/young
 import { IeltsEnglishAdListComponent } from './pages/ielts-english-ad-list/ielts-english-ad-list.component';
 import { ToeicEnglishAdListComponent } from './pages/toeic-english-ad-list/toeic-english-ad-list.component';
 import { BasicEnglishAdListComponent } from './pages/basic-english-ad-list/basic-english-ad-list.component';
+import { TeacherScheduleComponent } from './pages/teacher-schedule/teacher-schedule.component';
+import { AddTeacherScheduleComponent } from './pages/add-teacher-schedule/add-teacher-schedule.component';
+import { UpdateTeacherScheduleComponent } from './pages/update-teacher-schedule/update-teacher-schedule.component';
+
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path: 'teacher-manager',component:TeacherManagerComponent},
@@ -78,7 +82,10 @@ const routes: Routes = [
   {path: 'young-english-ad-list', component: YoungEnglishAdListComponent},
   {path: 'ielts-english-ad-list', component: IeltsEnglishAdListComponent},
   {path: 'toeic-english-ad-list', component: ToeicEnglishAdListComponent},
-  {path: 'basic-english-ad-list', component: BasicEnglishAdListComponent}
+  {path: 'basic-english-ad-list', component: BasicEnglishAdListComponent},
+  {path: 'teacher-schedule', component: TeacherScheduleComponent},
+  {path: 'add-teacher-schedule/:id', component: AddTeacherScheduleComponent},
+  {path: 'update-teacher-schedule/:id', component: UpdateTeacherScheduleComponent}
 ];
 
 @NgModule({

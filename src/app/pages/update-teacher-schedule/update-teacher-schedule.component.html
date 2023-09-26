@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+<app-header></app-header>
+<div class="main-content">
+
+  <main>
+
+    <div class="page-header">
+      <h3>Thêm kế hoạch giảng dạy</h3>
+    </div>
+
+    <div class="page-content">
+
+        <div class="records table-responsive">
+          <form (ngSubmit)="onSubmit()">
+            <div class="record-header">
+              <div class="add">
+                <table>
+                  <div  class="td_select">
+                    <td><span>Ngày bắt đầu</span></td>
+                    <td>
+                      <input type="text" [(ngModel)]="teacherSchedule.startTime" name="startTime" id="startTime" >
+                    </td>
+                    <td><span>Ngày kết thúc</span></td>
+                    <td>
+                      <input type="text" [(ngModel)]="teacherSchedule.endTime" name="endTime" id="endTime" >
+                    </td>
+                    <td><button  type="submit">Cập nhật</button></td>
+                  </div>
+                </table>
+              </div>
+            </div>
+          </form>
+        </div>
+    </div>
+  </main>
+
+</div>

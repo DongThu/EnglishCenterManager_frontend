@@ -36,6 +36,10 @@ export class TeacherManagerComponent implements OnInit{
   updateTeacher(id: number){
     this.router.navigate(['update-teacher', id]);
   }
+
+  addTeacherSchedule(id: number){
+    this.router.navigate(['add-teacher-schedule', id]);
+  }
   public onDeleteTeacher(teacherId: number): void {
     this.teacherService.deleteTeacher(teacherId).subscribe(
       (response: void) => {

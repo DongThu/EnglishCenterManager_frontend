@@ -15,14 +15,14 @@ export class RegisterCourseComponent implements OnInit {
 
   id!: number;
   courses: Course = new Course();
-  registerChild!: ChildSchedule;
+  registerChild!: RegisterCourse;
 
   constructor(
     private AddCourseService: AddCourseService,
     private route: ActivatedRoute,
     private router: Router,
     private registerCourseChild: RegisterCourseService) {
-      this.registerChild =new ChildSchedule()
+      this.registerChild =new RegisterCourse()
     }
 
 

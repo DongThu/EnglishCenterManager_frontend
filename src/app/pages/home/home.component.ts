@@ -10,38 +10,38 @@ import { RegisterCourseService } from 'src/app/service/register-course.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit{
-  public register!: RegisterCourse[];
+  // public register!: RegisterCourse[];
 
-  constructor(
-    private registerCourseService: RegisterCourseService,
-    private router: Router
-    ){
+  // constructor(
+  //   private registerCourseService: RegisterCourseService,
+  //   private router: Router
+  //   ){
 
-  }
+  // }
   ngOnInit(){
-    this.getRegister();
+    // this.getRegister();
   }
 
-  public getRegister(): void {
-    this.registerCourseService.getCourse().subscribe(
-      (response: RegisterCourse[]) => {
-        this.register = response;
-      },
-      (error: HttpErrorResponse) => {
-        alert(error.message);
-      }
-    );
-  }
+  // public getRegister(): void {
+  //   this.registerCourseService.getCourse().subscribe(
+  //     (response: RegisterCourse[]) => {
+  //       this.register = response;
+  //     },
+  //     (error: HttpErrorResponse) => {
+  //       alert(error.message);
+  //     }
+  //   );
+  // }
 
-  public onDeleteRegister(registerId: number): void {
-    this.registerCourseService.deleteRegister(registerId).subscribe(
-      (response: void) => {
-        console.log(response);
-        this.getRegister();
-      },
-      (error: HttpErrorResponse) => {
-        alert(error.message);
-      }
-    );
-  }
+  // public onDeleteRegister(registerId: number): void {
+  //   this.registerCourseService.deleteRegister(registerId).subscribe(
+  //     (response: void) => {
+  //       console.log(response);
+  //       this.getRegister();
+  //     },
+  //     (error: HttpErrorResponse) => {
+  //       alert(error.message);
+  //     }
+  //   );
+  // }
 }

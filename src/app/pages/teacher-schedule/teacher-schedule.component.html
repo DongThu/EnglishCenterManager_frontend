@@ -1,0 +1,81 @@
+<app-navbar></app-navbar>
+<app-header></app-header>
+<div class="main-content">
+
+  <main>
+
+      <div class="page-header">
+          <h3>Quản lý thông tin giảng viên</h3>
+          <nav class="nav justify-content-center text-uppercase">
+            <a class="nav-link text-success" routerLink="/teacher-manager">Quản lý thông tin</a>
+            <a class="nav-link text-success active"routerLink="/teacher-schedule">Kế hoạch giảng dạy</a>
+          </nav>
+      </div>
+
+      <div class="page-content">
+
+          <div class="records table-responsive">
+
+              <div class="record-header">
+                  <!-- <div class="add">
+                      <span>Entries</span>
+                      <select name="" id="">
+                          <option value="">ID</option>
+                      </select>
+                      <a  routerLink="/add-teacher"><button>Thêm</button></a>
+                  </div> -->
+
+                  <div class="browse">
+                     <input type="search" placeholder="Search" class="record-search">
+                      <!-- <select name="" id="">
+                          <option value="">Status</option>
+                      </select> -->
+                  </div>
+              </div>
+
+              <div>
+                  <table width="100%">
+                      <thead>
+                          <tr>
+                              <th>#</th>
+                              <th class="text-center"><span class="las la-sort"></span> ID GIẢNG VIÊN</th>
+                              <th class="text-center"><span class="las la-sort"></span> TÊN GIẢNG VIÊN</th>
+                              <th class="text-center"><span class="las la-sort"></span> NGÀY BẮT ĐẦU</th>
+                              <th class="text-center"><span class="las la-sort"></span> NGÀY KẾT THÚC</th>
+                              <th class="text-center"><span class="las la-sort"></span> THAO TÁC</th>
+                          </tr>
+                      </thead>
+                      <tbody *ngFor="let teacherList of teacherScheduleList">
+                          <tr class="text-center">
+                            <td>{{teacherList.id}}</td>
+
+                              <td >{{teacherList.teacher.id}}</td>
+
+                              <td>
+                                {{teacherList.teacher.fullName}}
+                              </td>
+                              <td>
+                                {{teacherList.startTime}}
+                              </td>
+                              <td>
+                                {{teacherList.endTime}}
+                              </td>
+
+                              <td>
+                                  <div class="actions">
+                                    <button (click)="updateTeacherSchedule(teacherList.id)" class="btn" type="submit"><span class="las la-edit"></span></button>
+                                    <button (click)="onDeleteTeacherSchedule(teacherList.id)" class="btn" type="submit"><span class="las la-trash-alt"></span></button>
+                                  </div>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+
+          </div>
+
+      </div>
+
+  </main>
+
+</div>

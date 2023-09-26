@@ -12,30 +12,32 @@ export class RegisterCourseService {
   private apiServerUrl = environment.apiBaseUrl;
   constructor(private http: HttpClient) { }
 
-  public getCourse(): Observable<RegisterCourse[]> {
-    return this.http.get<RegisterCourse[]>(`${this.apiServerUrl}/register/all`);
+
+// service quản lý đăng ký Tiếng Anh thiếu nhi
+  public RegisterCourse(id: number, register: RegisterCourse): Observable<Object> {
+    return this.http.post<RegisterCourse>(`${this.apiServerUrl}/register-course/${id}`, register);
   }
 
-  public RegisterCourse(id: number, register: ChildSchedule): Observable<Object> {
-    return this.http.post<ChildSchedule>(`${this.apiServerUrl}/register-course/${id}`, register);
+
+
+  public getRegisterListChild(): Observable<ChildSchedule[]> {
+    return this.http.get<ChildSchedule[]>(`${this.apiServerUrl}/register-course/all`);
   }
 
+
+
+  // Đăng ký khóa học bên user
   public Register(register: Register): Observable<Object> {
     return this.http.post<Register>(`${this.apiServerUrl}/api/v1/user/register`, register);
   }
 
-  // public getCourseById(id: number): Observable<RegisterCourse>{
-  //   return this.http.get<RegisterCourse>(`${this.apiServerUrl}/course/${id}`);
-  // }
-
-  public getCourseById(id: number): Observable<Course>{
-    return this.http.get<Course>(`${this.apiServerUrl}/course/${id}`);
-  }
-  // public updateCourse(id: number, register: RegisterCourse): Observable<Object>{
-  //   return this.http.put(`${this.apiServerUrl}/course/update/${id}`, register);
-  // }
-
+//Quản lý đăng ký học viên
   public deleteRegister(registerId: number): Observable<void> {
     return this.http.delete<void>(`${this.apiServerUrl}/register/delete/${registerId}`);
   }
+
+  public getCourse(): Observable<RegisterCourse[]> {
+    return this.http.get<RegisterCourse[]>(`${this.apiServerUrl}/register/all`);
+  }
+
 }

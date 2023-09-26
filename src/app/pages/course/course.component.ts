@@ -27,6 +27,7 @@ export class CourseComponent implements OnInit{
     this.AddCourseService.getCourse().subscribe(
       (response: Course[]) => {
         this.courses = response;
+        console.log(this.courses)
       },
       (error: HttpErrorResponse) => {
         alert(error.message);

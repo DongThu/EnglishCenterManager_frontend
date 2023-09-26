@@ -11,6 +11,7 @@ export class AddCourseService {
   private apiServerUrl = environment.apiBaseUrl;
   constructor(private http: HttpClient) { }
 
+  // quản lý khóa học tiếng Anh thiếu nhi
   public getCourse(): Observable<Course[]> {
     return this.http.get<Course[]>(`${this.apiServerUrl}/course/all`);
   }

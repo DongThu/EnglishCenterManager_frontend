@@ -5,8 +5,11 @@
   <main>
 
       <div class="page-header">
-          <h1>Quản lý giảng viên</h1>
-          <!-- <small>Home / Dashboard</small> -->
+          <h3>Quản lý thông tin giảng viên</h3>
+          <nav class="nav justify-content-center text-uppercase">
+            <a class="nav-link text-success" routerLink="/teacher-manager">Quản lý thông tin</a>
+            <a class="nav-link text-success active"routerLink="/teacher-schedule">Kế hoạch giảng dạy</a>
+          </nav>
       </div>
 
       <div class="page-content">
@@ -35,12 +38,11 @@
                       <thead>
                           <tr>
                               <th>#</th>
-                              <th><span class="las la-sort"></span> TÊN</th>
-                              <th><span class="las la-sort"></span> SINH NHẬT</th>
-                              <th><span class="las la-sort"></span> SĐT</th>
-                              <th><span class="las la-sort"></span> ĐỊA CHỈ</th>
-                              <th><span class="las la-sort"></span> LỊCH SỬ ĐĂNG KÝ</th>
-                              <th><span class="las la-sort"></span> THAO TÁC</th>
+                              <th class="text-center"><span class="las la-sort"></span> TÊN</th>
+                              <th class="text-center"><span class="las la-sort"></span> SĐT/Birth</th>
+                              <th class="text-center"><span class="las la-sort"></span> ĐỊA CHỈ</th>
+                              <th class="text-center"><span class="las la-sort"></span> CHƯƠNG TRÌNH GIẢNG DẠY</th>
+                              <th class="text-center"><span class="las la-sort"></span> THAO TÁC</th>
                           </tr>
                       </thead>
                       <tbody *ngFor="let teacher of teacher">
@@ -56,21 +58,25 @@
                                   </div>
                               </td>
                               <td>
-                                {{teacher.birthDay}}
-                              </td>
-                              <td>
-                                {{teacher.phone}}
+
+                                <div class="client">
+                                   <div class="client-info">
+                                       <h4>{{teacher.phone}}</h4>
+                                       <small>{{teacher.birthDay}}</small>
+                                   </div>
+                               </div>
                               </td>
                               <td>
                                 {{teacher.address}}
                               </td>
                               <td>
-                                  15/12/2022
+                                {{teacher.teachProgram}}
                               </td>
                               <td>
                                   <div class="actions">
                                     <button (click)="updateTeacher(teacher.id)" class="btn" type="submit"><span class="las la-edit"></span></button>
                                     <button (click)="onDeleteTeacher(teacher.id)" class="btn" type="submit"><span class="las la-trash-alt"></span></button>
+                                    <button (click)="addTeacherSchedule(teacher.id)" class="btn" type="submit"> <span class="las la-calendar-day"></span></button>
                                   </div>
                               </td>
                           </tr>

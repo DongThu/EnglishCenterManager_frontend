@@ -9,13 +9,21 @@ export class Course{
 }
 
 export class ChildSchedule{
-  program!: String ;
-  level!: String ;
-  price!: number;
-  schedule!: String;
-  openning!: Date ;
-  time!: String ;
-  email!: String;
+  id!: number;
+  user!: {
+    username: String;
+    phone:number;
+  };
+  course!:{
+    program: String ;
+    level: String ;
+    price: number;
+    schedule: String;
+    openning: Date ;
+    time: String ;
+  };
+
+
 }
 
 

@@ -1,9 +1,5 @@
 export class RegisterCourse{
   id!: number;
-  courseType!: String ;
-  userName!: String ;
-  address!: String ;
-  phone!: Number;
   email!: String;
 }
 

@@ -22,7 +22,6 @@ import { AboutUserComponent } from './page_users/about-user/about-user.component
 import { CourseUserComponent } from './page_users/course-user/course-user.component';
 import { RegisterCourseComponent } from './page_users/register-course/register-course.component';
 import { AddCourseComponent } from './pages/add-course/add-course.component';
-import { AddUserService } from './service/add-user.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddCourseService } from './service/add-course.service';
@@ -51,6 +50,10 @@ import { YoungEnglishAdListComponent } from './pages/young-english-ad-list/young
 import { IeltsEnglishAdListComponent } from './pages/ielts-english-ad-list/ielts-english-ad-list.component';
 import { ToeicEnglishAdListComponent } from './pages/toeic-english-ad-list/toeic-english-ad-list.component';
 import { BasicEnglishAdListComponent } from './pages/basic-english-ad-list/basic-english-ad-list.component';
+import { RegisterCourseService } from './service/register-course.service';
+import { TeacherScheduleComponent } from './pages/teacher-schedule/teacher-schedule.component';
+import { AddTeacherScheduleComponent } from './pages/add-teacher-schedule/add-teacher-schedule.component';
+import { UpdateTeacherScheduleComponent } from './pages/update-teacher-schedule/update-teacher-schedule.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -97,7 +100,10 @@ import { BasicEnglishAdListComponent } from './pages/basic-english-ad-list/basic
     YoungEnglishAdListComponent,
     IeltsEnglishAdListComponent,
     ToeicEnglishAdListComponent,
-    BasicEnglishAdListComponent
+    BasicEnglishAdListComponent,
+    TeacherScheduleComponent,
+    AddTeacherScheduleComponent,
+    UpdateTeacherScheduleComponent
   ],
   imports: [
     BrowserModule,
@@ -106,7 +112,7 @@ import { BasicEnglishAdListComponent } from './pages/basic-english-ad-list/basic
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [AddUserService, AddCourseService],
+  providers: [AddCourseService, RegisterCourseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
