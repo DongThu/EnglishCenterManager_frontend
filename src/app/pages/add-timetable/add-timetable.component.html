@@ -1,0 +1,86 @@
+<app-navbar></app-navbar>
+<app-header></app-header>
+<div class="main-content">
+
+  <main>
+
+      <div class="page-header">
+        <h3>Thêm khóa học</h3>
+      </div>
+
+      <div class="page-content">
+
+          <div class="records table-responsive">
+            <form  (ngSubmit)="onSubmit()">
+                          <div class="record-header">
+                              <div class="add">
+                                <table>
+                                  <div  class="td_select">
+                                  <td><span>Chương trình học</span></td>
+                                    <td>
+                                        <select  [(ngModel)]="timetable.courseId" style="width: 300px;"   name="program" id="program" class="form-select" aria-label="Default select example" required>
+                                          <option value="1" disabled >-- Chọn khóa học --</option>
+                                          <option  *ngFor="let course of courses" value="{{course.course_id}}">{{course.program}}, {{course.openning}}</option>
+                                        </select>
+                                        <!-- <input type="text" [(ngModel)]="timetable.courseId" name="id" id="id"> -->
+                                    </td>
+                                  </div>
+                                </table>
+                              </div>
+                          </div>
+                          <div class="record-header">
+                            <div class="add">
+                              <table>
+                                <div  class="td_select">
+                                  <td><span>Phòng học</span></td>
+                                  <td>
+                                    <select [(ngModel)]="timetable.classroom" name="classroom" id="classroom">
+                                        <option disabled >-- Chọn phòng --</option>
+                                        <option value="P01">P01</option>
+                                        <option value="P02">P02</option>
+                                        <option value="P03">P03</option>
+                                        <option value="P04">P04</option>
+                                        <option value="P05">P05</option>
+                                        <option value="P06">P06</option>
+                                        <option value="P07">P07</option>
+                                        <option value="P08">P08</option>
+                                        <option value="P09">P09</option>
+                                    </select>
+                                    <!-- <input type="text" [(ngModel)]="timetable.classroom" name="classroom" id="classroom" > -->
+
+                                  </td>
+                                </div>
+                             </table>
+                            </div>
+                        </div>
+                        <div class="record-header">
+                          <div class="add">
+                            <table>
+                              <div  class="td_select">
+                                <td><span>Giảng viên</span></td>
+                                <td>
+                                    <select [(ngModel)]="timetable.teacherId"  name="fullName" id="fullName" class="form-select" aria-label="Default select example" required>
+
+                                      <option value="1" disabled >-- Chọn giảng viên --</option>
+                                      <option value="{{teachers.id}}" *ngFor="let teachers of teachers">{{teachers.fullName}}</option>
+
+                                    </select>
+                                    <!-- <input type="text" [(ngModel)]="timetable.teacherId" name="fullName" id="fullName" > -->
+                                  </td>
+
+                              <td><button  type="submit">Thêm</button></td>
+                            </div>
+                          </table>
+                          </div>
+                      </div>
+
+            </form>
+
+          </div>
+
+      </div>
+
+  </main>
+
+</div>
+

@@ -54,6 +54,8 @@ import { RegisterCourseService } from './service/register-course.service';
 import { TeacherScheduleComponent } from './pages/teacher-schedule/teacher-schedule.component';
 import { AddTeacherScheduleComponent } from './pages/add-teacher-schedule/add-teacher-schedule.component';
 import { UpdateTeacherScheduleComponent } from './pages/update-teacher-schedule/update-teacher-schedule.component';
+import { AddTimetableComponent } from './pages/add-timetable/add-timetable.component';
+import { TimetableService } from './service/timetable.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -103,7 +105,8 @@ import { UpdateTeacherScheduleComponent } from './pages/update-teacher-schedule/
     BasicEnglishAdListComponent,
     TeacherScheduleComponent,
     AddTeacherScheduleComponent,
-    UpdateTeacherScheduleComponent
+    UpdateTeacherScheduleComponent,
+    AddTimetableComponent
   ],
   imports: [
     BrowserModule,
@@ -112,7 +115,7 @@ import { UpdateTeacherScheduleComponent } from './pages/update-teacher-schedule/
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [AddCourseService, RegisterCourseService],
+  providers: [AddCourseService, RegisterCourseService, TimetableService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

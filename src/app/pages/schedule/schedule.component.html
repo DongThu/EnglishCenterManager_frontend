@@ -5,7 +5,7 @@
   <main>
 
       <div class="page-header">
-          <h1>Quản lý giảng viên</h1>
+          <h1>Quản lý thời khóa biểu</h1>
           <!-- <small>Home / Dashboard</small> -->
       </div>
 
@@ -19,7 +19,7 @@
                       <select name="" id="">
                           <option value="">ID</option>
                       </select>
-                      <a  routerLink="/add-teacher"><button>Thêm</button></a>
+                      <a  routerLink="/add-timetable"><button>Thêm</button></a>
                   </div>
 
                   <div class="browse">
@@ -35,42 +35,37 @@
                       <thead>
                           <tr>
                               <th>#</th>
-                              <th><span class="las la-sort"></span> NGÀY</th>
-                              <th><span class="las la-sort"></span> THỜI GIAN</th>
-                              <th><span class="las la-sort"></span> LỚP</th>
+                              <th><span class="las la-sort"></span> CHƯƠNG TRÌNH</th>
+                              <th><span class="las la-sort"></span> KHAI GIẢNG</th>
+                              <th><span class="las la-sort"></span> GIỜ HỌC</th>
                               <th><span class="las la-sort"></span> PHÒNG</th>
                               <th><span class="las la-sort"></span> GIÁO VIÊN</th>
                               <th><span class="las la-sort"></span> THAO TÁC</th>
                           </tr>
                       </thead>
-                      <tbody *ngFor="let teacher of teacher">
+                      <tbody *ngFor="let timetable of timetable">
                           <tr>
-                              <td>{{teacher.id}}</td>
+                              <td>{{timetable.id}}</td>
+
                               <td>
-                                  <div class="client">
-                                     <div class="client-img bg-img" style="background-image: url({{teacher.image}})"></div>
-                                      <div class="client-info">
-                                          <h4>{{teacher.fullName}}</h4>
-                                          <small>{{teacher.email}}</small>
-                                      </div>
-                                  </div>
+                                {{timetable.course.program}}
                               </td>
                               <td>
-                                {{teacher.birthDay}}
+                                {{timetable.course.openning}}
                               </td>
                               <td>
-                                {{teacher.phone}}
+                                {{timetable.course.schedule}}
                               </td>
                               <td>
-                                {{teacher.address}}
+                                {{timetable.classroom}}
                               </td>
                               <td>
-                                  15/12/2022
+                                  {{timetable.teacher.fullName}}
                               </td>
                               <td>
                                   <div class="actions">
-                                    <button (click)="updateTeacher(teacher.id)" class="btn" type="submit"><span class="las la-edit"></span></button>
-                                    <button (click)="onDeleteTeacher(teacher.id)" class="btn" type="submit"><span class="las la-trash-alt"></span></button>
+                                    <!-- <button (click)="updateTeacher(teacher.id)" class="btn" type="submit"><span class="las la-edit"></span></button> -->
+                                    <button (click)="onDeleteTimetable(timetable.id)" class="btn" type="submit"><span class="las la-trash-alt"></span></button>
                                   </div>
                               </td>
                           </tr>

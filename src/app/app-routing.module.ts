@@ -42,6 +42,7 @@ import { BasicEnglishAdListComponent } from './pages/basic-english-ad-list/basic
 import { TeacherScheduleComponent } from './pages/teacher-schedule/teacher-schedule.component';
 import { AddTeacherScheduleComponent } from './pages/add-teacher-schedule/add-teacher-schedule.component';
 import { UpdateTeacherScheduleComponent } from './pages/update-teacher-schedule/update-teacher-schedule.component';
+import { AddTimetableComponent } from './pages/add-timetable/add-timetable.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -85,7 +86,8 @@ const routes: Routes = [
   {path: 'basic-english-ad-list', component: BasicEnglishAdListComponent},
   {path: 'teacher-schedule', component: TeacherScheduleComponent},
   {path: 'add-teacher-schedule/:id', component: AddTeacherScheduleComponent},
-  {path: 'update-teacher-schedule/:id', component: UpdateTeacherScheduleComponent}
+  {path: 'update-teacher-schedule/:id', component: UpdateTeacherScheduleComponent},
+  {path: 'add-timetable', component: AddTimetableComponent}
 ];
 
 @NgModule({

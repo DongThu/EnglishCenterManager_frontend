@@ -2,7 +2,8 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Teacher } from 'src/app/model/teacher';
-import { TeacherService } from 'src/app/service/teacher.service';
+import { TimeTable } from 'src/app/model/timetable';
+import { TimetableService } from 'src/app/service/timetable.service';
 
 @Component({
   selector: 'app-schedule',
@@ -10,22 +11,22 @@ import { TeacherService } from 'src/app/service/teacher.service';
   styleUrls: ['./schedule.component.css']
 })
 export class ScheduleComponent implements OnInit{
-  public teacher!: Teacher[];
+  public timetable!: TimeTable[];
 
   constructor(
-    private teacherService: TeacherService,
+    private timetableService: TimetableService,
     private router: Router
     ){
 
   }
   ngOnInit(){
-    this.getTeacher();
+    this.getTimeTable();
   }
 
-  public getTeacher(): void {
-    this.teacherService.getTeacher().subscribe(
-      (response: Teacher[]) => {
-        this.teacher = response;
+  public getTimeTable(): void {
+    this.timetableService.getTimeTable().subscribe(
+      (response: TimeTable[]) => {
+        this.timetable = response;
       },
       (error: HttpErrorResponse) => {
         alert(error.message);
@@ -33,14 +34,14 @@ export class ScheduleComponent implements OnInit{
     );
   }
 
-  updateTeacher(id: number){
-    this.router.navigate(['update-teacher', id]);
-  }
-  public onDeleteTeacher(teacherId: number): void {
-    this.teacherService.deleteTeacher(teacherId).subscribe(
+  // updateTeacher(id: number){
+  //   this.router.navigate(['update-teacher', id]);
+  // }
+  public onDeleteTimetable(timetableId: number): void {
+    this.timetableService.deleteTimeTable(timetableId).subscribe(
       (response: void) => {
         console.log(response);
-        this.getTeacher();
+        this.getTimeTable();
       },
       (error: HttpErrorResponse) => {
         alert(error.message);
