@@ -25,15 +25,26 @@ export class RegisterCourseService {
   }
 
 
+  public deleteRegisterListChild(Id: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiServerUrl}/register-course/delete/${Id}`);
+  }
+
 
   // Đăng ký khóa học bên user
   public Register(register: Register): Observable<Object> {
     return this.http.post<Register>(`${this.apiServerUrl}/api/v1/user/register`, register);
   }
 
+  public getListRegister(): Observable<Register[]> {
+    return this.http.get<Register[]>(`${this.apiServerUrl}/api/v1/user/all`);
+  }
+
+
+
+  // có thể bỏ
 //Quản lý đăng ký học viên
   public deleteRegister(registerId: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiServerUrl}/register/delete/${registerId}`);
+    return this.http.delete<void>(`${this.apiServerUrl}/api/v1/user/delete/${registerId}`);
   }
 
   public getCourse(): Observable<RegisterCourse[]> {

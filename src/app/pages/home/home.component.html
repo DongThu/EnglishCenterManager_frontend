@@ -14,19 +14,8 @@
           <div class="records table-responsive">
 
               <div class="record-header">
-                  <div class="add">
-                      <span>Entries</span>
-                      <select name="" id="">
-                          <option value="">ID</option>
-                      </select>
-                      <button>Thêm</button>
-                  </div>
-
                   <div class="browse">
                      <input type="search" placeholder="Search" class="record-search">
-                      <select name="" id="">
-                          <option value="">Status</option>
-                      </select>
                   </div>
               </div>
 
@@ -38,20 +27,21 @@
                               <th><span class="las la-sort"></span> TÊN</th>
                               <th><span class="las la-sort"></span> ĐỊA CHỈ</th>
                               <th><span class="las la-sort"></span> SĐT</th>
-                              <th><span class="las la-sort"></span> KHÓA HỌC</th>
-                              <th><span class="las la-sort"></span> LỊCH SỬ ĐĂNG KÝ</th>
+                              <th><span class="las la-sort"></span> SINH NHẬT</th>
+                              <!-- <th><span class="las la-sort"></span> LỊCH SỬ ĐĂNG KÝ</th> -->
                               <th><span class="las la-sort"></span> THAO TÁC</th>
                           </tr>
                       </thead>
-                      <!-- <tbody *ngFor="let register of register ">
+                      <tbody *ngFor="let register of register ">
+
                           <tr>
                               <td>{{register.id}}</td>
                               <td>
                                   <div class="client">
-                                      <div class="client-img bg-img" style="background-image: url(../../../assets/img/3.jpeg)"></div> 
+                                      <!-- <div class="client-img bg-img" style="background-image: url(../../../assets/img/3.jpeg)"></div> -->
                                       <div class="client-info">
-                                          <h4>{{register.userName}}</h4>
-                                          <small>{{register.email}}</small>
+                                          <h4>{{register.name}}</h4>
+                                          <small>{{register.username}}</small>
                                       </div>
                                   </div>
                               </td>
@@ -62,21 +52,21 @@
                                 {{register.phone}}
                               </td>
                               <td>
-                                {{register.courseType}}
+                                {{register.birthday}}
                               </td>
-                              <td>
+                              <!-- <td>
                                   15/12/2022
-                              </td>
+                              </td> -->
                               <td>
                                   <div class="actions">
-                                    <a href="">
+                                    <!-- <a href="">
                                       <button class="btn" type="submit"><span class="las la-edit"></span></button>
-                                    </a>
+                                    </a> -->
                                     <button (click)="onDeleteRegister(register.id)" class="btn" type="submit"><span class="las la-trash-alt"></span></button>
                                   </div>
                               </td>
                           </tr>
-                      </tbody> -->
+                      </tbody>
                   </table>
               </div>
 

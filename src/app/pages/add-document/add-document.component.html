@@ -1,0 +1,68 @@
+<app-navbar></app-navbar>
+<app-header></app-header>
+<div class="main-content">
+
+  <main>
+
+      <div class="page-header">
+        <h3>Thêm khóa học</h3>
+      </div>
+
+      <div class="page-content">
+
+          <div class="records table-responsive">
+            <form (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+                          <div class="record-header">
+                              <div class="add">
+                                <table>
+                                  <div  class="td_select">
+                                  <td><span>Tên tài liệu</span></td>
+                                    <td>
+                                      <input type="text" [(ngModel)]="document.nameD" name="nameD" id="nameD" required>
+
+                                    </td>
+                                  <td><span>Loại tài liệu</span></td>
+                                  <td>
+                                    <input type="text" [(ngModel)]="document.typeD" name="typeD" id="typeD" required>
+                                  </td>
+                                  <td><span>Nội dung</span></td>
+                                  <td>
+                                    <!-- <input type="file" [(ngModel)]="document.nameDocument" name="nameDocument" id="nameDocument" required> -->
+                                    <input style=" height: 30px; width: 350px;" type="file" name="nameDocument" (change)="onFileSelect($event)" />
+
+                                  </td>
+                                </div>
+                                </table>
+                              </div>
+                          </div>
+
+                        <div class="record-header">
+                          <div class="add">
+                            <table>
+                              <div  class="td_select">
+                              <!-- <td><span>Nội dung</span></td>
+                              <td><textarea name="" id="" cols="30" rows="2"></textarea></td>-->
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td><button  type="submit">Thêm</button></td>
+                            </div>
+                          </table>
+                          </div>
+                      </div>
+
+            </form>
+
+          </div>
+
+      </div>
+
+  </main>
+
+</div>
+

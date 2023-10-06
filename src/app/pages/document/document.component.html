@@ -19,7 +19,8 @@
                       <select name="" id="">
                           <option value="">ID</option>
                       </select>
-                      <button>Thêm</button>
+                      <a routerLink="/add-document"><button>Thêm</button></a>
+
                   </div>
 
                   <div class="browse">
@@ -42,24 +43,25 @@
 
                           </tr>
                       </thead>
-                      <tbody>
+                      <tbody *ngFor="let document of documents">
                           <tr>
-                              <td>#5033</td>
+                              <td>{{document.id}}</td>
                               <td>
-                                  khóa học giao tiếp
+                                {{document.nameD}}
                               </td>
                               <td>
-                                  giáo trình
+                                {{document.typeD}}
                               </td>
                               <td>
-                                 nội dung
+                                {{document.nameDocument}}
+                                <button class="btn"   (click)="downloadDocument(document.nameDocument)"><span class="las la-download"></span></button>
                               </td>
                            <td>
                             <div class="actions">
                               <a href="">
                                 <button class="btn" type="submit"><span class="las la-edit"></span></button>
                               </a>
-                              <button class="btn" type="submit"><span class="las la-trash-alt"></span></button>
+                              <button (click)="onDeleteDocument(document.id)" class="btn" type="submit"><span class="las la-trash-alt"></span></button>
                             </div>
                         </td>
                           </tr>

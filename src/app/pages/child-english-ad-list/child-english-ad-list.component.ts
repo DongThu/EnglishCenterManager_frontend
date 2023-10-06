@@ -34,4 +34,15 @@ export class ChildEnglishAdListComponent implements OnInit{
     );
   }
 
+  public onDeleteRegisterListChild(registerId: number): void {
+    this.registerCourseService.deleteRegisterListChild(registerId).subscribe(
+      (response: void) => {
+        console.log(response);
+        this.getRegisterListChild();
+      },
+      (error: HttpErrorResponse) => {
+        alert("Bạn không thể xóa người này!");
+      }
+    );
+  }
 }

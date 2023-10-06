@@ -43,6 +43,7 @@ import { TeacherScheduleComponent } from './pages/teacher-schedule/teacher-sched
 import { AddTeacherScheduleComponent } from './pages/add-teacher-schedule/add-teacher-schedule.component';
 import { UpdateTeacherScheduleComponent } from './pages/update-teacher-schedule/update-teacher-schedule.component';
 import { AddTimetableComponent } from './pages/add-timetable/add-timetable.component';
+import { AddDocumentComponent } from './pages/add-document/add-document.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -87,7 +88,8 @@ const routes: Routes = [
   {path: 'teacher-schedule', component: TeacherScheduleComponent},
   {path: 'add-teacher-schedule/:id', component: AddTeacherScheduleComponent},
   {path: 'update-teacher-schedule/:id', component: UpdateTeacherScheduleComponent},
-  {path: 'add-timetable', component: AddTimetableComponent}
+  {path: 'add-timetable', component: AddTimetableComponent},
+  {path: 'add-document', component: AddDocumentComponent}
 ];
 
 @NgModule({

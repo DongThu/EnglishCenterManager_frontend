@@ -56,6 +56,7 @@ import { AddTeacherScheduleComponent } from './pages/add-teacher-schedule/add-te
 import { UpdateTeacherScheduleComponent } from './pages/update-teacher-schedule/update-teacher-schedule.component';
 import { AddTimetableComponent } from './pages/add-timetable/add-timetable.component';
 import { TimetableService } from './service/timetable.service';
+import { AddDocumentComponent } from './pages/add-document/add-document.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -106,7 +107,8 @@ import { TimetableService } from './service/timetable.service';
     TeacherScheduleComponent,
     AddTeacherScheduleComponent,
     UpdateTeacherScheduleComponent,
-    AddTimetableComponent
+    AddTimetableComponent,
+    AddDocumentComponent
   ],
   imports: [
     BrowserModule,
