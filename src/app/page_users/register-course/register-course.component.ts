@@ -16,6 +16,7 @@ export class RegisterCourseComponent implements OnInit {
   id!: number;
   courses: Course = new Course();
   registerChild!: RegisterCourse;
+  loggedIn: boolean = false;
 
   constructor(
     private AddCourseService: AddCourseService,

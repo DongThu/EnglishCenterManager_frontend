@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Course } from 'src/app/model/course';
 import { AddCourseService } from 'src/app/service/add-course.service';
+import { LoginUserService } from 'src/app/service/login-user.service';
 
 @Component({
   selector: 'app-toiec',
@@ -11,16 +12,29 @@ import { AddCourseService } from 'src/app/service/add-course.service';
 })
 export class ToiecComponent implements OnInit{
   public courses!: Course[];
+  loggedIn: boolean = false;
 
   constructor(
     private AddCourseService: AddCourseService,
-    private router: Router
+    private router: Router,
+    private authService: LoginUserService
     ){
 
   }
-  ngOnInit(){
-    this.getCourse();
-  }
+  ngOnInit()
+  : void {
+//     this.getCourse();
+//     if(!localStorage.getItem('accessToken')){
+//       this.router.navigate(['/login-user']);
+//     }
+//     else {
+//       this.loggedIn = true;
+//       console.log(localStorage.getItem('accessToken'));
+// }
+}
+  // {
+  //   this.getCourse();
+  // }
 
   public getCourse(): void {
     this.AddCourseService.getCourse().subscribe(
@@ -33,5 +47,11 @@ export class ToiecComponent implements OnInit{
     );
   }
 
+  // handleLogout(){
+  //   this.authService.logout();
+  //   this.loggedIn = false;
+  //   // localStorage.removeItem('accessToken');
+  //   this.router.navigate(['/login-user']);
+  // }
 }
 

@@ -1,39 +1,39 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
 <body>
-    <div id="login">
-        <!-- <h3 class="text-center text-white pt-5">Login form</h3> -->
-        <div class="side-header">
-          <img style="width: 300px;" src="../../../assets/img/logo-trung-tam-hsk.png" alt="">
-      </div>
-        <div class="container">
-            <div id="login-row" class="row justify-content-center align-items-center">
-                <div id="login-column" class="col-md-6">
-                    <div id="login-box" class="col-md-12">
-                        <form id="login-form" class="form" action="" method="post">
-                            <h3 class="text-center text-success">Đăng nhập</h3>
-                            <div class="form-group">
-                                <label for="username" class="text-success">Email:</label><br>
-                                <input type="email" name="email" id="email" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="password" class="text-success">Password:</label><br>
-                                <input type="password" name="password" id="password" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="remember-me" class="text-success"><span>Ghi nhớ tôi</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
-                                <input type="submit" name="submit" class="btn btn-success btn-md" value="Đăng nhập">
-                            </div>
-                            <!-- <div id="register-link" class="text-right">
-                                <a href="#" class="text-info">Register here</a>
-                            </div> -->
-                        </form>
-                    </div>
-                </div>
+
+
+  <!-- <main id="main"> -->
+    <section class="h-100 h-custom" >
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-lg-8 col-xl-6">
+            <div class="card rounded-3">
+              <div class="card-body p-4 p-md-5">
+                <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2 text-center">Đăng nhập</h3>
+
+                <form [formGroup]="form" class="px-md-2">
+                  <div class="form-outline mb-4">
+                    <input type="text" name="username" id="username" class="form-control" formControlName="username"
+                    placeholder="Email" />
+                  </div>
+                  <div class="form-outline mb-4">
+                    <input type="password" name="password" id="password" class="form-control" formControlName="password" placeholder="Password" />
+                  </div>
+                  <!-- <div class="form-outline mb-4 row">
+                    <label class="checkbox col"><input class="input" type="checkbox">Ghi nhớ tôi</label>
+                    <label class="col">Nếu chưa có tài khoản vui lòng<a routerLink="/register"> đăng ký tại đây!</a></label>
+                  </div> -->
+
+                  <button [disabled]="form.invalid"
+                  (click)="onSubmit()"
+                  type="submit" class="btn btn-success btn-lg mb-1">Đăng nhập</button>
+                  <i></i>
+                </form>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
+    </section>
+  <!-- </main>End #main -->
 </body>
+

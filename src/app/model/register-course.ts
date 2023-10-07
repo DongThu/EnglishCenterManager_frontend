@@ -23,3 +23,15 @@ export class Auth {
     return this.password;
   }
 }
+
+export class AuthAd {
+  constructor(private usernameAd: string = '', private passwordAd: string = '') {}
+
+  getUsernameAd(): string {
+    return this.usernameAd;
+  }
+
+  getPasswordAd(): string {
+    return this.passwordAd;
+  }
+}

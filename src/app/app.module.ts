@@ -57,6 +57,7 @@ import { UpdateTeacherScheduleComponent } from './pages/update-teacher-schedule/
 import { AddTimetableComponent } from './pages/add-timetable/add-timetable.component';
 import { TimetableService } from './service/timetable.service';
 import { AddDocumentComponent } from './pages/add-document/add-document.component';
+import { NavbarUserComponent } from './layouts/navbar-user/navbar-user.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -108,7 +109,8 @@ import { AddDocumentComponent } from './pages/add-document/add-document.componen
     AddTeacherScheduleComponent,
     UpdateTeacherScheduleComponent,
     AddTimetableComponent,
-    AddDocumentComponent
+    AddDocumentComponent,
+    NavbarUserComponent
   ],
   imports: [
     BrowserModule,

@@ -1,23 +1,13 @@
-body {
-  margin: 0;
-  padding: 0;
-  background: var(--main-color);
-  height: 100vh;
+@media (min-width: 1025px) {
+  .h-custom {
+  height: 100vh !important;
+  }
 }
-#login .container #login-row #login-column #login-box {
-  margin-top: 120px;
-  max-width: 600px;
-  height: 320px;
-  border: 1px solid #9C9C9C;
-  background-color: #EAEAEA;
+.input{
+  height: 20px;
+  width: 20px;
 }
-#login .container #login-row #login-column #login-box #login-form {
-  padding: 20px;
-}
-#login .container #login-row #login-column #login-box #login-form #register-link {
-  margin-top: -85px;
-}
-.side-header{
-  position: relative;
-  top: 50px;
+body
+{
+  background: url("https://img.freepik.com/premium-photo/school-supplies-blue-background-school-teacher-day-concept-wooden-letters-table-with-copy-space_114311-297.jpg?size=626&ext=jpg&ga=GA1.2.186812330.1694421726&semt=ais");
 }

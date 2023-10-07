@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
-export class LoginUserService {
+export class LoginAdminService {
 
   constructor(private http: HttpClient, private router: Router) {}
 
@@ -58,7 +58,7 @@ export class LoginUserService {
               if (roles.includes('ADMIN')) {
                 this.router.navigate(['/home']);
               } else {
-                this.router.navigate(['/home-user']);
+                this.router.navigate(['/']);
               }
             });
           }
