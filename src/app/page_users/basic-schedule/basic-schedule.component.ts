@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Course } from 'src/app/model/course';
 import { LoginUserService } from 'src/app/service/login-user.service';
+import { AddCourseService } from 'src/app/service/add-course.service';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-basic-schedule',
@@ -9,25 +12,33 @@ import { LoginUserService } from 'src/app/service/login-user.service';
 })
 export class BasicScheduleComponent implements OnInit{
 
-  // loggedIn: boolean = false;
+  public courses!: Course[];
 
-  constructor(private authService: LoginUserService, private router: Router){}
+  constructor(
+    private AddCourseService: AddCourseService,
+    private router: Router,
+    ){
 
-  ngOnInit(): void {
-  //     if(!localStorage.getItem('accessToken')){
-  //       this.router.navigate(['/login-user']);
-  //     }
-  //     else {
-  //       this.loggedIn = true;
-  //       console.log(localStorage.getItem('accessToken'));
-  // }
-}
+  }
+  ngOnInit(){
+    this.getCourse();
 
-// handleLogout(){
-//   this.authService.logout();
-//   this.loggedIn = false;
-//   // localStorage.removeItem('accessToken');
-//   this.router.navigate(['/login-user']);
-// }
+
+  }
+
+  public getCourse(): void {
+    this.AddCourseService.getCourse5().subscribe(
+      (response: Course[]) => {
+        this.courses = response;
+      },
+      (error: HttpErrorResponse) => {
+        alert(error.message);
+      }
+    );
+  }
+
+  updateCourse(id: number){
+    this.router.navigate(['register-course', id]);
+  }
 
 }

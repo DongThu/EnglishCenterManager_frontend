@@ -58,6 +58,10 @@ import { AddTimetableComponent } from './pages/add-timetable/add-timetable.compo
 import { TimetableService } from './service/timetable.service';
 import { AddDocumentComponent } from './pages/add-document/add-document.component';
 import { NavbarUserComponent } from './layouts/navbar-user/navbar-user.component';
+import { AddYoungEnglishComponent } from './pages/add-young-english/add-young-english.component';
+import { AddToiecComponent } from './pages/add-toiec/add-toiec.component';
+import { AddIeltsComponent } from './pages/add-ielts/add-ielts.component';
+import { AddBasicEnglishComponent } from './pages/add-basic-english/add-basic-english.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -110,7 +114,11 @@ import { NavbarUserComponent } from './layouts/navbar-user/navbar-user.component
     UpdateTeacherScheduleComponent,
     AddTimetableComponent,
     AddDocumentComponent,
-    NavbarUserComponent
+    NavbarUserComponent,
+    AddYoungEnglishComponent,
+    AddToiecComponent,
+    AddIeltsComponent,
+    AddBasicEnglishComponent
   ],
   imports: [
     BrowserModule,

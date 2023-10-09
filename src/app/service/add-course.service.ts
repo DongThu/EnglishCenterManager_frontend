@@ -13,7 +13,23 @@ export class AddCourseService {
 
   // quản lý khóa học tiếng Anh thiếu nhi
   public getCourse(): Observable<Course[]> {
-    return this.http.get<Course[]>(`${this.apiServerUrl}/course/all`);
+    return this.http.get<Course[]>(`${this.apiServerUrl}/course/getEnglish`);
+  }
+
+  public getCourse2(): Observable<Course[]> {
+    return this.http.get<Course[]>(`${this.apiServerUrl}/course/getEnglish2`);
+  }
+
+  public getCourse3(): Observable<Course[]> {
+    return this.http.get<Course[]>(`${this.apiServerUrl}/course/getEnglish3`);
+  }
+
+  public getCourse4(): Observable<Course[]> {
+    return this.http.get<Course[]>(`${this.apiServerUrl}/course/getEnglish4`);
+  }
+
+  public getCourse5(): Observable<Course[]> {
+    return this.http.get<Course[]>(`${this.apiServerUrl}/course/getEnglish5`);
   }
 
   public addCourse(course: Course): Observable<Object> {

@@ -1,4 +1,5 @@
 export class Course{
+  id!:  number;
   course_id!: number;
   program!: String ;
   level!: String ;

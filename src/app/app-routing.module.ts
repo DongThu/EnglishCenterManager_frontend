@@ -44,6 +44,10 @@ import { AddTeacherScheduleComponent } from './pages/add-teacher-schedule/add-te
 import { UpdateTeacherScheduleComponent } from './pages/update-teacher-schedule/update-teacher-schedule.component';
 import { AddTimetableComponent } from './pages/add-timetable/add-timetable.component';
 import { AddDocumentComponent } from './pages/add-document/add-document.component';
+import { AddYoungEnglishComponent } from './pages/add-young-english/add-young-english.component';
+import { AddToiecComponent } from './pages/add-toiec/add-toiec.component';
+import { AddIeltsComponent } from './pages/add-ielts/add-ielts.component';
+import { AddBasicEnglishComponent } from './pages/add-basic-english/add-basic-english.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -89,7 +93,11 @@ const routes: Routes = [
   {path: 'add-teacher-schedule/:id', component: AddTeacherScheduleComponent},
   {path: 'update-teacher-schedule/:id', component: UpdateTeacherScheduleComponent},
   {path: 'add-timetable', component: AddTimetableComponent},
-  {path: 'add-document', component: AddDocumentComponent}
+  {path: 'add-document', component: AddDocumentComponent},
+  {path: 'add-young-english', component: AddYoungEnglishComponent},
+  {path: 'add-toiec', component: AddToiecComponent},
+  {path: 'add-ielts', component: AddIeltsComponent},
+  {path: 'add-basic-english', component: AddBasicEnglishComponent}
 ];
 
 @NgModule({
