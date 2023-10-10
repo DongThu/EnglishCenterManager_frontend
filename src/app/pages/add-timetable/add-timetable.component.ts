@@ -35,7 +35,7 @@ export class AddTimetableComponent implements OnInit{
   }
 
   public getCourse(): void {
-    this.AddCourseService.getCourse().subscribe(
+    this.AddCourseService.getCourseAll().subscribe(
       (response: Course[]) => {
         this.courses = response;
         console.log(this.courses)

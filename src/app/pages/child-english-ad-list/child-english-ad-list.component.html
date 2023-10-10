@@ -10,32 +10,38 @@
         <ul>
           <li class="dropdown"><a routerLink="/course"><span>Tiếng Anh thiếu nhi</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a routerLink="/course">Quản lý lịch học</a></li>
-              <li><a routerLink="/child-english-ad-list">Danh sách đăng ký khóa học</a></li>
+              <!-- <li><a routerLink="/course">Quản lý lịch học</a></li> -->
+              <!-- <li><a routerLink="/child-english-ad-list">Danh sách đăng ký khóa học</a></li> -->
             </ul>
           </li>
           <li class="dropdown"><a routerLink="/young-english-ad"><span>Tiếng Anh thiếu niên</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a routerLink="/young-english-ad">Quản lý lịch học</a></li>
-              <li><a routerLink="/young-english-ad-list">Danh sách đăng ký khóa học</a></li>
+              <!-- <li><a routerLink="/young-english-ad">Quản lý lịch học</a></li> -->
+              <!-- <li><a routerLink="/young-english-ad-list">Danh sách đăng ký khóa học</a></li> -->
             </ul>
           </li>
           <li class="dropdown"><a routerLink="/ielts-english-ad"><span>Luyện thi IELTS</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a routerLink="/ielts-english-ad">Quản lý lịch học</a></li>
-              <li><a routerLink="/ielts-english-ad-list">Danh sách đăng ký khóa học</a></li>
+              <!-- <li><a routerLink="/ielts-english-ad">Quản lý lịch học</a></li> -->
+              <!-- <li><a routerLink="/ielts-english-ad-list">Danh sách đăng ký khóa học</a></li> -->
             </ul>
           </li>
           <li class="dropdown"><a routerLink="/toeic-english-ad"><span>Luyện thi TOEFL-TOEIC</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a routerLink="/toeic-english-ad">Quản lý lịch học</a></li>
-              <li><a routerLink="/toeic-english-ad-list">Danh sách đăng ký khóa học</a></li>
+              <!-- <li><a routerLink="/toeic-english-ad">Quản lý lịch học</a></li> -->
+              <!-- <li><a routerLink="/toeic-english-ad-list">Danh sách đăng ký khóa học</a></li> -->
             </ul>
           </li>
           <li class="dropdown"><a routerLink="/basic-english-ad"><span>Giao tiếp - Căn Bản</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a routerLink="/basic-english-ad">Quản lý lịch học</a></li>
-              <li><a routerLink="/basic-english-ad-list">Danh sách đăng ký khóa học</a></li>
+              <!-- <li><a routerLink="/basic-english-ad">Quản lý lịch học</a></li> -->
+              <!-- <li><a routerLink="/basic-english-ad-list">Danh sách đăng ký khóa học</a></li> -->
+            </ul>
+          </li>
+          <li class="dropdown"><a routerLink="/child-english-ad-list"><span>Danh sách đăng ký khóa học</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <!-- <li><a routerLink="/course">Quản lý lịch học</a></li> -->
+              <!-- <li><a routerLink="/child-english-ad-list">Danh sách đăng ký khóa học</a></li> -->
             </ul>
           </li>
         </ul>
@@ -66,6 +72,7 @@
                   <table width="100%">
                       <thead>
                           <tr>
+                              <th><span class="las la-sort"></span> TIẾNG ANH</th>
                               <th><span class="las la-sort"></span> CHƯƠNG TRÌNH</th>
                               <th><span class="las la-sort"></span> CẤP ĐỘ</th>
                               <th><span class="las la-sort"></span> HỌC PHÍ</th>
@@ -79,6 +86,9 @@
                       </thead>
                       <tbody *ngFor="let childRegister of childRegisterList">
                           <tr>
+                              <td>
+                                {{childRegister.course.english.englishName}}
+                            </td>
                               <td>
                                   {{childRegister.course.program}}
                               </td>

@@ -7,6 +7,9 @@ export class Course{
   schedule!: String;
   openning!: Date ;
   time!: String ;
+  english!: {
+    englishName: String;
+};
 }
 
 export class ChildSchedule{
@@ -16,6 +19,9 @@ export class ChildSchedule{
     phone:number;
   };
   course!:{
+    english: {
+      englishName: String;
+  };
     program: String ;
     level: String ;
     price: number;

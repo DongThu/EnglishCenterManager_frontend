@@ -1,12 +1,13 @@
 export class TimeTable {
   id!: number;
-  classroom!: String;
+  classroom!: string;
   course!:{
-    program: String;
+    program: string;
     openning: Date;
-    schedule: String;
+    schedule: string;
   };
   teacher!: {
+    id: number;
     fullName: string;
   };
 }

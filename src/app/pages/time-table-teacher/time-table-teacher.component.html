@@ -1,0 +1,70 @@
+<app-navbar></app-navbar>
+<app-header></app-header>
+<div class="main-content">
+
+  <main>
+
+      <div class="page-header">
+          <h1>Quản lý thời khóa biểu</h1>
+          <!-- <small>Home / Dashboard</small> -->
+      </div>
+
+      <div class="page-content">
+
+          <div class="records table-responsive">
+
+              <div *ngIf="timetables && timetables.length > 0">
+                  <table width="100%">
+                      <thead>
+                          <tr>
+                              <th>#</th>
+                              <th><span class="las la-sort"></span> CHƯƠNG TRÌNH</th>
+                              <th><span class="las la-sort"></span> KHAI GIẢNG</th>
+                              <th><span class="las la-sort"></span> GIỜ HỌC</th>
+                              <th><span class="las la-sort"></span> PHÒNG</th>
+                              <th><span class="las la-sort"></span> GIÁO VIÊN</th>
+                              <th><span class="las la-sort"></span> THAO TÁC</th>
+                          </tr>
+                      </thead>
+                      <tbody *ngFor="let timetable of timetables">
+                          <tr>
+                              <td>{{timetable.id}}</td>
+
+                              <td>
+                                {{timetable.course.program}}
+                              </td>
+                              <td>
+                                {{timetable.course.openning}}
+                              </td>
+                              <td>
+                                {{timetable.course.schedule}}
+                              </td>
+                              <td>
+                                {{timetable.classroom}}
+                              </td>
+                              <td>
+                                  {{timetable.teacher.fullName}}
+                              </td>
+                              <td>
+                                  <div class="actions">
+                                    <!-- <button (click)="updateTeacher(teacher.id)" class="btn" type="submit"><span class="las la-edit"></span></button> -->
+                                    <!-- <button (click)="onDeleteTimetable(timetable.id)" class="btn" type="submit"><span class="las la-trash-alt"></span></button> -->
+                                  </div>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+
+              <div *ngIf="timetables && timetables.length === 0">
+                <h3>Không có thời khóa biểu cho giảng viên này.</h3>
+              </div>
+
+          </div>
+
+      </div>
+
+  </main>
+
+</div>
+

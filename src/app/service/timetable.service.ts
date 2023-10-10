@@ -15,6 +15,10 @@ export class TimetableService {
     public getTimeTable(): Observable<TimeTable[]> {
       return this.http.get<TimeTable[]>(`${this.apiServerUrl}/timetable/all`);
     }
+    // thời khóa biểu giảng viên
+    public getTimeTableTeacher(teacherId: number): Observable<TimeTable[]> {
+      return this.http.get<TimeTable[]>(`${this.apiServerUrl}/timetable/teacher/${teacherId}`);
+    }
 
     public addTimeTable(timetable: TimeTableInput): Observable<Object> {
       return this.http.post<TimeTableInput>(`${this.apiServerUrl}/timetable`, timetable);

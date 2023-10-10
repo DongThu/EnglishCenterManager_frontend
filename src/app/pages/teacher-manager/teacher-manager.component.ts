@@ -2,7 +2,9 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Teacher } from 'src/app/model/teacher';
+import { TimeTable } from 'src/app/model/timetable';
 import { TeacherService } from 'src/app/service/teacher.service';
+import { TimetableService } from 'src/app/service/timetable.service';
 
 @Component({
   selector: 'app-teacher-manager',
@@ -11,10 +13,12 @@ import { TeacherService } from 'src/app/service/teacher.service';
 })
 export class TeacherManagerComponent implements OnInit{
   public teacher!: Teacher[];
+  timetables!: TimeTable[];
 
   constructor(
     private teacherService: TeacherService,
-    private router: Router
+    private router: Router,
+    private timetableService: TimetableService
     ){
 
   }
@@ -39,6 +43,15 @@ export class TeacherManagerComponent implements OnInit{
 
   addTeacherSchedule(id: number){
     this.router.navigate(['add-teacher-schedule', id]);
+  }
+
+  findTeacherSchedule(teacherId: number): void {
+    this.router.navigate(['/time-table-teacher', teacherId]);
+  }
+
+  getTimetableByTeacherId(teacherId: number): void {
+    this.timetableService.getTimeTableTeacher(teacherId)
+      .subscribe(timetables => this.timetables = timetables);
   }
   public onDeleteTeacher(teacherId: number): void {
     this.teacherService.deleteTeacher(teacherId).subscribe(

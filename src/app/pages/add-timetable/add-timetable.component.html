@@ -18,9 +18,9 @@
                                   <div  class="td_select">
                                   <td><span>Chương trình học</span></td>
                                     <td>
-                                        <select  [(ngModel)]="timetable.courseId" style="width: 300px;"   name="program" id="program" class="form-select" aria-label="Default select example" required>
+                                        <select  [(ngModel)]="timetable.courseId" style="width: 350px;"   name="program" id="program" class="form-select" aria-label="Default select example" required>
                                           <option value="1" disabled >-- Chọn khóa học --</option>
-                                          <option  *ngFor="let course of courses" value="{{course.course_id}}">{{course.program}}, {{course.openning}}</option>
+                                          <option  *ngFor="let course of courses" value="{{course.course_id}}">{{course.english.englishName}} | {{course.program}} | {{course.openning}}</option>
                                         </select>
                                         <!-- <input type="text" [(ngModel)]="timetable.courseId" name="id" id="id"> -->
                                     </td>
@@ -34,7 +34,7 @@
                                 <div  class="td_select">
                                   <td><span>Phòng học</span></td>
                                   <td>
-                                    <select [(ngModel)]="timetable.classroom" name="classroom" id="classroom">
+                                    <select [(ngModel)]="timetable.classroom" style="width: 350px;" name="classroom" id="classroom">
                                         <option disabled >-- Chọn phòng --</option>
                                         <option value="P01">P01</option>
                                         <option value="P02">P02</option>
@@ -59,7 +59,7 @@
                               <div  class="td_select">
                                 <td><span>Giảng viên</span></td>
                                 <td>
-                                    <select [(ngModel)]="timetable.teacherId"  name="fullName" id="fullName" class="form-select" aria-label="Default select example" required>
+                                    <select [(ngModel)]="timetable.teacherId" style="width: 350px;" name="fullName" id="fullName" class="form-select" aria-label="Default select example" required>
 
                                       <option value="1" disabled >-- Chọn giảng viên --</option>
                                       <option value="{{teachers.id}}" *ngFor="let teachers of teachers">{{teachers.fullName}}</option>

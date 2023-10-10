@@ -16,6 +16,10 @@ export class AddCourseService {
     return this.http.get<Course[]>(`${this.apiServerUrl}/course/getEnglish`);
   }
 
+  public getCourseAll(): Observable<Course[]> {
+    return this.http.get<Course[]>(`${this.apiServerUrl}/course/all`);
+  }
+
   public getCourse2(): Observable<Course[]> {
     return this.http.get<Course[]>(`${this.apiServerUrl}/course/getEnglish2`);
   }

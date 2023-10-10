@@ -62,6 +62,7 @@ import { AddYoungEnglishComponent } from './pages/add-young-english/add-young-en
 import { AddToiecComponent } from './pages/add-toiec/add-toiec.component';
 import { AddIeltsComponent } from './pages/add-ielts/add-ielts.component';
 import { AddBasicEnglishComponent } from './pages/add-basic-english/add-basic-english.component';
+import { TimeTableTeacherComponent } from './pages/time-table-teacher/time-table-teacher.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -118,7 +119,8 @@ import { AddBasicEnglishComponent } from './pages/add-basic-english/add-basic-en
     AddYoungEnglishComponent,
     AddToiecComponent,
     AddIeltsComponent,
-    AddBasicEnglishComponent
+    AddBasicEnglishComponent,
+    TimeTableTeacherComponent
   ],
   imports: [
     BrowserModule,
