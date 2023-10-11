@@ -13,6 +13,7 @@ import { TimetableService } from 'src/app/service/timetable.service';
 export class TimeTableTeacherComponent implements OnInit {
   timetables!: TimeTable[];
   teacherId!: number;
+  teacherEmail!: string;
   constructor(
     private route: ActivatedRoute,
     private timetableService: TimetableService) { }
@@ -26,5 +27,20 @@ export class TimeTableTeacherComponent implements OnInit {
   getTimetableByTeacherId(teacherId: number): void {
     this.timetableService.getTimeTableTeacher(teacherId)
       .subscribe(timetables => this.timetables = timetables);
+  }
+
+  sendEmail() {
+    this.timetableService.sendTimetableEmail(this.teacherId)
+      .subscribe(
+        response => {
+          alert('Email gửi thành công!');
+          console.log('Email gửi thành công!');
+
+        },
+        error => {
+          alert('Không gửi được email!');
+          console.log('Lỗi khi gửi email:', error);
+        }
+      );
   }
 }

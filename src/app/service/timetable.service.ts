@@ -36,6 +36,20 @@ export class TimetableService {
       return this.http.delete<void>(`${this.apiServerUrl}/timetable/delete/${timetableId}`);
     }
 
+    // gửi email thời khóa biểu
+    // sendTimetableEmail(teacherEmail: string, timetables: TimeTable[]) {
+    //   const emailData = {
+    //     teacherEmail: teacherEmail,
+    //     timetables: timetables
+    //   };
+
+    //   return this.http.post(this.apiServerUrl + '/send-email', emailData);
+    // }
+
+    public sendTimetableEmail(teacherId: number): Observable<TimeTable[]> {
+      return this.http.post<TimeTable[]>(`${this.apiServerUrl}/timetable/sendEmail/${teacherId}`, teacherId);
+    }
+
   }
 
 

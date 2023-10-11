@@ -23,7 +23,6 @@
                               <th><span class="las la-sort"></span> GIỜ HỌC</th>
                               <th><span class="las la-sort"></span> PHÒNG</th>
                               <th><span class="las la-sort"></span> GIÁO VIÊN</th>
-                              <th><span class="las la-sort"></span> THAO TÁC</th>
                           </tr>
                       </thead>
                       <tbody *ngFor="let timetable of timetables">
@@ -45,14 +44,14 @@
                               <td>
                                   {{timetable.teacher.fullName}}
                               </td>
-                              <td>
-                                  <div class="actions">
-                                    <!-- <button (click)="updateTeacher(teacher.id)" class="btn" type="submit"><span class="las la-edit"></span></button> -->
-                                    <!-- <button (click)="onDeleteTimetable(timetable.id)" class="btn" type="submit"><span class="las la-trash-alt"></span></button> -->
-                                  </div>
-                              </td>
+
                           </tr>
                       </tbody>
+                      <!-- <tfoot> -->
+
+                          <button style="position: relative; left: 1115px;" type="button" class="btn btn-primary" (click)="sendEmail()">Gửi mail  <span class="las la-paper-plane"></span></button>
+
+                      <!-- </tfoot> -->
                   </table>
               </div>
 
