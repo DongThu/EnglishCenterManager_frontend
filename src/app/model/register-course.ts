@@ -22,6 +22,7 @@ export class Auth {
   getPassword(): string {
     return this.password;
   }
+
 }
 
 export class AuthAd {

@@ -24,7 +24,9 @@ export class RegisterCourseService {
     return this.http.get<ChildSchedule[]>(`${this.apiServerUrl}/register-course/all`);
   }
 
-
+  public getRegisterUserChild(id: number): Observable<ChildSchedule[]> {
+    return this.http.get<ChildSchedule[]>(`${this.apiServerUrl}/register-course/user/${id}`);
+  }
   public deleteRegisterListChild(Id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiServerUrl}/register-course/delete/${Id}`);
   }
@@ -39,7 +41,13 @@ export class RegisterCourseService {
     return this.http.get<Register[]>(`${this.apiServerUrl}/api/v1/user/all`);
   }
 
+  public getUserById(id: number): Observable<Register>{
+    return this.http.get<Register>(`${this.apiServerUrl}/api/v1/user/${id}`);
+  }
 
+  public getUserByEmail(username: String){
+    return this.http.get(`${this.apiServerUrl}/api/v1/user/find/username/${username}`);
+  }
 
   // có thể bỏ
 //Quản lý đăng ký học viên

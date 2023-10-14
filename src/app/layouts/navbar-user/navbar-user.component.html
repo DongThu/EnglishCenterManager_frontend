@@ -28,7 +28,13 @@
             <li><a  routerLink="/basic-schedule">Tiếng Anh Căn Bản - Giao tiếp & Tiếng Anh cho người đi làm</a></li>
           </ul>
         </li>
-        <li><a *ngIf="loggedIn" routerLink="">Hồ sơ cá nhân</a></li>
+        <li *ngIf="loggedIn" class="dropdown"><a routerLink="/user-course-manager"><span>Hồ sơ cá nhân</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a routerLink="/user-course-manager">Khóa học của bạn</a></li>
+            <li><a routerLink="/young-schedule">Tài liệu học tập</a></li>
+            <li><a routerLink="/ielts-schedule">Thanh toán</a></li>
+          </ul>
+        </li>
         <li><a routerLink="/contact">Liên hệ</a></li>
         <li><a *ngIf="!loggedIn" routerLink="/login-user">Đăng nhập</a></li>
         <li><a *ngIf="loggedIn" (click)="handleLogout()">Đăng xuất</a></li>

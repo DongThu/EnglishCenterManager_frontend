@@ -49,6 +49,7 @@ import { AddToiecComponent } from './pages/add-toiec/add-toiec.component';
 import { AddIeltsComponent } from './pages/add-ielts/add-ielts.component';
 import { AddBasicEnglishComponent } from './pages/add-basic-english/add-basic-english.component';
 import { TimeTableTeacherComponent } from './pages/time-table-teacher/time-table-teacher.component';
+import { UserCourseManagerComponent } from './page_users/user-course-manager/user-course-manager.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -99,7 +100,8 @@ const routes: Routes = [
   {path: 'add-toiec', component: AddToiecComponent},
   {path: 'add-ielts', component: AddIeltsComponent},
   {path: 'add-basic-english', component: AddBasicEnglishComponent},
-  {path: 'time-table-teacher/:teacherId', component: TimeTableTeacherComponent}
+  {path: 'time-table-teacher/:teacherId', component: TimeTableTeacherComponent},
+  {path: 'user-course-manager', component: UserCourseManagerComponent}
 ];
 
 @NgModule({

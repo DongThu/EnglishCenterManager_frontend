@@ -63,6 +63,7 @@ import { AddToiecComponent } from './pages/add-toiec/add-toiec.component';
 import { AddIeltsComponent } from './pages/add-ielts/add-ielts.component';
 import { AddBasicEnglishComponent } from './pages/add-basic-english/add-basic-english.component';
 import { TimeTableTeacherComponent } from './pages/time-table-teacher/time-table-teacher.component';
+import { UserCourseManagerComponent } from './page_users/user-course-manager/user-course-manager.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -120,7 +121,8 @@ import { TimeTableTeacherComponent } from './pages/time-table-teacher/time-table
     AddToiecComponent,
     AddIeltsComponent,
     AddBasicEnglishComponent,
-    TimeTableTeacherComponent
+    TimeTableTeacherComponent,
+    UserCourseManagerComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,172 @@
+<body>
+  <!-- ======= Header ======= -->
+  <!-- <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto">
+        <a href="index.html">
+          <img  src="../../../assets/img/logo-trung-tam-hsk.png" alt="">
+        </a></h1>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a routerLink="/home-user">Trang chủ</a></li>
+          <li><a routerLink="/about">Giới thiệu</a></li>
+          <li class="dropdown"><a routerLink="/child-english"><span>Chương trình học</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a routerLink="/child-english">Tiếng Anh thiếu nhi</a></li>
+              <li><a routerLink="/young-english">Tiếng Anh thiếu niên</a></li>
+              <li><a routerLink="/ielts">Luyện thi IELTS</a></li>
+              <li><a routerLink="/toiec">Luyện thi TOEFL - TOEIC & CHỨNG CHỈ QUỐC TẾ</a></li>
+              <li><a routerLink="/basic-english">Tiếng Anh Căn Bản - Giao tiếp & Tiếng Anh cho người đi làm</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a routerLink="/child-schedule"><span>Lịch Khai Giảng</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a routerLink="/child-schedule">Tiếng Anh thiếu nhi</a></li>
+              <li><a routerLink="/young-schedule">Tiếng Anh thiếu niên</a></li>
+              <li><a routerLink="/ielts-schedule">Luyện thi IELTS</a></li>
+              <li><a routerLink="/toiec-schedule">Luyện thi TOEFL - TOEIC & CHỨNG CHỈ QUỐC TẾ</a></li>
+              <li><a routerLink="/basic-schedule">Tiếng Anh Căn Bản - Giao tiếp & Tiếng Anh cho người đi làm</a></li>
+            </ul>
+          </li>
+          <li><a routerLink="/contact">Liên hệ</a></li>
+          <li><a *ngIf="!loggedIn" routerLink="/login-user">Đăng nhập</a></li>
+          <li><a *ngIf="loggedIn" (click)="handleLogout()">Đăng xuất</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header> -->
+  <!-- End Header -->
+  <app-navbar-user></app-navbar-user>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero-child"  class="d-flex justify-content-center align-items-center">
+    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+      <h1>THỜI KHÓA BIỂU LỚP HỌC CỦA BẠN</h1>
+    </div>
+  </section><!-- End Hero -->
+    <main id="main">
+
+      <!-- ======= Popular Courses Section ======= -->
+      <section id="popular-courses" class="courses">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <!-- <h2>Khóa học</h2> -->
+            <p>KHÓA HỌC CỦA BẠN</p>
+          </div>
+
+          <div class="row" data-aos="zoom-in" data-aos-delay="100">
+            <div class="records table-responsive">
+
+            <div>
+              <table width="100%" >
+                <thead >
+                    <tr >
+                      <th><span class="las la-sort"></span> TIẾNG ANH</th>
+                      <th><span class="las la-sort"></span> CHƯƠNG TRÌNH</th>
+                      <th><span class="las la-sort"></span> CẤP ĐỘ</th>
+                      <th><span class="las la-sort"></span> HỌC PHÍ</th>
+                      <th><span class="las la-sort"></span> LỊCH HỌC</th>
+                      <th><span class="las la-sort"></span> NGÀY KHAI GIẢNG</th>
+                      <th><span class="las la-sort"></span> EMAIL</th>
+                      <th><span class="las la-sort"></span> SĐT</th>
+                      <th ></th>
+            </thead>
+                <tbody *ngFor="let class of user">
+                  <tr>
+                    <td>
+                      {{class.course.english.englishName}}
+                  </td>
+                    <td>
+                        {{class.course.program}}
+                    </td>
+                    <td>
+                        {{class.course.level}}
+                    </td>
+
+                    <td>
+                        {{class.course.price | currency:'VND'}}
+                    </td>
+                    <td>
+                       {{class.course.schedule}}
+                    </td>
+                    <td>
+                    {{class.course.openning}}
+                   </td>
+
+                   <td>
+                    {{class.user.username}}
+                   </td>
+                   <td>
+                    {{class.user.phone}}
+                   </td>
+                  </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <br><br><br>
+    <section id="popular-courses" class="courses">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <!-- <h2>Khóa học</h2> -->
+          <p>THỜI KHÓA BIỂU</p>
+        </div>
+
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+          <div class="records table-responsive">
+
+          <div>
+            <table width="100%" >
+              <thead >
+                  <tr >
+                    <!-- <th><span class="las la-sort"></span> TIẾNG ANH</th> -->
+                    <th><span class="las la-sort"></span> CHƯƠNG TRÌNH</th>
+                    <!-- <th><span class="las la-sort"></span> CẤP ĐỘ</th> -->
+                    <!-- <th><span class="las la-sort"></span> HỌC PHÍ</th> -->
+                    <th><span class="las la-sort"></span> NGÀY KHAI GIẢNG</th>
+                    <th><span class="las la-sort"></span> LỊCH HỌC</th>
+                    <th><span class="las la-sort"></span> PHÒNG HỌC</th>
+                    <th><span class="las la-sort"></span> GIÁO VIÊN</th>
+                    <th ></th>
+          </thead>
+          <tbody *ngIf="timetables" >
+            <tr>
+                <!-- <td>{{timetables.id}}</td> -->
+
+                <td>
+                  {{timetables.course.program}}
+                </td>
+                <td>
+                  {{timetables.course.openning}}
+                </td>
+                <td>
+                  {{timetables.course.schedule}}
+                </td>
+                <td>
+                  {{timetables.classroom}}
+                </td>
+                <td>
+                    {{timetables.teacher.fullName}}
+                </td>
+
+            </tr>
+        </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+  <app-footer></app-footer>
+  </body>
+
+
+
+

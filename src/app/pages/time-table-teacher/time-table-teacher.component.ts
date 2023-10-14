@@ -1,7 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Teacher } from 'src/app/model/teacher';
 import { TimeTable } from 'src/app/model/timetable';
 import { TimetableService } from 'src/app/service/timetable.service';
 
