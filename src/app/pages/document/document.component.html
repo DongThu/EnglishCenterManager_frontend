@@ -38,7 +38,7 @@
                               <th>#</th>
                               <th><span class="las la-sort"></span> TÊN</th>
                               <th><span class="las la-sort"></span> LOẠI</th>
-                              <th><span class="las la-sort"></span> NỘI DUNG</th>
+                              <!-- <th><span class="las la-sort"></span> NỘI DUNG</th> -->
                               <th><span class="las la-sort"></span> THAO TÁC</th>
 
                           </tr>
@@ -47,20 +47,20 @@
                           <tr>
                               <td>{{document.id}}</td>
                               <td>
-                                {{document.nameD}}
+                                {{document.nameD. englishName}}
                               </td>
-                              <td>
+                              <!-- <td>
                                 {{document.typeD}}
-                              </td>
+                              </td> -->
                               <td>
                                 {{document.nameDocument}}
                                 <button class="btn"   (click)="downloadDocument(document.nameDocument)"><span class="las la-download"></span></button>
                               </td>
                            <td>
                             <div class="actions">
-                              <a href="">
+                              <!-- <a href="">
                                 <button class="btn" type="submit"><span class="las la-edit"></span></button>
-                              </a>
+                              </a> -->
                               <button (click)="onDeleteDocument(document.id)" class="btn" type="submit"><span class="las la-trash-alt"></span></button>
                             </div>
                         </td>

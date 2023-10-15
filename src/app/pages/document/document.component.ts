@@ -1,7 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ManagerDocument } from 'src/app/model/document';
+import { English, ManagerDocument } from 'src/app/model/document';
 import { DocumentService } from 'src/app/service/document.service';
 
 @Component({
@@ -11,7 +11,8 @@ import { DocumentService } from 'src/app/service/document.service';
 })
 export class DocumentComponent implements OnInit{
   public documents!: ManagerDocument[];
-  // nameDocument!: ManagerDocument
+
+
   constructor(
     private documentService: DocumentService,
     private router: Router

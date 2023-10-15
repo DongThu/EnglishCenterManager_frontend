@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { TimeTable, TimeTableInput } from '../model/timetable';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -28,6 +28,13 @@ export class TimetableService {
       return this.http.get<TimeTable>(`${this.apiServerUrl}/timetable/${id}`);
     }
 
+    public findByCourseId(id: number){
+      return this.http.get(`${this.apiServerUrl}/timetable/find/timetable/${id}`).pipe(
+        map((response: any) => {
+          return Number(response); // Chuyển đổi kết quả trả về thành kiểu number
+        })
+      );
+    }
     // public updateTimeTable(id: number, teacher: TimeTable): Observable<Object>{
     //   return this.http.put(`${this.apiServerUrl}/teacher/update/${id}`, teacher);
     // }

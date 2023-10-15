@@ -1,6 +1,7 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ManagerDocument, ManagerDocumentUp } from 'src/app/model/document';
+import { English, ManagerDocument, ManagerDocumentUp } from 'src/app/model/document';
 import { DocumentService } from 'src/app/service/document.service';
 // import { FormsModule } from '@angular/forms';
 @Component({
@@ -10,9 +11,9 @@ import { DocumentService } from 'src/app/service/document.service';
 })
 export class AddDocumentComponent {
   document!: ManagerDocumentUp;
-  // nameDocument: string = '';
-  // nameD!: string
-  // typeD!: string;
+
+  public englishs!: English[];
+
 
   constructor(
     private router: Router,
@@ -21,13 +22,24 @@ export class AddDocumentComponent {
     }
 
   ngOnInit(){
+    this.getEnglishAll()
+  }
+
+  public getEnglishAll(): void {
+    this.documentService.getEnglishAll().subscribe(
+      (response: English[]) => {
+        this.englishs = response;
+        console.log(this.englishs)
+      },
+      (error: HttpErrorResponse) => {
+        alert(error.message);
+      }
+    );
   }
 
 
-
-
-  uploadDocument( nameDocument: File, nameD: string, typeD: string) {
-    this.documentService.uploadDocument(nameDocument, nameD, typeD).subscribe( data =>{
+  uploadDocument( nameDocument: File, nameD: string/*, typeD: string*/) {
+    this.documentService.uploadDocument(nameDocument, nameD/*, typeD*/).subscribe( data =>{
       console.log(data);
       alert("Thêm dữ liệu thành công!");
       this.goToCourseList();
@@ -52,7 +64,7 @@ onFileSelect(event: any): void {
 
 onSubmit(){
   console.log(this.document);
-  this.uploadDocument( this.document.nameDocument,this.document.nameD, this.document.typeD);
+  this.uploadDocument( this.document.nameDocument,this.document.nameD/*, this.document.typeD*/);
 }
 
 

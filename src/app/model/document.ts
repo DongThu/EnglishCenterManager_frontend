@@ -2,9 +2,11 @@ export class ManagerDocument
 {
   id!: number;
 
-  nameD!: string;
-
-  typeD!: string;
+  nameD!: {
+    id: number,
+    englishName: string
+  };
+  // typeD!: string;
 
   nameDocument!: string;
 }
@@ -15,7 +17,16 @@ export class ManagerDocumentUp
 
   nameD!: string;
 
-  typeD!: string;
+  // typeD!: string;
+
+
+}
+
+export class English
+{
+  id!: number;
+
+  englishName!: string;
 
 
 }

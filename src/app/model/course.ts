@@ -19,6 +19,7 @@ export class ChildSchedule{
     phone:number;
   };
   course!:{
+    course_id: number;
     english: {
       englishName: String;
   };

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Register, RegisterCourse } from '../model/register-course';
 import { ChildSchedule, Course  } from '../model/course';
@@ -26,6 +26,14 @@ export class RegisterCourseService {
 
   public getRegisterUserChild(id: number): Observable<ChildSchedule[]> {
     return this.http.get<ChildSchedule[]>(`${this.apiServerUrl}/register-course/user/${id}`);
+  }
+
+  public findByclassChildId(id: number) {
+    return this.http.get(`${this.apiServerUrl}/register-course/find/courseId/${id}`).pipe(
+      map((response: any) => {
+        return Number(response); // Chuyển đổi kết quả trả về thành kiểu number
+      })
+    );
   }
   public deleteRegisterListChild(Id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiServerUrl}/register-course/delete/${Id}`);

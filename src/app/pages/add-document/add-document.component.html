@@ -17,19 +17,20 @@
                                 <table>
                                   <div  class="td_select">
                                   <td><span>Tên tài liệu</span></td>
-                                    <td>
-                                      <input type="text" [(ngModel)]="document.nameD" name="nameD" id="nameD" required>
 
-                                    </td>
-                                  <td><span>Loại tài liệu</span></td>
+                                    <td>
+                                      <select  [(ngModel)]="document.nameD" name="nameD" id="nameD" class="form-select" aria-label="Default select example" required>
+                                        <option value="1" disabled >-- Chọn khóa học --</option>
+                                        <option  *ngFor="let english of englishs" value="{{english.id}}">{{english.englishName}}</option>
+                                      </select>
+                                  </td>
+                                  <!-- <td><span>Loại tài liệu</span></td>
                                   <td>
                                     <input type="text" [(ngModel)]="document.typeD" name="typeD" id="typeD" required>
-                                  </td>
+                                  </td> -->
                                   <td><span>Nội dung</span></td>
                                   <td>
-                                    <!-- <input type="file" [(ngModel)]="document.nameDocument" name="nameDocument" id="nameDocument" required> -->
                                     <input style=" height: 30px; width: 350px;" type="file" name="nameDocument" (change)="onFileSelect($event)" />
-
                                   </td>
                                 </div>
                                 </table>
@@ -40,8 +41,6 @@
                           <div class="add">
                             <table>
                               <div  class="td_select">
-                              <!-- <td><span>Nội dung</span></td>
-                              <td><textarea name="" id="" cols="30" rows="2"></textarea></td>-->
                               <td></td>
                               <td></td>
                               <td></td>

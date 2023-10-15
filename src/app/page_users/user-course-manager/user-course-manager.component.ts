@@ -22,12 +22,6 @@ export class UserCourseManagerComponent {
     ) { }
 
   ngOnInit() {
-    // Thay thế bằng ID người dùng sau khi đăng nhập thành công
-
-    // const email = this.auth.getUsername();
-    // console.log(email)
-
-
     const username = this.auth.getUsername();
     console.log(username);
 
@@ -42,6 +36,23 @@ export class UserCourseManagerComponent {
               if(reponse){
                 this.user = reponse;
                 console.log(this.user);
+
+                if (this.user && this.user.length > 0) {
+                  const courseId = this.user[0].course.course_id;
+                  console.log(courseId);
+                  // console.log("có");
+
+                  this.timeTableService.findByCourseId(courseId).subscribe((timetableId: number) => {
+                    console.log(timetableId);
+                    // In ra giá trị number
+                    this.getTimeTableById(timetableId)
+
+                  });
+
+                }
+                else {
+                  console.log("this.user is not defined or empty");
+                }
               }
               else {
                 console.log("Không tìm thấy lớp học!")
@@ -54,9 +65,13 @@ export class UserCourseManagerComponent {
         }
       });
 
-      this.getTimeTableById(4)
+
+
+
+
 
   }
+
 
   getTimeTableById(id: number): void {
     this.timeTableService.getTimeTableId(id)
