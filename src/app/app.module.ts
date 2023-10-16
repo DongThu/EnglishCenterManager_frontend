@@ -64,6 +64,7 @@ import { AddIeltsComponent } from './pages/add-ielts/add-ielts.component';
 import { AddBasicEnglishComponent } from './pages/add-basic-english/add-basic-english.component';
 import { TimeTableTeacherComponent } from './pages/time-table-teacher/time-table-teacher.component';
 import { UserCourseManagerComponent } from './page_users/user-course-manager/user-course-manager.component';
+import { DocumentUserComponent } from './page_users/document-user/document-user.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -122,7 +123,8 @@ import { UserCourseManagerComponent } from './page_users/user-course-manager/use
     AddIeltsComponent,
     AddBasicEnglishComponent,
     TimeTableTeacherComponent,
-    UserCourseManagerComponent
+    UserCourseManagerComponent,
+    DocumentUserComponent
   ],
   imports: [
     BrowserModule,

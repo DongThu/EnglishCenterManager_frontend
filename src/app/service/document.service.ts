@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { English, ManagerDocument } from '../model/document';
 
@@ -17,6 +17,19 @@ export class DocumentService {
   // quản lý thông tin tài liệu
   public getDocument(): Observable<ManagerDocument[]> {
     return this.http.get<ManagerDocument[]>(`${this.apiServerUrl}/document/all`);
+  }
+
+
+  public getDocumentById(id: number): Observable<ManagerDocument> {
+    return this.http.get<ManagerDocument>(`${this.apiServerUrl}/document/find/englishId/${id}`);
+  }
+
+  public getDocumentEnglishId(id: number){
+    return this.http.get(`${this.apiServerUrl}/document/get/englishId/${id}`).pipe(
+      map((response: any) => {
+        return Number(response); // Chuyển đổi kết quả trả về thành kiểu number
+      })
+    );
   }
 
   public Download(nameDocument: string): Observable<any> {

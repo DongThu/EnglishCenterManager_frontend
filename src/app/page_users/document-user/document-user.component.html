@@ -1,0 +1,53 @@
+<body>
+
+  <app-navbar-user></app-navbar-user>
+
+  <section id="hero-child"  class="d-flex justify-content-center align-items-center">
+    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+      <h1>TÀI LIỆU HỌC TẬP</h1>
+    </div>
+  </section>
+    <main id="main">
+
+      <!-- ======= Popular Courses Section ======= -->
+      <section id="popular-courses" class="courses">
+        <div class="container" data-aos="fade-up">
+
+
+          <div class="row" data-aos="zoom-in" data-aos-delay="100">
+            <div class="records table-responsive">
+
+            <div>
+              <table  width="50%">
+                      <thead>
+                          <tr>
+                              <!-- <th>#</th> -->
+                              <th width="30%"><span class="las la-sort"></span> TÊN</th>
+                              <!-- <th><span class="las la-sort"></span> LOẠI</th> -->
+                              <th ><span class="las la-sort"></span> NỘI DUNG</th>
+                              <!-- <th><span class="las la-sort"></span></th> -->
+
+                          </tr>
+                      </thead>
+                      <tbody *ngIf="document">
+                          <tr>
+                              <!-- <td>{{document.id}}</td> -->
+                              <td>
+                                {{document.nameD.englishName}}
+                              </td>
+                              <td>
+                                {{document.nameDocument}}
+                                <button   class="btn text-primary"   (click)="downloadDocument(document.nameDocument)" >Download</button>
+                              </td>
+
+                      </tbody>
+                  </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <app-footer></app-footer>
+  </body>
+

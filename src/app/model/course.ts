@@ -21,6 +21,7 @@ export class ChildSchedule{
   course!:{
     course_id: number;
     english: {
+      id: number;
       englishName: String;
   };
     program: String ;
