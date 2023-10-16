@@ -48,7 +48,7 @@
     </div>
   </section><!-- End Hero -->
     <main id="main">
-
+  <div  *ngIf="user && user.length > 0">
       <!-- ======= Popular Courses Section ======= -->
       <section id="popular-courses" class="courses">
         <div class="container" data-aos="fade-up">
@@ -60,7 +60,7 @@
           <div class="row" data-aos="zoom-in" data-aos-delay="100">
             <div class="records table-responsive">
 
-            <div>
+            <div >
               <table width="100%" >
                 <thead >
                     <tr >
@@ -72,39 +72,56 @@
                       <th><span class="las la-sort"></span> NGÀY KHAI GIẢNG</th>
                       <th><span class="las la-sort"></span> EMAIL</th>
                       <th><span class="las la-sort"></span> SĐT</th>
+                      <th><span class="las la-sort"></span> THANH TOÁN</th>
                       <th ></th>
             </thead>
                 <tbody *ngFor="let class of user">
                   <tr>
-                    <td>
-                      {{class.course.english.englishName}}
-                  </td>
-                    <td>
-                        {{class.course.program}}
+                      <td>
+                        {{class.course.english.englishName}}
                     </td>
-                    <td>
-                        {{class.course.level}}
+                      <td>
+                          {{class.course.program}}
+                      </td>
+                      <td>
+                          {{class.course.level}}
+                      </td>
+
+                      <td>
+                          {{class.course.price | currency:'VND'}}
+                      </td>
+                      <td>
+                        {{class.course.schedule}}
+                      </td>
+                      <td>
+                      {{class.course.openning}}
                     </td>
 
                     <td>
-                        {{class.course.price | currency:'VND'}}
+                      {{class.user.username}}
                     </td>
                     <td>
-                       {{class.course.schedule}}
+                      {{class.user.phone}}
                     </td>
                     <td>
-                    {{class.course.openning}}
-                   </td>
+                      <div *ngIf="class.status == 1">
+                        Đã thanh toán
+                      </div>
+                      <div *ngIf="class.status == 0">
+                      <!-- Học phí của bạn: {{class.course.price | currency:'VND'}}, -->
+                      <a class="text-primary" (click)="payment(class.course.price, class.id)">Chưa thanh toán!</a>
+                      </div>
+                    </td>
+                    </tr>
+                    <tr class="text-center">
 
-                   <td>
-                    {{class.user.username}}
-                   </td>
-                   <td>
-                    {{class.user.phone}}
-                   </td>
+                     </tr>
+
                   </tbody>
               </table>
+
             </div>
+
           </div>
         </div>
       </div>
@@ -163,6 +180,10 @@
       </div>
     </div>
   </section>
+</div>
+  <div *ngIf="user && user.length === 0">
+    <h3 class="text-center text-primary">Bạn chưa đăng ký khóa học nào của trung tâm.</h3>
+  </div>
   </main>
   <app-footer></app-footer>
   </body>

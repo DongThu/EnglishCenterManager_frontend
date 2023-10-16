@@ -5,6 +5,7 @@ import { TimeTable } from 'src/app/model/timetable';
 import { LoginUserService } from 'src/app/service/login-user.service';
 import { RegisterCourseService } from 'src/app/service/register-course.service';
 import { TimetableService } from 'src/app/service/timetable.service';
+import { VnpayService } from 'src/app/service/vnpay.service';
 
 @Component({
   selector: 'app-user-course-manager',
@@ -18,7 +19,8 @@ export class UserCourseManagerComponent {
   timetables!: TimeTable;
   constructor(private userService: RegisterCourseService,
     private auth: LoginUserService,
-    private timeTableService: TimetableService
+    private timeTableService: TimetableService,
+    private vnpayService: VnpayService
     ) { }
 
   ngOnInit() {
@@ -78,6 +80,19 @@ export class UserCourseManagerComponent {
       .subscribe(response => {
         this.timetables = response;
       });
+  }
+
+  payment(price: number, id: number) {
+
+    this.vnpayService.getPayment(price, id).subscribe({
+      next: (response: string) => {
+        window.location.href = response;
+      },
+      error: (error) => {
+        // Swal.fire('Có lỗi!', error.error.message, 'error');
+        console.log(error);
+      },
+    });
   }
 
 

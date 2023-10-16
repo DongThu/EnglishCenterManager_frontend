@@ -31,6 +31,7 @@ export class ChildSchedule{
     time: String ;
   };
 
+  status!: number;
 
 }
 

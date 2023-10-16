@@ -76,17 +76,18 @@
                               <th><span class="las la-sort"></span> CHƯƠNG TRÌNH</th>
                               <th><span class="las la-sort"></span> CẤP ĐỘ</th>
                               <th><span class="las la-sort"></span> HỌC PHÍ</th>
-                              <th><span class="las la-sort"></span> LỊCH HỌC</th>
+                              <!-- <th><span class="las la-sort"></span> LỊCH HỌC</th> -->
                               <th><span class="las la-sort"></span> NGÀY KHAI GIẢNG</th>
                               <th><span class="las la-sort"></span> EMAIL</th>
                               <th><span class="las la-sort"></span> SĐT</th>
+                              <th><span class="las la-sort"></span> THANH TOÁN</th>
                               <th ></th>
 
                           </tr>
                       </thead>
                       <tbody *ngFor="let childRegister of childRegisterList">
                           <tr>
-                              <td>
+                              <td >
                                 {{childRegister.course.english.englishName}}
                             </td>
                               <td>
@@ -99,10 +100,10 @@
                               <td>
                                   {{childRegister.course.price | currency:'VND'}}
                               </td>
-                              <td>
+                              <!-- <td>
                                  {{childRegister.course.schedule}}
-                              </td>
-                              <td>
+                              </td> -->
+                              <td class="text-center">
                               {{childRegister.course.openning}}
                              </td>
 
@@ -112,6 +113,15 @@
                              <td>
                               {{childRegister.user.phone}}
                              </td>
+                             <td class="text-center">
+                              <div *ngIf="childRegister.status == 1">
+                                Đã thanh toán
+                              </div>
+                              <div *ngIf="childRegister.status == 0">
+                              <!-- Học phí của bạn: {{class.course.price | currency:'VND'}}, -->
+                              <a class="text-primary" >Chưa thanh toán!</a>
+                              </div>
+                            </td>
                              <td>
                               <div class="actions">
                                 <button (click)="onDeleteRegisterListChild(childRegister.id)" class="btn" type="submit"><span class="las la-trash-alt"></span></button>
