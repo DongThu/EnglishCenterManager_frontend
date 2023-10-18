@@ -1,0 +1,102 @@
+
+<app-navbar-user></app-navbar-user>
+<div class="formbold-main-wrapper">
+  <!-- Author: FormBold Team -->
+  <!-- Learn More: https://formbold.com -->
+  <div class="formbold-form-wrapper">
+    <img src="./../../../assets/img/exam.png">
+    <form action="https://formbold.com/s/FORM_ID" method="POST">
+      <div class="formbold-input-flex">
+        <!-- <div>
+          <label for="firstname" class="formbold-form-label">
+            First name
+          </label>
+          <input
+            type="text"
+            name="firstname"
+            id="firstname"
+            placeholder="Jane"
+            class="formbold-form-input"
+          />
+        </div>
+        <div>
+          <label for="lastname" class="formbold-form-label"> Last name </label>
+          <input
+            type="text"
+            name="lastname"
+            id="lastname"
+            placeholder="Cooper"
+            class="formbold-form-input"
+          />
+        </div>-->
+      </div>
+    <div *ngFor="let quiz of quizs">
+      <div class="formbold-mb-5">
+        <label [for]="'qus' + quiz.id" class="formbold-form-label">
+         {{quiz.questionTitle}}
+        </label>
+
+        <div class="formbold-radio-flex">
+          <div class="formbold-radio-group">
+            <label class="formbold-radio-label">
+              <input
+                class="formbold-input-radio"
+                type="radio"
+                [name]="'qus' + quiz.id"
+                  [id]="'qus' + quiz.id + 'option1'"
+                  (click)="selectAnswer(quiz.id, quiz.option1)"
+              />
+              {{quiz.option1}}
+              <span class="formbold-radio-checkmark"></span>
+            </label>
+          </div>
+
+          <div class="formbold-radio-group">
+            <label class="formbold-radio-label">
+              <input
+                class="formbold-input-radio"
+                type="radio"
+                [name]="'qus' + quiz.id"
+                  [id]="'qus' + quiz.id + 'option2'"
+                  (click)="selectAnswer(quiz.id, quiz.option2)"
+              />
+              {{quiz.option2}}
+              <span class="formbold-radio-checkmark"></span>
+            </label>
+          </div>
+
+          <div class="formbold-radio-group">
+            <label class="formbold-radio-label">
+              <input
+                class="formbold-input-radio"
+                type="radio"
+                [name]="'qus' + quiz.id"
+                  [id]="'qus' + quiz.id + 'option3'"
+                  (click)="selectAnswer(quiz.id, quiz.option3)"
+              />
+              {{quiz.option3}}
+              <span class="formbold-radio-checkmark"></span>
+            </label>
+          </div>
+
+          <div class="formbold-radio-group">
+            <label class="formbold-radio-label">
+              <input
+                class="formbold-input-radio"
+                type="radio"
+                [name]="'qus' + quiz.id"
+                  [id]="'qus' + quiz.id + 'option4'"
+                  (click)="selectAnswer(quiz.id, quiz.option4)"
+              />
+              {{quiz.option4}}
+              <span class="formbold-radio-checkmark"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+      <button (click)="submitQuiz()" type="submit" class="formbold-btn">Submit</button>
+    </form>
+  </div>
+</div>
+

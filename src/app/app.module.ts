@@ -65,6 +65,7 @@ import { AddBasicEnglishComponent } from './pages/add-basic-english/add-basic-en
 import { TimeTableTeacherComponent } from './pages/time-table-teacher/time-table-teacher.component';
 import { UserCourseManagerComponent } from './page_users/user-course-manager/user-course-manager.component';
 import { DocumentUserComponent } from './page_users/document-user/document-user.component';
+import { QuizAppComponent } from './page_users/quiz-app/quiz-app.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -124,7 +125,8 @@ import { DocumentUserComponent } from './page_users/document-user/document-user.
     AddBasicEnglishComponent,
     TimeTableTeacherComponent,
     UserCourseManagerComponent,
-    DocumentUserComponent
+    DocumentUserComponent,
+    QuizAppComponent
   ],
   imports: [
     BrowserModule,
