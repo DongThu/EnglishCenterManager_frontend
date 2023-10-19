@@ -13,6 +13,11 @@ export class QuizAppComponent implements OnInit{
 
   public quizs!: QuizApp[];
   public selectedAnswers!: QuizResponse[];
+  // countdown!: number;
+  // timer: any;
+
+
+
   constructor(
     private quizAppService: QuizappService,
     private router: Router,
@@ -25,7 +30,8 @@ export class QuizAppComponent implements OnInit{
   this.selectedAnswers = [];
   this.getQuiz();
 
-
+  // this.countdown = 300; // Đặt thời gian là 300 giây (5 phút)
+  // this.startCountdown();
   }
 
   public getQuiz(): void {
@@ -49,6 +55,7 @@ export class QuizAppComponent implements OnInit{
       .subscribe((result: any) => {
         // handle the result from the backend
         console.log(result);
+        this.router.navigate(['/quiz-app-result'], { state: { result: result } });
       });
   }
 
@@ -68,4 +75,14 @@ export class QuizAppComponent implements OnInit{
       this.selectedAnswers.push(response);
     }
   }
+
+  // startCountdown() {
+  //   this.timer = setInterval(() => {
+  //     this.countdown--;
+  //     if (this.countdown <= 0) {
+  //       clearInterval(this.timer);
+  //       // Xử lý khi hết thời gian
+  //     }
+  //   }, 1000); // Đếm mỗi giây
+  // }
 }
