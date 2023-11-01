@@ -53,6 +53,11 @@ import { UserCourseManagerComponent } from './page_users/user-course-manager/use
 import { DocumentUserComponent } from './page_users/document-user/document-user.component';
 import { QuizAppComponent } from './page_users/quiz-app/quiz-app.component';
 import { QuizAppResultComponent } from './page_users/quiz-app-result/quiz-app-result.component';
+import { ExamCourseComponent } from './pages/exam-course/exam-course.component';
+import { ExamUsersComponent } from './page_users/exam-users/exam-users.component';
+import { ExamTestComponent } from './page_users/exam-test/exam-test.component';
+import { QuizAppResultTestComponent } from './page_users/quiz-app-result-test/quiz-app-result-test.component';
+import { ExamStudentResultComponent } from './page_users/exam-student-result/exam-student-result.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -107,7 +112,12 @@ const routes: Routes = [
   {path: 'user-course-manager', component: UserCourseManagerComponent},
   {path: 'document-user', component: DocumentUserComponent},
   {path: 'quiz-app', component: QuizAppComponent},
-  {path: 'quiz-app-result', component: QuizAppResultComponent}
+  {path: 'quiz-app-result', component: QuizAppResultComponent},
+  {path: 'exam-course', component: ExamCourseComponent},
+  {path: 'exam-user', component: ExamUsersComponent},
+  {path: 'exam-test/:quizId', component: ExamTestComponent},
+  {path: 'quiz-app-result-test', component: QuizAppResultTestComponent},
+  {path: 'exam-student-result', component: ExamStudentResultComponent}
 ];
 
 @NgModule({

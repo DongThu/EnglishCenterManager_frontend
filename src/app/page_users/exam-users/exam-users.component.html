@@ -1,0 +1,59 @@
+<body>
+
+  <app-navbar-user></app-navbar-user>
+
+  <section id="hero-child"  class="d-flex justify-content-center align-items-center">
+    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+      <h1>TIẾN TRÌNH HỌC TẬP</h1>
+    </div>
+  </section>
+    <main id="main">
+
+      <!-- ======= Popular Courses Section ======= -->
+      <section id="popular-courses" class="courses">
+        <div class="container" data-aos="fade-up">
+
+
+          <div class="row" data-aos="zoom-in" data-aos-delay="100">
+            <div class="records table-responsive">
+
+            <div>
+              <table width="100%">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th><span class="las la-sort"></span> CHƯƠNG TRÌNH</th>
+                        <th><span class="las la-sort"></span> CẤP ĐỘ</th>
+                        <th><span class="las la-sort"></span> NGÀY KHAI GIẢNG</th>
+                        <th><span class="las la-sort"></span> BÀI KIỂM TRA</th>
+                        <!-- <th><span class="las la-sort"></span> LỊCH SỬ ĐĂNG KÝ</th> -->
+                        <th><span class="las la-sort"></span> THAO TÁC</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let exam of exams ">
+
+                  <tr>
+                      <td>{{exam.id}}</td>
+                      <td>
+                        {{exam.course.program}}
+                      </td>
+                      <td>
+                        {{exam.course.level}}
+                      </td>
+                      <td>
+                        {{exam.course.openning}}
+                      </td>
+                      <td>
+                        {{exam.quiz.title}}
+                      </td>
+                      <td> <a class="text-success" (click)="findQuizById(exam.quiz.id, exam.id)">Thực hiển kiểm tra!</a></td>
+            </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <app-footer></app-footer>
+  </body>
+

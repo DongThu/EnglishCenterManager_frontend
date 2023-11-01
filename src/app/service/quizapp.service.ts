@@ -17,6 +17,10 @@ export class QuizappService {
     return this.http.get<QuizApp[]>(`${this.apiServerUrl}/quiz/get/1`);
   }
 
+  public getQuizById(id: number): Observable<QuizApp[]> {
+    return this.http.get<QuizApp[]>(`${this.apiServerUrl}/quiz/get/${id}`);
+  }
+
   public submitQuiz(response: QuizResponse): Observable<Object> {
     return this.http.post<QuizResponse>(`${this.apiServerUrl}/quiz/get/1`, response);
   }

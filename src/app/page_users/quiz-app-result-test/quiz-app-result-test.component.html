@@ -1,0 +1,51 @@
+<body>
+
+  <app-navbar-user></app-navbar-user>
+  <section id="hero-child"  class="d-flex justify-content-center align-items-center">
+    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+      <h1>KẾT QUẢ KIỂM TRA NĂNG LỰC CỦA BẠN</h1>
+    </div>
+  </section>
+    <main id="main">
+      <div *ngIf="result">
+        <h3 class="text-center text-primary">Tổng điểm: {{ result }}/20 câu
+          <form (ngSubmit)="onSubmit()"><button  class="btn">Lưu kết quả bài làm</button></form>
+       </h3>
+      </div>
+      <!-- <div *ngIf="result > 4 && result <= 8">
+        <h3 class="text-center text-primary">Tổng điểm: {{ result }}/20 câu</h3>
+        <h3 class="text-center text-primary">Bạn đang ở trình độ A2</h3>
+      </div>
+      <div *ngIf="result > 8 && result <= 12">
+        <h3 class="text-center text-primary">Tổng điểm: {{ result }}/20 câu</h3>
+        <h3 class="text-center text-primary">Bạn đang ở trình độ B1</h3>
+      </div>
+      <div *ngIf="result > 12 && result <= 16">
+        <h3 class="text-center text-primary">Tổng điểm: {{ result }}/20 câu</h3>
+        <h3 class="text-center text-primary">Bạn đang ở trình độ B2</h3>
+      </div>
+      <div *ngIf="result > 16 && result <= 19">
+        <h3 class="text-center text-primary">Tổng điểm: {{ result }}/20 câu</h3>
+        <h3 class="text-center text-primary">Bạn đang ở trình độ C1</h3>
+      </div> -->
+      <!-- <div *ngIf="result == 20">
+        <h3 class="text-center text-primary">Tổng điểm: {{ result }}/20 câu</h3>
+        <h3 class="text-center text-primary">Bạn đang ở trình độ C2</h3>
+      </div> -->
+      <!-- <div *ngIf="result">
+        <p>Tổng điểm: {{ result }}</p>
+        <ul>
+          <li *ngFor="let response of result.responses">
+            Câu hỏi {{ response.id }}: {{ response.response }}
+          </li>
+        </ul>
+      </div> -->
+  </main>
+  <!-- <app-footer></app-footer> -->
+  </body>
+
+
+
+
+
+

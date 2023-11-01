@@ -1,0 +1,71 @@
+<app-navbar></app-navbar>
+<app-header></app-header>
+<div class="main-content">
+
+  <main>
+
+      <div class="page-header">
+          <h1>Quản lý đăng ký các học viên</h1>
+          <!-- <small>Home / Dashboard</small> -->
+      </div>
+
+      <div class="page-content">
+
+          <div class="records table-responsive">
+
+              <div class="record-header">
+                  <div class="browse">
+                     <input type="search" placeholder="Search" class="record-search">
+                  </div>
+              </div>
+
+              <div>
+                  <table width="100%">
+                      <thead>
+                          <tr>
+                              <th>#</th>
+                              <th><span class="las la-sort"></span> CHƯƠNG TRÌNH</th>
+                              <th><span class="las la-sort"></span> CẤP ĐỘ</th>
+                              <th><span class="las la-sort"></span> NGÀY KHAI GIẢNG</th>
+                              <th><span class="las la-sort"></span> BÀI KIỂM TRA</th>
+                              <!-- <th><span class="las la-sort"></span> LỊCH SỬ ĐĂNG KÝ</th> -->
+                              <th><span class="las la-sort"></span> THAO TÁC</th>
+                          </tr>
+                      </thead>
+                      <tbody *ngFor="let exam of exams ">
+
+                          <tr>
+                              <td>{{exam.id}}</td>
+                              <td>
+                                {{exam.course.program}}
+                              </td>
+                              <td>
+                                {{exam.course.level}}
+                              </td>
+                              <td>
+                                {{exam.course.openning}}
+                              </td>
+                              <td>
+                                {{exam.quiz.title}}
+                              </td>
+                              <!-- {{exam.id}} -->
+                              <td>
+                                  <div class="actions">
+                                    <!-- <a href="">
+                                      <button class="btn" type="submit"><span class="las la-edit"></span></button>
+                                    </a> -->
+                                    <!-- <button (click)="onDeleteRegister(register.id)" class="btn" type="submit"><span class="las la-trash-alt"></span></button> -->
+                                  </div>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+
+          </div>
+
+      </div>
+
+  </main>
+
+</div>
