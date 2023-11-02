@@ -58,6 +58,11 @@ import { ExamUsersComponent } from './page_users/exam-users/exam-users.component
 import { ExamTestComponent } from './page_users/exam-test/exam-test.component';
 import { QuizAppResultTestComponent } from './page_users/quiz-app-result-test/quiz-app-result-test.component';
 import { ExamStudentResultComponent } from './page_users/exam-student-result/exam-student-result.component';
+import { ManagerQuizComponent } from './pages/manager-quiz/manager-quiz.component';
+import { AddManagerQuizComponent } from './pages/add-manager-quiz/add-manager-quiz.component';
+import { ExamTopicComponent } from './pages/exam-topic/exam-topic.component';
+import { AddExamTopicComponent } from './pages/add-exam-topic/add-exam-topic.component';
+import { AddExamCourseComponent } from './pages/add-exam-course/add-exam-course.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -117,7 +122,12 @@ const routes: Routes = [
   {path: 'exam-user', component: ExamUsersComponent},
   {path: 'exam-test/:quizId', component: ExamTestComponent},
   {path: 'quiz-app-result-test', component: QuizAppResultTestComponent},
-  {path: 'exam-student-result', component: ExamStudentResultComponent}
+  {path: 'exam-student-result', component: ExamStudentResultComponent},
+  {path: 'manager-quiz', component: ManagerQuizComponent},
+  {path: 'add-manager-quiz', component: AddManagerQuizComponent},
+  {path: 'exam-topic', component: ExamTopicComponent},
+  {path: 'add-exam-topic', component: AddExamTopicComponent},
+  {path: 'add-exam-course', component: AddExamCourseComponent}
 ];
 
 @NgModule({

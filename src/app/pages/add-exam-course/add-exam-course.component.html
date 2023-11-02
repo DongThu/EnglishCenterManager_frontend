@@ -1,0 +1,69 @@
+<app-navbar></app-navbar>
+<app-header></app-header>
+<div class="main-content">
+
+  <main>
+
+      <div class="page-header">
+        <h3>Thêm khóa học</h3>
+      </div>
+
+      <div class="page-content">
+
+          <div class="records table-responsive">
+            <form #f="ngForm" (ngSubmit)="onSubmit()">
+                          <div class="record-header">
+                              <div class="add">
+                                <table>
+                                  <div  class="td_select">
+                                    <td><span>Chương trình</span></td>
+                                    <td>
+                                      <select  [(ngModel)]="question.courseId" style="width: 350px;"   name="courseId" id="courseId" class="form-select" aria-label="Default select example" required>
+                                        <option value="1" disabled >-- Chọn khóa học --</option>
+                                        <option  *ngFor="let course of courses" value="{{course.course_id}}">{{course.english.englishName}} | {{course.program}} | {{course.openning}}</option>
+                                      </select>
+                                    </td>
+                                  <td><span>Bài kiểm tra</span></td>
+                                  <td>
+                                    <select  [(ngModel)]="question.quizId" style="width: 350px;"   name="quizId" id="quizId" class="form-select" aria-label="Default select example" required>
+                                      <option value="1" disabled >-- Chọn khóa học --</option>
+                                      <option  *ngFor="let quizs of quizs" value="{{quizs.id}}">{{quizs.title}}</option>
+                                    </select>
+                                  </td>
+
+
+                                </div>
+                                </table>
+                              </div>
+                          </div>
+
+                        <div class="record-header">
+                          <div class="add">
+                            <table>
+                              <div  class="td_select">
+                              <!-- <td><span>Nội dung</span></td>
+                              <td><textarea name="" id="" cols="30" rows="2"></textarea></td>-->
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td><button  type="submit">Thêm</button></td>
+                            </div>
+                          </table>
+                          </div>
+                      </div>
+
+            </form>
+
+          </div>
+
+      </div>
+
+  </main>
+
+</div>
+

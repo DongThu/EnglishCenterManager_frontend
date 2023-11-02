@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { Exam, examStudent, examStudentResult } from '../model/exam';
+import { Exam, ExamInput, examStudent, examStudentResult } from '../model/exam';
 import { Observable, map } from 'rxjs';
 
 @Injectable({
@@ -17,8 +17,8 @@ export class ExamCourseService {
     return this.http.get<Exam[]>(`${this.apiServerUrl}/exam/all`);
   }
 
-  public addExam(exam: Exam): Observable<Object> {
-    return this.http.post<Exam>(`${this.apiServerUrl}/exam`, exam);
+  public addExam(exam: ExamInput): Observable<Object> {
+    return this.http.post<ExamInput>(`${this.apiServerUrl}/exam`, exam);
   }
 
   public addExamStudent(exam: examStudent): Observable<Object> {
@@ -43,6 +43,10 @@ export class ExamCourseService {
 
   public getExamStudentById(id: number): Observable<examStudentResult[]>{
     return this.http.get<examStudentResult[]>(`${this.apiServerUrl}/examStudent/user/${id}`);
+  }
+
+  public deleteExam(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiServerUrl}/exam/${id}`);
   }
 
 }

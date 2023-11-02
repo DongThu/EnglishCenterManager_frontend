@@ -34,4 +34,16 @@ export class ExamCourseComponent implements OnInit{
     );
   }
 
+  public onDeleteExam(id: number): void {
+    this.examCourseService.deleteExam(id).subscribe(
+      (response: void) => {
+        console.log(response);
+        this.getExam();
+      },
+      (error: HttpErrorResponse) => {
+        alert(error.message);
+      }
+    );
+  }
+
 }

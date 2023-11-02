@@ -72,6 +72,12 @@ import { ExamUsersComponent } from './page_users/exam-users/exam-users.component
 import { ExamTestComponent } from './page_users/exam-test/exam-test.component';
 import { QuizAppResultTestComponent } from './page_users/quiz-app-result-test/quiz-app-result-test.component';
 import { ExamStudentResultComponent } from './page_users/exam-student-result/exam-student-result.component';
+import { ResultStudyComponent } from './pages/result-study/result-study.component';
+import { ExamTopicComponent } from './pages/exam-topic/exam-topic.component';
+import { ManagerQuizComponent } from './pages/manager-quiz/manager-quiz.component';
+import { AddManagerQuizComponent } from './pages/add-manager-quiz/add-manager-quiz.component';
+import { AddExamTopicComponent } from './pages/add-exam-topic/add-exam-topic.component';
+import { AddExamCourseComponent } from './pages/add-exam-course/add-exam-course.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -138,7 +144,13 @@ import { ExamStudentResultComponent } from './page_users/exam-student-result/exa
     ExamUsersComponent,
     ExamTestComponent,
     QuizAppResultTestComponent,
-    ExamStudentResultComponent
+    ExamStudentResultComponent,
+    ResultStudyComponent,
+    ExamTopicComponent,
+    ManagerQuizComponent,
+    AddManagerQuizComponent,
+    AddExamTopicComponent,
+    AddExamCourseComponent
   ],
   imports: [
     BrowserModule,

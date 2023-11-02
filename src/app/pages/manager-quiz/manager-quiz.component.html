@@ -32,7 +32,7 @@
                   <select name="" id="">
                       <option value="">ID</option>
                   </select> -->
-                 <a  routerLink="/add-exam-course"><button>Thêm</button></a>
+                 <a  routerLink="/add-manager-quiz"><button>Thêm</button></a>
               </div>
 
               <!-- <div class="browse">
@@ -48,39 +48,38 @@
                       <thead>
                           <tr>
                               <th>#</th>
+                              <th><span class="las la-sort"></span> CÂU HỎI</th>
+                              <th><span class="las la-sort"></span> TRẢ LỜI</th>
+                              <th><span class="las la-sort"></span> ĐÁP ÁN</th>
+                              <th><span class="las la-sort"></span> MỨC ĐỘ</th>
                               <th><span class="las la-sort"></span> CHƯƠNG TRÌNH</th>
-                              <th><span class="las la-sort"></span> CẤP ĐỘ</th>
-                              <th><span class="las la-sort"></span> NGÀY KHAI GIẢNG</th>
-                              <th><span class="las la-sort"></span> BÀI KIỂM TRA</th>
-                              <!-- <th><span class="las la-sort"></span> LỊCH SỬ ĐĂNG KÝ</th> -->
-                              <th><span class="las la-sort"></span> THAO TÁC</th>
+                              <th><span class="las la-sort"></span></th>
                           </tr>
                       </thead>
-                      <tbody *ngFor="let exam of exams ">
+                      <tbody *ngFor="let question of question ">
 
                           <tr>
-                              <td>{{exam.id}}</td>
-                              <td>
-                                {{exam.course.program}}
+                              <td style="width: 50px;">{{question.id}}</td>
+                              <td style="width: 400px;">
+                                {{question.questionTitle}}
                               </td>
                               <td>
-                                {{exam.course.level}}
+                               A.{{question.option1}} <br>
+                               B. {{question.option2}} <br>
+                               C. {{question.option3}} <br>
+                               D.{{question.option4}} <br>
+
                               </td>
+                              <td>{{question.rightAnswer}}</td>
+                             <td>{{question.difficultylevel}}</td>
+                              <td class="text-center">{{question.category}}</td>
+
                               <td>
-                                {{exam.course.openning}}
-                              </td>
-                              <td>
-                                {{exam.quiz.title}}
-                              </td>
-                              <!-- {{exam.id}} -->
-                              <td>
-                                  <div class="actions">
-                                    <!-- <a href="">
-                                      <button class="btn" type="submit"><span class="las la-edit"></span></button>
-                                    </a> -->
-                                    <button (click)="onDeleteExam(exam.id)" class="btn" type="submit"><span class="las la-trash-alt"></span></button>
-                                  </div>
-                              </td>
+                                <div class="actions">
+                                  <!-- <button  class="btn" type="submit"><span class="las la-edit"></span></button> -->
+                                  <button (click)="onDeleteQuestion(question.id)" class="btn" ><span class="las la-trash-alt"></span></button>
+                                </div>
+                            </td>
                           </tr>
                       </tbody>
                   </table>

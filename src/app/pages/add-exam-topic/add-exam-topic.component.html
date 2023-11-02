@@ -1,0 +1,77 @@
+<app-navbar></app-navbar>
+<app-header></app-header>
+<div class="main-content">
+
+  <main>
+
+      <div class="page-header">
+        <h3>Thêm khóa học</h3>
+      </div>
+
+      <div class="page-content">
+
+          <div class="records table-responsive">
+            <form #f="ngForm" (ngSubmit)="onSubmit()">
+                          <div class="record-header">
+                              <div class="add">
+                                <table>
+                                  <div  class="td_select">
+                                    <td><span>Chương trình</span></td>
+                                    <td>
+                                      <select  [(ngModel)]="question.category" name="category" id="category" class="form-select" aria-label="Default select example" required>
+                                        <option value="1" disabled >-- Chọn khóa học --</option>
+                                        <option value="Test">Test</option>
+                                        <option value="Child">Child</option>
+                                        <option value="Young">Young</option>
+                                        <option value="Ielts">Ielts</option>
+                                        <option value="Toeic">Toeic</option>
+                                        <option value="Basic">Basic</option>
+                                    </select>                                    </td>
+                                  <td><span>Số câu hỏi</span></td>
+                                    <td>
+                                      <input type="text" [(ngModel)]="question.numQ" name="numQ" id="numQ" >
+                                    </td>
+                                    <td><span>Tên bài thi</span></td>
+                                    <td>
+                                      <input type="text" [(ngModel)]="question.title" name="title" id="title" >
+                                    </td>
+                                    <!-- <td><span>Trả lời thứ ba</span></td>
+                                    <td>
+                                      <input type="text" [(ngModel)]="question.option3" name="option3" id="option3" >
+                                    </td> -->
+
+                                </div>
+                                </table>
+                              </div>
+                          </div>
+
+                        <div class="record-header">
+                          <div class="add">
+                            <table>
+                              <div  class="td_select">
+                              <!-- <td><span>Nội dung</span></td>
+                              <td><textarea name="" id="" cols="30" rows="2"></textarea></td>-->
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td><button  type="submit">Thêm</button></td>
+                            </div>
+                          </table>
+                          </div>
+                      </div>
+
+            </form>
+
+          </div>
+
+      </div>
+
+  </main>
+
+</div>
+

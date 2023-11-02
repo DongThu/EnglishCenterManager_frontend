@@ -19,6 +19,12 @@ export class Exam{
   }
 }
 
+export class ExamInput{
+
+  courseId!: number;
+  quizId!: number;
+}
+
 export class examStudent{
   // id!: number;
   //       user!: {
