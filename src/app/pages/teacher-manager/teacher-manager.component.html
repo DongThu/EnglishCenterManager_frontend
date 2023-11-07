@@ -7,8 +7,8 @@
       <div class="page-header">
           <h3>Quản lý thông tin giảng viên</h3>
           <nav class="nav justify-content-center text-uppercase">
-            <a class="nav-link text-success" routerLink="/teacher-manager">Quản lý thông tin</a>
-            <a class="nav-link text-success active"routerLink="/teacher-schedule">Kế hoạch giảng dạy</a>
+            <!-- <a class="nav-link text-success" routerLink="/teacher-manager">Quản lý thông tin</a> -->
+            <!-- <a class="nav-link text-success active"routerLink="/teacher-schedule">Kế hoạch giảng dạy</a> -->
           </nav>
       </div>
 
@@ -42,6 +42,7 @@
                               <th class="text-center"><span class="las la-sort"></span> SĐT/Birth</th>
                               <th class="text-center"><span class="las la-sort"></span> ĐỊA CHỈ</th>
                               <th class="text-center"><span class="las la-sort"></span> CHƯƠNG TRÌNH GIẢNG DẠY</th>
+                              <th class="text-center"><span class="las la-sort"></span> MỨC LƯƠNG/BUỔI</th>
                               <th class="text-center"><span class="las la-sort"></span> THAO TÁC</th>
                           </tr>
                       </thead>
@@ -50,7 +51,7 @@
                               <td>{{teacher.id}}</td>
                               <td>
                                   <div class="client">
-                                     <div class="client-img bg-img" style="background-image: url({{teacher.image}})"></div>
+                                     <!-- <div class="client-img bg-img" style="background-image: url({{teacher.image}})"></div> -->
                                       <div class="client-info">
                                           <h4>{{teacher.fullName}}</h4>
                                           <small>{{teacher.email}}</small>
@@ -73,10 +74,13 @@
                                 {{teacher.teachProgram}}
                               </td>
                               <td>
+                                {{teacher.levelSalary | currency:'VND'}}
+                              </td>
+                              <td>
                                   <div class="actions">
                                     <button (click)="updateTeacher(teacher.id)" class="btn" type="submit"><span class="las la-edit"></span></button>
                                     <button (click)="onDeleteTeacher(teacher.id)" class="btn" type="submit"><span class="las la-trash-alt"></span></button>
-                                    <button (click)="addTeacherSchedule(teacher.id)" class="btn" type="submit"> <span class="las la-calendar-day"></span></button>
+                                    <!-- <button (click)="addTeacherSchedule(teacher.id)" class="btn" type="submit"> <span class="las la-calendar-day"></span></button> -->
                                     <button (click)="findTeacherSchedule(teacher.id)" class="btn" type="submit"> <span class="las la-calendar-check"></span></button>
                                   </div>
                               </td>

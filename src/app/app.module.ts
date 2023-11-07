@@ -78,6 +78,8 @@ import { ManagerQuizComponent } from './pages/manager-quiz/manager-quiz.componen
 import { AddManagerQuizComponent } from './pages/add-manager-quiz/add-manager-quiz.component';
 import { AddExamTopicComponent } from './pages/add-exam-topic/add-exam-topic.component';
 import { AddExamCourseComponent } from './pages/add-exam-course/add-exam-course.component';
+import { ListTimetableSalaryComponent } from './pages/list-timetable-salary/list-timetable-salary.component';
+import { TimetableSalaryComponent } from './pages/timetable-salary/timetable-salary.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -150,7 +152,9 @@ import { AddExamCourseComponent } from './pages/add-exam-course/add-exam-course.
     ManagerQuizComponent,
     AddManagerQuizComponent,
     AddExamTopicComponent,
-    AddExamCourseComponent
+    AddExamCourseComponent,
+    ListTimetableSalaryComponent,
+    TimetableSalaryComponent,
   ],
   imports: [
     BrowserModule,

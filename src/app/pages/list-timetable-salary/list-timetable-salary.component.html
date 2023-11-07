@@ -1,0 +1,72 @@
+<app-navbar></app-navbar>
+<app-header></app-header>
+<div class="main-content">
+
+  <main>
+
+      <div class="page-header">
+          <h1>Quản lý thu chi</h1>
+          <!-- <small>Home / Dashboard</small> -->
+      </div>
+
+      <div class="page-content">
+
+          <div class="records table-responsive">
+
+
+
+              <div>
+                  <table width="100%">
+                      <thead>
+                          <tr>
+                              <th>#</th>
+                              <th><span class="las la-sort"></span> CHƯƠNG TRÌNH</th>
+                              <th><span class="las la-sort"></span> GIÁO VIÊN</th>
+                              <th><span class="las la-sort"></span> TRẠNG THÁI THANH TOÁN</th>
+                              <th><span class="las la-sort"></span> THAO TÁC</th>
+                          </tr>
+                      </thead>
+                      <tbody *ngFor="let timetable of timetable">
+                          <tr>
+                              <td>{{timetable.id}}</td>
+
+                              <td>
+                                {{timetable.course.program}}
+                              </td>
+                              <td>
+                                  {{timetable.teacher.fullName}}
+                              </td>
+                              <td>
+                                <div *ngIf="timetable.status == 1">
+                                        Đã thanh toán
+                                </div>
+                                <div *ngIf="timetable.status == 0">
+                                        Chưa thanh toán
+                                </div>
+                              </td>
+                              <td>
+                                  <div class="actions">
+                                    <td>
+                                      <!-- <div *ngIf="class.status == 1">
+                                        Đã thanh toán
+                                      </div>
+                                      <div *ngIf="class.status == 0"> -->
+                                      <!-- Học phí của bạn: {{class.course.price | currency:'VND'}},(click)="payment(class.course.price, class.id)" -->
+                                      <a (click)="findTeacherSchedule(timetable.id)" class="text-primary" >Xem lương phải trả!</a>
+                                      <!-- </div> -->
+                                    </td>
+                                  </div>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+
+          </div>
+
+      </div>
+
+  </main>
+
+</div>
+

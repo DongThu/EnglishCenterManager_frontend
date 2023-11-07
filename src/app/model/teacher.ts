@@ -3,11 +3,12 @@ export class Teacher{
   msgv!: String ;
   fullName!: String ;
   phone!: number;
-  image!: String ;
+  // image!: String ;
   birthDay!: Date;
   email!: String ;
   address!: String ;
   teachProgram!: string;
+  levelSalary!: number;
 }
 
 

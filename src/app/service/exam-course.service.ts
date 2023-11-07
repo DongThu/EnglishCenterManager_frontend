@@ -25,6 +25,10 @@ export class ExamCourseService {
     return this.http.post<examStudent>(`${this.apiServerUrl}/examStudent`, exam);
   }
 
+  public getExamStudent(): Observable<examStudentResult[]> {
+    return this.http.get<examStudentResult[]>(`${this.apiServerUrl}/examStudent/all`);
+  }
+
   // public searchByCourseId(id: number) {
   //   return this.http.get(`${this.apiServerUrl}/exam/courseId/${id}`).pipe(
   //     map((response: any) => {

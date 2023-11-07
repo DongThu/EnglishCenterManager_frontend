@@ -57,6 +57,10 @@ export class TimetableService {
       return this.http.post<TimeTable[]>(`${this.apiServerUrl}/timetable/sendEmail/${teacherId}`, teacherId);
     }
 
+    calculateSalary(timetableId: number) {
+     return this.http.get<number>(`${this.apiServerUrl}/timetable/salary/${timetableId}`);
+    }
+
   }
 
 

@@ -29,7 +29,7 @@ export class VnpayService {
   getPaymentService(price: number, id: number): Observable<string> {
     let params = new HttpParams()
       .set('price', price.toString())
-      .set('registerServiceId', id.toString());
+      .set('TimetableId', id.toString());
     return this.http.get(this.getFullUrl('api/v1/pay-service'), {
       params,
       responseType: 'text', // Yêu cầu response dưới dạng văn bản

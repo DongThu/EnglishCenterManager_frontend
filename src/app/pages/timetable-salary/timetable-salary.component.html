@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+<app-header></app-header>
+<div class="main-content">
+
+  <main>
+
+      <div class="page-header">
+          <h1>Quản lý thu chi</h1>
+          <!-- <small>Home / Dashboard</small> -->
+      </div>
+
+      <div class="page-content">
+
+          <div class="records table-responsive">
+            <table style="width: 100%;">
+              <tr>
+              <td><h3>Tổng phải trả: {{salary | currency:'VND'}} </h3></td>
+              <td>
+                <!-- <div *ngIf="timetables.status == 1">
+                  Đã thanh toán
+                </div> -->
+                <!-- <div *ngIf="timetables.status == 0"> -->
+                  <a (click)="getPaymentService(salary, timetableId)">Thanh toán ngay!</a>
+                <!-- </div> -->
+                <!-- <a (click)="getPaymentService(salary, timetableId)">Thanh toán ngay!</a> -->
+              </td>
+
+              </tr>
+            </table>
+
+          </div>
+
+      </div>
+
+  </main>
+
+</div>
+

@@ -1,1 +1,90 @@
-<p>result-study works!</p>
+<app-navbar></app-navbar>
+<app-header></app-header>
+<div class="main-content">
+
+  <main>
+
+      <div class="page-header">
+          <h1>Quản lý kết quả học tập các học viên</h1>
+          <!-- <small>Home / Dashboard</small> -->
+      </div>
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li class="dropdown"><a routerLink="/result-study"><span>Kết quả học tập</span> <i class="bi bi-chevron-down"></i></a>
+          </li>
+          <li class="dropdown"><a routerLink="/exam-course"><span>Quản lý bài thi</span> <i class="bi bi-chevron-down"></i></a>
+          </li>
+          <li class="dropdown"><a routerLink="/exam-topic"><span>Quản lý đề kiểm tra</span> <i class="bi bi-chevron-down"></i></a>
+          </li>
+          <li class="dropdown"><a routerLink="/manager-quiz"><span>Quản lý câu hỏi</span> <i class="bi bi-chevron-down"></i></a>
+          </li>
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+      <div class="page-content">
+
+        <div class="records table-responsive">
+
+          <div class="record-header">
+              <div class="add">
+                  <!-- <span>Entries</span>
+                  <select name="" id="">
+                      <option value="">ID</option>
+                  </select> -->
+                 <a  routerLink="/add-manager-quiz"><button>Thêm</button></a>
+              </div>
+
+              <!-- <div class="browse">
+                 <input type="search" placeholder="Search" class="record-search">
+                  <select name="" id="">
+                      <option value="">Status</option>
+                  </select>
+              </div> -->
+          </div>
+
+          <div>
+                  <table width="100%">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th><span class="las la-sort"></span> TÊN</th>
+                          <th><span class="las la-sort"></span> EMAIL</th>
+                          <th><span class="las la-sort"></span> CHƯƠNG TRÌNH</th>
+                          <th><span class="las la-sort"></span> BÀI THI</th>
+                          <th><span class="las la-sort"></span> KẾT QUẢ</th>
+                          <!-- <th><span class="las la-sort"></span> LỊCH SỬ ĐĂNG KÝ</th> -->
+                          <!-- <th><span class="las la-sort"></span> THAO TÁC</th> -->
+                      </tr>
+                      </thead>
+                      <tbody *ngFor="let examStudent of examStudent ">
+
+                        <tr>
+                            <td>{{examStudent.id}}</td>
+                            <td>
+                              {{examStudent.user.name}}
+                            </td>
+                            <td>
+                              {{examStudent.user.username}}
+                            </td>
+                             <td>
+                              {{examStudent.exam.course.program}}
+                            </td>
+                           <td>
+                              {{examStudent.exam.quiz.title}}
+                            </td>
+                            <td>
+                              {{examStudent.score}}
+                            </td>
+                            <!-- <td> <a class="text-success" (click)="findQuizById(exam.quiz.id, exam.id)">Thực hiển kiểm tra!</a></td> -->
+                  </table>
+              </div>
+
+          </div>
+
+      </div>
+
+  </main>
+
+</div>
+

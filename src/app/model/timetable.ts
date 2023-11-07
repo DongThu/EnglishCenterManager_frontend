@@ -10,6 +10,7 @@ export class TimeTable {
     id: number;
     fullName: string;
   };
+  status!: number;
 }
 
 export class TimeTableInput {

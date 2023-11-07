@@ -63,6 +63,9 @@ import { AddManagerQuizComponent } from './pages/add-manager-quiz/add-manager-qu
 import { ExamTopicComponent } from './pages/exam-topic/exam-topic.component';
 import { AddExamTopicComponent } from './pages/add-exam-topic/add-exam-topic.component';
 import { AddExamCourseComponent } from './pages/add-exam-course/add-exam-course.component';
+import { ResultStudyComponent } from './pages/result-study/result-study.component';
+import { ListTimetableSalaryComponent } from './pages/list-timetable-salary/list-timetable-salary.component';
+import { TimetableSalaryComponent } from './pages/timetable-salary/timetable-salary.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -127,7 +130,10 @@ const routes: Routes = [
   {path: 'add-manager-quiz', component: AddManagerQuizComponent},
   {path: 'exam-topic', component: ExamTopicComponent},
   {path: 'add-exam-topic', component: AddExamTopicComponent},
-  {path: 'add-exam-course', component: AddExamCourseComponent}
+  {path: 'add-exam-course', component: AddExamCourseComponent},
+  {path: 'result-study', component: ResultStudyComponent},
+  {path: 'list-timetable-salary', component: ListTimetableSalaryComponent},
+  {path: 'timetable-salary/:timetableId', component: TimetableSalaryComponent}
 ];
 
 @NgModule({
