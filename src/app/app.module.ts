@@ -80,6 +80,7 @@ import { AddExamTopicComponent } from './pages/add-exam-topic/add-exam-topic.com
 import { AddExamCourseComponent } from './pages/add-exam-course/add-exam-course.component';
 import { ListTimetableSalaryComponent } from './pages/list-timetable-salary/list-timetable-salary.component';
 import { TimetableSalaryComponent } from './pages/timetable-salary/timetable-salary.component';
+import { ReportComponent } from './pages/report/report.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -155,6 +156,7 @@ import { TimetableSalaryComponent } from './pages/timetable-salary/timetable-sal
     AddExamCourseComponent,
     ListTimetableSalaryComponent,
     TimetableSalaryComponent,
+    ReportComponent,
   ],
   imports: [
     BrowserModule,

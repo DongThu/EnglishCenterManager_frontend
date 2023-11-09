@@ -1,0 +1,57 @@
+<app-navbar></app-navbar>
+<app-header></app-header>
+<div class="main-content">
+
+  <main>
+
+      <div class="page-header">
+          <h1>Báo cáo</h1>
+          <!-- <small>Home / Dashboard</small> -->
+      </div>
+
+      <div class="page-content">
+
+        <div class="records table-responsive">
+          <div>
+                  <table width="100%">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th><span class="las la-sort"></span> THU VÀO</th>
+                          <th><span class="las la-sort"></span> CHI</th>
+                          <th><span class="las la-sort"></span> DOANH THU</th>
+
+                      </tr>
+                      </thead>
+                      <tbody>
+
+                        <tr>
+                          <td></td>
+                            <td>{{examStudent | currency:'VND'}}</td>
+                             <td>
+                              {{totalSalary | currency:'VND'}}
+                           </td>
+                            <td>
+                              {{profit | currency:'VND'}}
+                            </td>
+                            <!--  <td>
+                              {{examStudent.exam.course.program}}
+                            </td>
+                           <td>
+                              {{examStudent.exam.quiz.title}}
+                            </td>
+                            <td>
+                              {{examStudent.score}}
+                            </td> -->
+                            <!-- <td> <a class="text-success" (click)="findQuizById(exam.quiz.id, exam.id)">Thực hiển kiểm tra!</a></td> -->
+                  </table>
+              </div>
+
+          </div>
+
+      </div>
+
+  </main>
+
+</div>
+

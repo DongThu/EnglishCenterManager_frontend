@@ -53,4 +53,12 @@ export class ExamCourseService {
     return this.http.delete<void>(`${this.apiServerUrl}/exam/${id}`);
   }
 
+
+  searchStudentsByName(name: string): Observable<examStudentResult[]> {
+    return this.http.get<examStudentResult[]>(`${this.apiServerUrl}/examStudent/search?name=${name}`);
+  }
+
+  getFilteredExamStudents(courseId: number, quizId: number): Observable<any> {
+    return this.http.get(`${this.apiServerUrl}/examStudent/filtered?courseId=${courseId}&quizId=${quizId}`);
+  }
 }

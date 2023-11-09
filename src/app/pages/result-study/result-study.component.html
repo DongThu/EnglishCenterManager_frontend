@@ -6,7 +6,6 @@
 
       <div class="page-header">
           <h1>Quản lý kết quả học tập các học viên</h1>
-          <!-- <small>Home / Dashboard</small> -->
       </div>
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
@@ -21,26 +20,34 @@
 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+      </nav>
       <div class="page-content">
 
         <div class="records table-responsive">
 
           <div class="record-header">
               <div class="add">
-                  <!-- <span>Entries</span>
-                  <select name="" id="">
-                      <option value="">ID</option>
-                  </select> -->
-                 <a  routerLink="/add-manager-quiz"><button>Thêm</button></a>
+                <input [(ngModel)]="searchName" type="search" placeholder="Search" class="record-search">
+                <button style="position: absolute; left: 390px; height: 35px;" class="btn " class="las la-search" (click)="searchStudents()"></button>
               </div>
+            <div class="add">
+              <select   style="width: 350px;"   [(ngModel)]="selectedCourseId" class="form-select" aria-label="Default select example" required>
+                <option value="1" disabled >-- Chọn khóa học --</option>
+                <option  *ngFor="let course of courses" value="{{course.course_id}}">{{course.program}} | {{course.openning}}</option>
+              </select>
+              <select   style="width: 350px;"   [(ngModel)]="selectedQuizId" class="form-select" aria-label="Default select example" required>
+                <option value="1" disabled >-- Chọn bài thi --</option>
+                <option  *ngFor="let quizs of quizs" value="{{quizs.id}}">{{quizs.title}}</option>
+              </select>
+                <button  class="btn " class="las la-search" (click)="filterExamStudents()"></button>
 
-              <!-- <div class="browse">
-                 <input type="search" placeholder="Search" class="record-search">
-                  <select name="" id="">
-                      <option value="">Status</option>
-                  </select>
-              </div> -->
+            </div>
+
+            <!-- <div class="add">
+              <select name="" id="">
+                <option value="">Status</option>
+              </select>
+          </div> -->
           </div>
 
           <div>
@@ -53,10 +60,11 @@
                           <th><span class="las la-sort"></span> CHƯƠNG TRÌNH</th>
                           <th><span class="las la-sort"></span> BÀI THI</th>
                           <th><span class="las la-sort"></span> KẾT QUẢ</th>
-                          <!-- <th><span class="las la-sort"></span> LỊCH SỬ ĐĂNG KÝ</th> -->
-                          <!-- <th><span class="las la-sort"></span> THAO TÁC</th> -->
                       </tr>
                       </thead>
+                      <!-- <div *ngIf="examStudent && examStudent.length"> -->
+                        <!-- <div *ngFor="let examStudentSearch of examStudentSearch"> -->
+
                       <tbody *ngFor="let examStudent of examStudent ">
 
                         <tr>
@@ -76,7 +84,9 @@
                             <td>
                               {{examStudent.score}}
                             </td>
-                            <!-- <td> <a class="text-success" (click)="findQuizById(exam.quiz.id, exam.id)">Thực hiển kiểm tra!</a></td> -->
+                          </tbody>
+                          <!-- </div> -->
+                        <!-- </div> -->
                   </table>
               </div>
 

@@ -66,6 +66,7 @@ import { AddExamCourseComponent } from './pages/add-exam-course/add-exam-course.
 import { ResultStudyComponent } from './pages/result-study/result-study.component';
 import { ListTimetableSalaryComponent } from './pages/list-timetable-salary/list-timetable-salary.component';
 import { TimetableSalaryComponent } from './pages/timetable-salary/timetable-salary.component';
+import { ReportComponent } from './pages/report/report.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -133,7 +134,8 @@ const routes: Routes = [
   {path: 'add-exam-course', component: AddExamCourseComponent},
   {path: 'result-study', component: ResultStudyComponent},
   {path: 'list-timetable-salary', component: ListTimetableSalaryComponent},
-  {path: 'timetable-salary/:timetableId', component: TimetableSalaryComponent}
+  {path: 'timetable-salary/:timetableId', component: TimetableSalaryComponent},
+  {path: 'report', component: ReportComponent}
 ];
 
 @NgModule({
