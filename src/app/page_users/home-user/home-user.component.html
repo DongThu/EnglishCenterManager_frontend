@@ -80,10 +80,11 @@
         </div>
 
       </div>
-    </section><!-- End About Section -->
+    </section>
+    <!-- End About Section -->
 
     <!-- ======= Why Us Section ======= -->
-    <section id="why-us" class="why-us">
+    <!-- <section id="why-us" class="why-us">
       <div class="container" data-aos="fade-up">
 
         <div class="row">
@@ -122,108 +123,85 @@
                   </div>
                 </div>
               </div>
-            </div><!-- End .content-->
+            </div>
+
           </div>
         </div>
 
       </div>
-    </section><!-- End Why Us Section -->
+    </section> -->
+    <!-- End Why Us Section -->
 
     <!-- ======= Popular Courses Section ======= -->
     <section id="popular-courses" class="courses">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Khóa học</h2>
-          <p>Những khóa học phổ biến</p>
+          <!-- <h2>Khóa học</h2> -->
+          <p>Những khóa học</p>
         </div>
 
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="course-item">
-              <img src="https://giasuducminh.com/data/media/1485/images/ba-hinh-thuc-hoc-tieng-anh-co-ban.jpg" class="img-fluid" alt="...">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>Luyện thi IELTS</h4>
-                  <!-- <p class="price">2,000,000đ</p> -->
-                </div>
-                <!-- <table>
-                  <tr>
-                    <td> <h3>Khai giảng:</h3></td>
-                    <td><h3>28-8-2023</h3></td>
-                  </tr>
-                  <tr>
-                    <td> <h3>Thời gian học:</h3></td>
-                    <td><h3>3 tháng</h3></td>
-                  </tr>
-                  <tr>
-                    <td> <h3>Giờ học</h3></td>
-                    <td><h3>19h(2-4-6)</h3></td>
-                  </tr>
-                </table> -->
-                <p>Giúp người học đạt được kết quản như mong đợi</p>
+          <div class="records table-responsive">
+            <div class="record-header">
+                <div class="add">
+                  <select [(ngModel)]="selectedMonth" (change)="loadCoursesByMonth()">
+                    <option value="1">Tháng 1</option>
+                    <option value="2">Tháng 2</option>
+                    <option value="3">Tháng 3</option>
+                    <option value="4">Tháng 4</option>
+                    <option value="5">Tháng 5</option>
+                    <option value="6">Tháng 6</option>
+                    <option value="7">Tháng 7</option>
+                    <option value="8">Tháng 8</option>
+                    <option value="9">Tháng 9</option>
+                    <option value="10">Tháng 10</option>
+                    <option value="11">Tháng 11</option>
+                    <option value="12">Tháng 12</option>
+                </select>
               </div>
             </div>
-          </div> <!-- End Course Item-->
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-            <div class="course-item">
-              <img src="https://cdnstepup.r.worldssl.net/wp-content/uploads/2019/09/ch%E1%BB%8B-dora-1-1080x675.jpg" class="img-fluid" alt="...">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>Tiếng Anh giao tiếp cơ bản</h4>
-                  <!-- <p class="price">2,000,000đ</p> -->
-                </div>
-                <!-- <table>
-                  <tr>
-                    <td> <h3>Khai giảng:</h3></td>
-                    <td><h3>28-8-2023</h3></td>
-                  </tr>
-                  <tr>
-                    <td> <h3>Thời gian học:</h3></td>
-                    <td><h3>3 tháng</h3></td>
-                  </tr>
-                  <tr>
-                    <td> <h3>Giờ học</h3></td>
-                    <td><h3>19h(2-4-6)</h3></td>
-                  </tr>
-                </table> -->
-                <p>Giúp người học giao tiếp cơ bản trong công việc</p>
-              </div>
-            </div>
-          </div> <!-- End Course Item-->
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-            <div class="course-item">
-              <img src="https://cdnstepup.r.worldssl.net/wp-content/uploads/2019/09/ch%E1%BB%8B-dora-1-1080x675.jpg" class="img-fluid" alt="...">
-              <div class="course-content">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>Luyện thi TOEIC</h4>
-                  <!-- <p class="price">2,000,000đ</p> -->
-                </div>
-                <!-- <table>
-                  <tr>
-                    <td> <h3>Khai giảng:</h3></td>
-                    <td><h3>28-8-2023</h3></td>
-                  </tr>
-                  <tr>
-                    <td> <h3>Thời gian học:</h3></td>
-                    <td><h3>3 tháng</h3></td>
-                  </tr>
-                  <tr>
-                    <td> <h3>Giờ học</h3></td>
-                    <td><h3>19h(2-4-6)</h3></td>
-                  </tr>
-                </table> -->
-                <p>Giúp người học đạt mục tiêu mong muốn</p>
-              </div>
-              </div>
-            </div>
-          </div> <!-- End Course Item-->
-
+          <div>
+            <table width="100%" >
+              <thead >
+                  <tr >
+                    <th><span class="las la-sort"></span> CHƯƠNG TRÌNH</th>
+                    <th><span class="las la-sort"></span> CẤP ĐỘ</th>
+                    <th><span class="las la-sort"></span> HỌC PHÍ</th>
+                    <!-- <th><span class="las la-sort"></span> LỊCH HỌC</th> -->
+                    <th><span class="las la-sort"></span> NGÀY KHAI GIẢNG</th>
+                    <!-- <th><span class="las la-sort"></span> THỜI LƯỢNG KHÓA</th> -->
+                    <!-- <th><span class="las la-sort"></span> ĐĂNG KÝ</th> -->
+          </thead>
+              <tbody *ngFor="let course of courses">
+                <tr>
+                    <!-- <td>{{course?.course_id}}</td> -->
+                    <td>
+                        {{course?.program}}
+                    </td>
+                    <td>
+                        {{course?.level}}
+                    </td>
+                    <td>
+                        {{course?.price | currency:'VND'}}
+                    </td>
+                    <!-- <td>
+                      {{course?.schedule}}
+                    </td> -->
+                    <td>
+                    {{course?.openning}}
+                  </td>
+                  <!-- <td>
+                    {{course?.time}}
+                  </td> -->
+                  <!-- <td>
+                    <a class="text-success" (click)="updateCourse(course.course_id)">Đăng ký ngay!</a>
+                  </td> -->
+                </tbody>
+            </table>
+          </div>
         </div>
+      </div>
 
       </div>
     </section><!-- End Popular Courses Section -->

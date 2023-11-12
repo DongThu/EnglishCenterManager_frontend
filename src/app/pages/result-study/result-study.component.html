@@ -33,10 +33,12 @@
             <div class="add">
               <select   style="width: 350px;"   [(ngModel)]="selectedCourseId" class="form-select" aria-label="Default select example" required>
                 <option value="1" disabled >-- Chọn khóa học --</option>
+                <option value="null">Tất cả</option>
                 <option  *ngFor="let course of courses" value="{{course.course_id}}">{{course.program}} | {{course.openning}}</option>
               </select>
               <select   style="width: 350px;"   [(ngModel)]="selectedQuizId" class="form-select" aria-label="Default select example" required>
                 <option value="1" disabled >-- Chọn bài thi --</option>
+                <option value="null">Tất cả</option>
                 <option  *ngFor="let quizs of quizs" value="{{quizs.id}}">{{quizs.title}}</option>
               </select>
                 <button  class="btn " class="las la-search" (click)="filterExamStudents()"></button>

@@ -51,4 +51,8 @@ export class AddCourseService {
   public deleteCourse(courseId: number): Observable<void> {
     return this.http.delete<void>(`${this.apiServerUrl}/course/delete/${courseId}`);
   }
+
+  public getCourseByMonth(month: number): Observable<Course[]> {
+    return this.http.get<Course[]>(`${this.apiServerUrl}/course/by-month/${month}`);
+  }
 }

@@ -11,7 +11,7 @@ export class NavbarUserComponent implements OnInit{
 
   loggedIn: boolean = false;
 
-  allowedRoutes = ['/home-user', '/about', '/contact','/child-schedule', '/young-schedule','/ielts-schedule', '/toiec-schedule','/basic-schedule','/child-english','/young-english', '/ielts','/toiec', '/basic-english','/login-user'];
+  allowedRoutes = ['/home-user', '/about', '/contact','/child-schedule', '/young-schedule','/ielts-schedule', '/toiec-schedule','/basic-schedule','/child-english','/young-english', '/ielts','/toiec', '/basic-english','/login-user', '/register'];
 
 
   constructor(private authService: LoginUserService, private router: Router){}

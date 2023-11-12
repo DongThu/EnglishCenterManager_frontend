@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Course } from 'src/app/model/course';
 import { LoginUserService } from 'src/app/service/login-user.service';
+import { AddCourseService } from 'src/app/service/add-course.service';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-home-user',
@@ -8,26 +11,41 @@ import { LoginUserService } from 'src/app/service/login-user.service';
   styleUrls: ['./home-user.component.css']
 })
 export class HomeUserComponent implements OnInit{
+  public courses!: Course[];
+  selectedMonth: number = 1;
 
-  // loggedIn: boolean = false;
+  constructor(
+    private AddCourseService: AddCourseService,
+    private router: Router,
+    ){
 
-  constructor(private authService: LoginUserService, private router: Router){}
+  }
+  ngOnInit(){
+    this.getCourse();
+    // this.loadCoursesByMonth();
 
-  ngOnInit(): void {
-  //     if(!localStorage.getItem('accessToken')){
-  //       this.router.navigate(['/login-user']);
-  //     }
-  //     else {
-  //       this.loggedIn = true;
-  //       console.log(localStorage.getItem('accessToken'));
-  // }
-}
+  }
 
-// handleLogout(){
-//   this.authService.logout();
-//   this.loggedIn = false;
-//   // localStorage.removeItem('accessToken');
-//   this.router.navigate(['/login-user']);
-// }
+  public getCourse(): void {
+    this.AddCourseService.getCourseAll().subscribe(
+      (response: Course[]) => {
+        this.courses = response;
+      },
+      (error: HttpErrorResponse) => {
+        alert(error.message);
+      }
+    );
+  }
+
+  loadCoursesByMonth(): void {
+    this.AddCourseService.getCourseByMonth(this.selectedMonth).subscribe(
+      (data) => {
+        this.courses = data;
+      },
+      (error) => {
+        console.error('Error fetching courses:', error);
+      }
+    );
+  }
 
 }
