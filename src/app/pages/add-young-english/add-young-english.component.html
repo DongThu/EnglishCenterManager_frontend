@@ -16,48 +16,40 @@
                               <div class="add">
                                 <table>
                                   <div  class="td_select">
-                                    <td><span>Chương trình học</span></td>
-                                    <td>
-                                      <!-- <input type="text" [(ngModel)]="courses.program" name="program" id="program" > -->
-                                      <select  [(ngModel)]="courses.id" name="id" id="id" class="form-select" aria-label="Default select example" required>
-                                        <!-- <option value="1" disabled >-- Chọn khóa học --</option> -->
-                                        <option value="2">Tiếng Anh thiếu niên</option>
+                                    <tr style="height: 70px;">
+                                      <td><span>Chương trình học</span></td>
+                                      <td>
+                                        <select  [(ngModel)]="courses.id" name="id" id="id" class="form-select" aria-label="Default select example" required>
+                                          <!-- <option value="1" disabled >-- Chọn khóa học --</option> -->
+                                          <option value="2">Tiếng Anh thiếu niên</option>
 
-                                    </select>
-                                    </td>
-                                  <td><span>Chương trình học</span></td>
+                                      </select>
+                                      </td>
+                                    <td><span>Chương trình học</span></td>
+                                      <td>
+                                        <select  [(ngModel)]="courses.program" name="program" id="program" class="form-select" aria-label="Default select example" required>
+                                          <option value="1" disabled >-- Chọn khóa học --</option>
+                                          <option value="TOEFL Junior">TOEFL Junior</option>
+                                          <option value="IELTS for Teen">IELTS for Teen</option>
+                                          <option value="Luyện thi lớp 10">Luyện thi lớp 10</option>
+                                      </select>
+                                      </td>
+                                    <td><span>Cấp độ</span></td>
                                     <td>
-                                      <!-- <input type="text" [(ngModel)]="courses.program" name="program" id="program" > -->
-                                      <select  [(ngModel)]="courses.program" name="program" id="program" class="form-select" aria-label="Default select example" required>
-                                        <option value="1" disabled >-- Chọn khóa học --</option>
-                                        <option value="TOEFL Junior">TOEFL Junior</option>
-                                        <option value="IELTS for Teen">IELTS for Teen</option>
-                                        <option value="Luyện thi lớp 10">Luyện thi lớp 10</option>
-                                    </select>
+                                      <select [(ngModel)]="courses.level" name="level" id="level" required>
+                                        <option value="PRE (Sơ cấp)">PRE (Sơ cấp)</option>
+                                        <option value="MID (Trung cấp)">MID (Trung cấp)</option>
+                                        <option value="ADV (Nâng cao)">ADV (Nâng cao)</option>
+                                        <option value="HON (Chuyên sâu)">HON (Chuyên sâu)</option>
+                                      </select>
                                     </td>
-                                  <td><span>Cấp độ</span></td>
-                                  <td>
-                                    <!-- <input type="text" [(ngModel)]="courses.level" name="level" id="level" > -->
-                                    <select [(ngModel)]="courses.level" name="level" id="level" required>
-                                      <option value="PRE (Sơ cấp)">PRE (Sơ cấp)</option>
-                                      <option value="MID (Trung cấp)">MID (Trung cấp)</option>
-                                      <option value="ADV (Nâng cao)">ADV (Nâng cao)</option>
-                                      <option value="HON (Chuyên sâu)">HON (Chuyên sâu)</option>
-                                    </select>
-                                  </td>
-                                  <td><span>Học phí</span></td>
-                                  <td>
-                                    <input type="text" [(ngModel)]="courses.price" name="price" id="price" required>
-                                  </td>
-                                </div>
-                                </table>
-                              </div>
-                          </div>
-                          <div class="record-header">
-                            <div class="add">
-                              <table>
-                                <div  class="td_select">
-                              <td><span>Lịch học</span></td>
+                                    <td><span>Học phí</span></td>
+                                    <td>
+                                      <input type="text" [(ngModel)]="courses.price" name="price" id="price" required>
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                      <td><span>Lịch học</span></td>
                               <td><input type="text" [(ngModel)]="courses.schedule" name="schedule" id="schedule"  required >
                               </td>
 
@@ -73,30 +65,13 @@
                                       <option value="60">60 buổi</option>
                                     </select>
                                   </td>
+                                  <td></td>
+                                  <td><button  type="submit">Thêm</button></td>
+                                    </tr>
+                                </div>
+                                </table>
                               </div>
-                              </table>
-                            </div>
-                        </div>
-                        <div class="record-header">
-                          <div class="add">
-                            <table>
-                              <div  class="td_select">
-                              <!-- <td><span>Nội dung</span></td>
-                              <td><textarea name="" id="" cols="30" rows="2"></textarea></td>-->
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td><button  type="submit">Thêm</button></td>
-                            </div>
-                          </table>
                           </div>
-                      </div>
-
             </form>
 
           </div>

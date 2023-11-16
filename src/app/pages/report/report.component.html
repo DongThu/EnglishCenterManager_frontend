@@ -4,11 +4,19 @@
 
   <main>
 
-      <div class="page-header">
-          <h1>Báo cáo</h1>
-          <!-- <small>Home / Dashboard</small> -->
-      </div>
-
+    <div class="page-header">
+      <h1>Quản lý thu chi</h1>
+      <!-- <small>Home / Dashboard</small> -->
+    </div>
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li class="dropdown"><a routerLink="/list-timetable-salary"><span>Thanh toán lương giảng viên</span> <i class="bi bi-chevron-down"></i></a>
+          </li>
+          <li class="dropdown"><a routerLink="/report"><span>Xem doanh thu</span> <i class="bi bi-chevron-down"></i></a>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
       <div class="page-content">
 
         <div class="records table-responsive">
