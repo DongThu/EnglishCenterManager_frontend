@@ -15,19 +15,19 @@
 
               <div class="record-header">
                   <div class="add">
-                      <span>Entries</span>
+                      <!-- <span>Entries</span>
                       <select name="" id="">
                           <option value="">ID</option>
-                      </select>
+                      </select> -->
                       <a  routerLink="/add-timetable"><button>Thêm</button></a>
                   </div>
 
-                  <div class="browse">
+                  <!-- <div class="browse">
                      <input type="search" placeholder="Search" class="record-search">
                       <select name="" id="">
                           <option value="">Status</option>
                       </select>
-                  </div>
+                  </div> -->
               </div>
 
               <div>
@@ -64,7 +64,7 @@
                               </td>
                               <td>
                                   <div class="actions">
-                                    <!-- <button (click)="updateTeacher(teacher.id)" class="btn" type="submit"><span class="las la-edit"></span></button> -->
+                                    <button (click)="updateTimetable(timetable.id)" class="btn" type="submit"><span class="las la-edit"></span></button>
                                     <button (click)="onDeleteTimetable(timetable.id)" class="btn" type="submit"><span class="las la-trash-alt"></span></button>
                                   </div>
                               </td>

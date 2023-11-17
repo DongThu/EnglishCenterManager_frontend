@@ -12,70 +12,59 @@
 
           <div class="records table-responsive">
             <form (ngSubmit)="onSubmit()">
-                          <div class="record-header">
-                              <div class="add">
-                                <table>
-                                  <div  class="td_select">
-                                  <td><span>Họ và Tên</span></td>
-                                    <td>
-                                      <input type="text" [(ngModel)]="teacher.fullName" name="fullName" id="fullName" >
-                                    </td>
-                                  <td><span>Mức lương</span></td>
-                                  <td><input type="text" [(ngModel)]="teacher.levelSalary" name="levelSalary" id="levelSalary" >
-                                  </td>
-                                  <td><span>Sinh nhật</span></td>
-                                  <td>
-                                    <input type="text" [(ngModel)]="teacher.birthDay" name="birthDay" id="birthDay" >
-                                  </td>
-                                </div>
-                                </table>
-                              </div>
-                          </div>
-                          <div class="record-header">
-                            <div class="add">
-                              <table>
-                                <div  class="td_select">
-                              <td><span>Điện thoại</span></td>
-                              <td><input type="text" [(ngModel)]="teacher.phone" name="phone" id="phone" >
-                              </td>
+              <div class="record-header">
+                <div class="add">
+                  <table>
+                    <div  class="td_select">
+                    <td><span>Họ và Tên</span></td>
+                      <td>
+                        <input type="text" [(ngModel)]="teacher.fullName" name="fullName" id="fullName" >
+                      </td>
+                    <td><span>Mức lương</span></td>
+                    <td><input type="text" [(ngModel)]="teacher.levelSalary" name="levelSalary" id="levelSalary" ></td>
+                    <td><span>Sinh nhật</span></td>
+                    <td>
+                      <input type="text" [(ngModel)]="teacher.birthDay" name="birthDay" id="birthDay" >
+                    </td>
+                  </div>
+                  </table>
+                </div>
+            </div>
+            <div class="record-header">
+              <div class="add">
+                <table>
+                  <div  class="td_select">
+                <td><span>Điện thoại</span></td>
+                <td><input type="text" [(ngModel)]="teacher.phone" name="phone" id="phone" >
+                </td>
 
-                              <td><span>Email</span></td>
-                              <td>
-                                <input type="email" [(ngModel)]="teacher.email" name="email" id="email" >
-                              </td>
-                              <td><span>Địa chỉ</span></td>
-                                  <td>
-                                    <input type="text" [(ngModel)]="teacher.address" name="address" id="address" >
-                                  </td>
-
-                              <td><span>Chương trình dạy</span></td>
-                                  <td>
-                                    <input type="text" [(ngModel)]="teacher.teachProgram" name="teachProgram" id="teachProgram" >
-                                  </td>
-                              </div>
-                              </table>
-                            </div>
-                        </div>
-                        <div class="record-header">
-                          <div class="add">
-                            <table>
-                              <div  class="td_select">
-                              <!-- <td><span>Nội dung</span></td>
-                              <td><textarea name="" id="" cols="30" rows="2"></textarea></td>-->
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td><button  type="submit">Thêm</button></td>
-                            </div>
-                          </table>
-                          </div>
-                      </div>
-
+                <td><span>Email</span></td>
+                <td>
+                  <input type="email" [(ngModel)]="teacher.email" name="email" id="email" >
+                </td>
+                <td><span>Địa chỉ</span></td>
+                    <td>
+                      <input type="text" [(ngModel)]="teacher.address" name="address" id="address" >
+                    </td>
+                </div>
+                </table>
+              </div>
+          </div>
+          <div class="record-header">
+            <div class="add">
+              <table>
+                <div style="
+                position: relative;
+                left: 25px;">
+                  <td><span>Chương trình dạy</span></td>
+                  <td>
+                    <input type="text" [(ngModel)]="teacher.teachProgram" name="teachProgram" id="teachProgram" >
+                  </td>
+                <td><button  type="submit">Thêm</button></td>
+              </div>
+            </table>
+            </div>
+        </div>
             </form>
 
           </div>

@@ -81,6 +81,8 @@ import { AddExamCourseComponent } from './pages/add-exam-course/add-exam-course.
 import { ListTimetableSalaryComponent } from './pages/list-timetable-salary/list-timetable-salary.component';
 import { TimetableSalaryComponent } from './pages/timetable-salary/timetable-salary.component';
 import { ReportComponent } from './pages/report/report.component';
+import { UpdateUserComponent } from './pages/update-user/update-user.component';
+import { UpdateTimetableComponent } from './pages/update-timetable/update-timetable.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -157,6 +159,8 @@ import { ReportComponent } from './pages/report/report.component';
     ListTimetableSalaryComponent,
     TimetableSalaryComponent,
     ReportComponent,
+    UpdateUserComponent,
+    UpdateTimetableComponent,
   ],
   imports: [
     BrowserModule,

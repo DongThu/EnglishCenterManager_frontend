@@ -11,6 +11,7 @@ import { RegisterCourseService } from 'src/app/service/register-course.service';
 })
 export class HomeComponent implements OnInit{
   public register!: Register[];
+  searchName!: string;
 
   constructor(
     private registerCourseService: RegisterCourseService,
@@ -43,5 +44,14 @@ export class HomeComponent implements OnInit{
         alert("Bạn không thể xóa người này!");
       }
     );
+  }
+
+  updateUser(id: number){
+    this.router.navigate(['/update-user', id]);
+  }
+
+  searchStudents() {
+    this.registerCourseService.searchUserByName(this.searchName)
+      .subscribe(students => this.register = students);
   }
 }

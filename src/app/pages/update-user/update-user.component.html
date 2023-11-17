@@ -1,0 +1,60 @@
+<app-navbar></app-navbar>
+<app-header></app-header>
+<div class="main-content">
+
+  <main>
+
+      <div class="page-header">
+        <h3>Chỉnh sửa thông tin học viên</h3>
+      </div>
+
+      <div class="page-content">
+
+          <div class="records table-responsive">
+            <form (ngSubmit)="onSubmit()">
+                          <div class="record-header">
+                              <div class="add">
+                                <table>
+                                  <div  class="td_select">
+                                    <tr style="height: 70px;">
+                                      <td><span>Họ và Tên</span></td>
+                                        <td>
+                                          <input type="text" [(ngModel)]="teacher.name" name="name" id="name" >
+                                        </td>
+                                      <td><span>Địa chỉ</span></td>
+                                      <td><input type="text" [(ngModel)]="teacher.address" name="address" id="address" >
+                                      </td>
+                                      <td><span>Sinh nhật</span></td>
+                                      <td>
+                                        <input type="text" [(ngModel)]="teacher.birthday" name="birthDay" id="birthday" >
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td><span>Điện thoại</span></td>
+                                      <td><input type="text" [(ngModel)]="teacher.phone" name="phone" id="phone" >
+                                      </td>
+
+                                      <td><span>Email</span></td>
+                                      <td>
+                                        <input type="email" [(ngModel)]="teacher.username" name="username" id="username" >
+                                      </td>
+                                      <td></td>
+                                      <td><button  type="submit">Cập nhật</button></td>
+
+
+                                    </tr>
+                                </div>
+                                </table>
+                              </div>
+                          </div>
+
+            </form>
+
+          </div>
+
+      </div>
+
+  </main>
+
+</div>
+

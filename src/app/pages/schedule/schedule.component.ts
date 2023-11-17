@@ -34,9 +34,9 @@ export class ScheduleComponent implements OnInit{
     );
   }
 
-  // updateTeacher(id: number){
-  //   this.router.navigate(['update-teacher', id]);
-  // }
+  updateTimetable(id: number){
+    this.router.navigate(['update-timetable', id]);
+  }
   public onDeleteTimetable(timetableId: number): void {
     this.timetableService.deleteTimeTable(timetableId).subscribe(
       (response: void) => {

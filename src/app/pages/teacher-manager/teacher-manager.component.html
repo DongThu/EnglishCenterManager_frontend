@@ -18,26 +18,26 @@
 
               <div class="record-header">
                   <div class="add">
-                      <span>Entries</span>
-                      <select name="" id="">
+                      <!-- <span>Entries</span> -->
+                      <!-- <select name="" id="">
                           <option value="">ID</option>
-                      </select>
+                      </select> -->
                       <a  routerLink="/add-teacher"><button>Thêm</button></a>
                   </div>
 
-                  <div class="browse">
+                  <!-- <div class="browse">
                      <input type="search" placeholder="Search" class="record-search">
                       <select name="" id="">
                           <option value="">Status</option>
                       </select>
-                  </div>
+                  </div> -->
               </div>
 
               <div>
                   <table width="100%">
                       <thead>
                           <tr>
-                              <th>#</th>
+                              <th style="width: 40px;">#</th>
                               <th class="text-center"><span class="las la-sort"></span> TÊN</th>
                               <th class="text-center"><span class="las la-sort"></span> SĐT/Birth</th>
                               <th class="text-center"><span class="las la-sort"></span> ĐỊA CHỈ</th>
@@ -48,7 +48,7 @@
                       </thead>
                       <tbody *ngFor="let teacher of teacher">
                           <tr>
-                              <td>{{teacher.id}}</td>
+                              <td style="width: 40px;">{{teacher.id}}</td>
                               <td>
                                   <div class="client">
                                      <!-- <div class="client-img bg-img" style="background-image: url({{teacher.image}})"></div> -->

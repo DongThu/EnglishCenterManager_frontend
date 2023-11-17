@@ -67,6 +67,8 @@ import { ResultStudyComponent } from './pages/result-study/result-study.componen
 import { ListTimetableSalaryComponent } from './pages/list-timetable-salary/list-timetable-salary.component';
 import { TimetableSalaryComponent } from './pages/timetable-salary/timetable-salary.component';
 import { ReportComponent } from './pages/report/report.component';
+import { UpdateUserComponent } from './pages/update-user/update-user.component';
+import { UpdateTimetableComponent } from './pages/update-timetable/update-timetable.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -135,7 +137,9 @@ const routes: Routes = [
   {path: 'result-study', component: ResultStudyComponent},
   {path: 'list-timetable-salary', component: ListTimetableSalaryComponent},
   {path: 'timetable-salary/:timetableId', component: TimetableSalaryComponent},
-  {path: 'report', component: ReportComponent}
+  {path: 'report', component: ReportComponent},
+  {path: 'update-user/:id', component: UpdateUserComponent},
+  {path: 'update-timetable:/id', component: UpdateTimetableComponent}
 ];
 
 @NgModule({

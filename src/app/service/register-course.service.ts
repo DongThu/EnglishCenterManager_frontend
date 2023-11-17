@@ -57,6 +57,14 @@ export class RegisterCourseService {
     return this.http.get(`${this.apiServerUrl}/api/v1/user/find/username/${username}`);
   }
 
+  public updateUser(id: number, teacher: Register): Observable<Object>{
+    return this.http.put(`${this.apiServerUrl}/api/v1/user/update/${id}`, teacher);
+  }
+
+  searchUserByName(name: string): Observable<Register[]> {
+    return this.http.get<Register[]>(`${this.apiServerUrl}/api/v1/user/search?name=${name}`);
+  }
+
   // có thể bỏ
 //Quản lý đăng ký học viên
   public deleteRegister(registerId: number): Observable<void> {
@@ -66,5 +74,6 @@ export class RegisterCourseService {
   public getCourse(): Observable<RegisterCourse[]> {
     return this.http.get<RegisterCourse[]>(`${this.apiServerUrl}/register/all`);
   }
+
 
 }

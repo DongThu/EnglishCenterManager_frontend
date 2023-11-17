@@ -28,6 +28,14 @@ export class TimetableService {
       return this.http.get<TimeTable>(`${this.apiServerUrl}/timetable/${id}`);
     }
 
+    public getTimeTableInputId(id: number): Observable<TimeTableInput>{
+      return this.http.get<TimeTableInput>(`${this.apiServerUrl}/timetable/${id}`);
+    }
+
+    public updateTimetable(id: number, teacher: TimeTableInput): Observable<Object>{
+      return this.http.put(`${this.apiServerUrl}/timetable/${id}`, teacher);
+    }
+
     public findByCourseId(id: number){
       return this.http.get(`${this.apiServerUrl}/timetable/find/timetable/${id}`).pipe(
         map((response: any) => {

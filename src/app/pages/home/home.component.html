@@ -14,8 +14,9 @@
           <div class="records table-responsive">
 
               <div class="record-header">
-                  <div class="browse">
-                     <input type="search" placeholder="Search" class="record-search">
+                  <div class="add">
+                    <input [(ngModel)]="searchName" type="search" placeholder="Search" class="record-search">
+                    <button style="position: absolute; left: 390px; height: 35px;" class="btn " class="las la-search" (click)="searchStudents()"></button>
                   </div>
               </div>
 
@@ -59,9 +60,9 @@
                               </td> -->
                               <td>
                                   <div class="actions">
-                                    <!-- <a href="">
-                                      <button class="btn" type="submit"><span class="las la-edit"></span></button>
-                                    </a> -->
+                                    <!-- <a href=""> -->
+                                      <button (click)="updateUser(register.id)" class="btn" type="submit"><span class="las la-edit"></span></button>
+                                    <!-- </a> -->
                                     <button (click)="onDeleteRegister(register.id)" class="btn" type="submit"><span class="las la-trash-alt"></span></button>
                                   </div>
                               </td>
