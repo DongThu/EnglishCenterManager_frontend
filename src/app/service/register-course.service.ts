@@ -28,6 +28,11 @@ export class RegisterCourseService {
     return this.http.get<ChildSchedule[]>(`${this.apiServerUrl}/register-course/user/${id}`);
   }
 
+  getRegistrationsForCourse(courseId: number): Observable<ChildSchedule[]> {
+    const url = `${this.apiServerUrl}/register-course/registrations?courseId=${courseId}`;
+    return this.http.get<ChildSchedule[]>(url);
+  }
+
   public findByclassChildId(id: number) {
     return this.http.get(`${this.apiServerUrl}/register-course/find/courseId/${id}`).pipe(
       map((response: any) => {

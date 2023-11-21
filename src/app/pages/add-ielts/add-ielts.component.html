@@ -16,85 +16,80 @@
                               <div class="add">
                                 <table>
                                   <div  class="td_select">
-                                    <td><span>Chương trình học</span></td>
-                                    <td>
-                                      <!-- <input type="text" [(ngModel)]="courses.program" name="program" id="program" > -->
-                                      <select  [(ngModel)]="courses.id" name="id" id="id" class="form-select" aria-label="Default select example" required>
-                                        <!-- <option value="1" disabled >-- Chọn khóa học --</option> -->
-                                        <option value="3">Luyện thi IELTS</option>
+                                    <tr style="height: 70px;">
+                                      <td><span>Chương trình học</span></td>
+                                      <td>
+                                        <!-- <input type="text" [(ngModel)]="courses.program" name="program" id="program" > -->
+                                        <select  [(ngModel)]="courses.id" name="id" id="id" class="form-select" aria-label="Default select example" required>
+                                          <!-- <option value="1" disabled >-- Chọn khóa học --</option> -->
+                                          <option value="3">Luyện thi IELTS</option>
 
-                                    </select>
-                                    </td>
-                                  <td><span>Chương trình học</span></td>
+                                      </select>
+                                      </td>
+                                    <td><span>Chương trình học</span></td>
+                                      <td>
+                                        <!-- <input type="text" [(ngModel)]="courses.program" name="program" id="program" > -->
+                                        <select  [(ngModel)]="courses.program" name="program" id="program" class="form-select" aria-label="Default select example" required>
+                                          <option value="1" disabled >-- Chọn khóa học --</option>
+                                          <option value="IELTS">IELTS</option>
+                                      </select>
+                                      </td>
+                                    <td><span>Cấp độ</span></td>
                                     <td>
-                                      <!-- <input type="text" [(ngModel)]="courses.program" name="program" id="program" > -->
-                                      <select  [(ngModel)]="courses.program" name="program" id="program" class="form-select" aria-label="Default select example" required>
-                                        <option value="1" disabled >-- Chọn khóa học --</option>
-                                        <option value="IELTS">IELTS</option>
-                                    </select>
+                                      <!-- <input type="text" [(ngModel)]="courses.level" name="level" id="level" > -->
+                                      <select [(ngModel)]="courses.level" name="level" id="level" required>
+                                        <option value="PreIELTS">PreIELTS</option>
+                                        <option value="IELTS 4.0">IELTS 4.0</option>
+                                        <option value="IELTS 5.0">IELTS 5.0</option>
+                                        <option value="IELTS 5.5">IELTS 5.5</option>
+                                        <option value="IELTS > 6.0">IELTS > 6.0</option>
+                                      </select>
                                     </td>
-                                  <td><span>Cấp độ</span></td>
-                                  <td>
-                                    <!-- <input type="text" [(ngModel)]="courses.level" name="level" id="level" > -->
-                                    <select [(ngModel)]="courses.level" name="level" id="level" required>
-                                      <option value="PreIELTS">PreIELTS</option>
-                                      <option value="IELTS 4.0">IELTS 4.0</option>
-                                      <option value="IELTS 5.0">IELTS 5.0</option>
-                                      <option value="IELTS 5.5">IELTS 5.5</option>
-                                      <option value="IELTS > 6.0">IELTS > 6.0</option>
-                                    </select>
-                                  </td>
-                                  <td><span>Học phí</span></td>
-                                  <td>
-                                    <input type="text" [(ngModel)]="courses.price" name="price" id="price" required>
-                                  </td>
+                                    <td><span>Học phí</span></td>
+                                    <td>
+                                      <input type="text" [(ngModel)]="courses.price" name="price" id="price" required>
+                                    </td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                      <td><span>Lịch học</span></td>
+                                      <td>
+                                        <select [(ngModel)]="courses.schedule" name="schedule" id="schedule" required>
+                                          <option value="7h (Thứ 3-5-7)">7h (Thứ 3-5-7)</option>
+                                          <option value="9h (Thứ 3-5-7)">9h (Thứ 3-5-7)</option>
+                                          <option value="13h (Thứ 3-5-7)">13h (Thứ 3-5-7)</option>
+                                          <option value="15h (Thứ 3-5-7)">15h (Thứ 3-5-7)</option>
+                                          <option value="18h (Thứ 3-5-7)">18h (Thứ 3-5-7)</option>
+                                          <option value="20h (Thứ 3-5-7)">20h (Thứ 3-5-7)</option>
+                                          <option value="7h (Thứ 2-4-6)">7h (Thứ 2-4-6)</option>
+                                          <option value="9h (Thứ 2-4-6)">9h (Thứ 2-4-6)</option>
+                                          <option value="13h (Thứ 2-4-6)">13h (Thứ 2-4-6)</option>
+                                          <option value="15h (Thứ 2-4-6)">15h (Thứ 2-4-6)</option>
+                                          <option value="18h (Thứ 2-4-6)">18h (Thứ 2-4-6)</option>
+                                          <option value="20h (Thứ 2-4-6)">20h (Thứ 2-4-6)</option>
+                                        </select>                                      </td>
+
+                                      <td><span>Ngày khai giảng dự kiến</span></td>
+                                      <td>
+                                        <input type="datetime-local" [(ngModel)]="courses.openning" name="openning" id="openning" required>
+                                      </td>
+                                      <td><span>Thời lượng khóa</span></td>
+                                          <td>
+                                            <select [(ngModel)]="courses.time" name="time" id="time" required>
+                                              <option value="36">36 buổi</option>
+                                              <option value="48">48 buổi</option>
+                                              <option value="60">60 buổi</option>
+                                            </select>
+                                          </td>
+                                          <td></td>
+                                      <td><button  type="submit">Thêm</button></td>
+                                    </tr>
                                 </div>
                                 </table>
                               </div>
                           </div>
-                          <div class="record-header">
-                            <div class="add">
-                              <table>
-                                <div  class="td_select">
-                              <td><span>Lịch học</span></td>
-                              <td><input type="text" [(ngModel)]="courses.schedule" name="schedule" id="schedule"  required >
-                              </td>
-
-                              <td><span>Ngày khai giảng dự kiến</span></td>
-                              <td>
-                                <input type="datetime-local" [(ngModel)]="courses.openning" name="openning" id="openning" required>
-                              </td>
-                              <td><span>Thời lượng khóa</span></td>
-                                  <td>
-                                    <select [(ngModel)]="courses.time" name="time" id="time" required>
-                                      <option value="36">36 buổi</option>
-                                      <option value="48">48 buổi</option>
-                                      <option value="60">60 buổi</option>
-                                    </select>
-                                  </td>
-                              </div>
-                              </table>
-                            </div>
-                        </div>
-                        <div class="record-header">
-                          <div class="add">
-                            <table>
-                              <div  class="td_select">
-                              <!-- <td><span>Nội dung</span></td>
-                              <td><textarea name="" id="" cols="30" rows="2"></textarea></td>-->
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td><button  type="submit">Thêm</button></td>
-                            </div>
-                          </table>
-                          </div>
-                      </div>
 
             </form>
 

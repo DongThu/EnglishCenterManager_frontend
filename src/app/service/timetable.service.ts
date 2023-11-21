@@ -32,8 +32,9 @@ export class TimetableService {
       return this.http.get<TimeTableInput>(`${this.apiServerUrl}/timetable/${id}`);
     }
 
-    public updateTimetable(id: number, teacher: TimeTableInput): Observable<Object>{
-      return this.http.put(`${this.apiServerUrl}/timetable/${id}`, teacher);
+    updateTimetable(id: number, timetableInput: TimeTableInput): Observable<TimeTableInput> {
+      const url = `${this.apiServerUrl}/timetable/${id}`;
+      return this.http.put<TimeTableInput>(url, timetableInput);
     }
 
     public findByCourseId(id: number){

@@ -1,0 +1,13 @@
+input{
+  width:300px;
+}
+.td_select td{
+ width: 170px;
+ text-align: right;
+}
+tr td, th{
+  text-align: center;
+}
+option{
+  width: 500px;
+}

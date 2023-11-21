@@ -1,44 +1,4 @@
 <body>
-  <!-- ======= Header ======= -->
-  <!-- <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center">
-
-      <h1 class="logo me-auto">
-        <a href="index.html">
-          <img  src="../../../assets/img/logo-trung-tam-hsk.png" alt="">
-        </a></h1>
-      <a href="index.html" class="logo me-auto"><img src="../../../assets/img/img/logo.png" alt="" class="img-fluid"></a>
-
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a routerLink="/home-user">Trang chủ</a></li>
-          <li><a routerLink="/about">Giới thiệu</a></li>
-          <li class="dropdown"><a routerLink="/child-english"><span>Chương trình học</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a routerLink="/child-english">Tiếng Anh thiếu nhi</a></li>
-              <li><a routerLink="/young-english">Tiếng Anh thiếu niên</a></li>
-              <li><a routerLink="/ielts">Luyện thi IELTS</a></li>
-              <li><a routerLink="/toiec">Luyện thi TOEFL - TOEIC & CHỨNG CHỈ QUỐC TẾ</a></li>
-              <li><a routerLink="/basic-english">Tiếng Anh Căn Bản - Giao tiếp & Tiếng Anh cho người đi làm</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a routerLink="/child-schedule"><span>Lịch Khai Giảng</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a routerLink="/child-schedule">Tiếng Anh thiếu nhi</a></li>
-              <li><a routerLink="/young-schedule">Tiếng Anh thiếu niên</a></li>
-              <li><a routerLink="/ielts-schedule">Luyện thi IELTS</a></li>
-              <li><a routerLink="/toiec-schedule">Luyện thi TOEFL - TOEIC & CHỨNG CHỈ QUỐC TẾ</a></li>
-              <li><a routerLink="/basic-schedule">Tiếng Anh Căn Bản - Giao tiếp & Tiếng Anh cho người đi làm</a></li>
-            </ul>
-          </li>
-          <li><a routerLink="/contact">Liên hệ</a></li>
-          <li><a *ngIf="!loggedIn" routerLink="/login-user">Đăng nhập</a></li>
-          <li><a *ngIf="loggedIn" (click)="handleLogout()">Đăng xuất</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-    </div>
-  </header>End Header -->
   <app-navbar-user></app-navbar-user>
 
   <!-- ======= Hero Section ======= -->
@@ -97,9 +57,16 @@
                     <td>
                       {{course?.time}}
                     </td>
-                    <td>
-                      <a class="text-success" (click)="updateCourse(course.course_id)">Đăng ký ngay!</a>
-                    </td>
+                    <ng-container *ngIf="loggedIn" >
+                      <td>
+                        <a class="text-success" (click)="updateCourse(course.course_id)">Đăng ký ngay!</a>
+                      </td>
+                    </ng-container>
+                    <ng-container *ngIf="!loggedIn">
+                      <td>
+                        <a class="text-danger" routerLink="/login-user" >Đăng nhập để đăng ký!</a>
+                      </td>
+                    </ng-container>
                   </tbody>
               </table>
             </div>

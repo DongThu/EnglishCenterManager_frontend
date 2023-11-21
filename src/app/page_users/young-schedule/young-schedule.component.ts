@@ -11,7 +11,7 @@ import { AddCourseService } from 'src/app/service/add-course.service';
 export class YoungScheduleComponent implements OnInit{
 
   public courses!: Course[];
-
+  loggedIn: boolean = false;
   constructor(
     private AddCourseService: AddCourseService,
     private router: Router,
@@ -20,6 +20,15 @@ export class YoungScheduleComponent implements OnInit{
   }
   ngOnInit(){
     this.getCourse();
+    if(!localStorage.getItem('accessToken')) {
+      this.loggedIn = false;
+
+      // this.router.navigate(['/login-user']);
+    }
+    else {
+      this.loggedIn = true;
+      console.log(localStorage.getItem('accessToken'));
+  }
 
 
   }

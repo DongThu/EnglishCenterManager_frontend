@@ -53,17 +53,11 @@
 
               <div class="record-header">
                   <div class="add">
-                      <span>Entries</span>
-                      <select name="" id="">
-                          <option value="">ID</option>
-                      </select>
-                     <a  routerLink="/add-course"><button>Thêm</button></a>
-                  </div>
-
-                  <div class="browse">
-                     <input type="search" placeholder="Search" class="record-search">
-                      <select name="" id="">
-                          <option value="">Status</option>
+                      <span>Liệt kê các khóa học</span>
+                      <select [(ngModel)]="selectedCourseId" (change)="getRegistrations(selectedCourseId)"  style="width: 350px;"   [(ngModel)]="selectedCourseId" class="form-select" aria-label="Default select example" required>
+                        <option value="1" disabled >-- Chọn khóa học --</option>
+                        <option value="null">Tất cả</option>
+                        <option  *ngFor="let course of courses" value="{{course.course_id}}">{{course.program}} | {{course.openning}}</option>
                       </select>
                   </div>
               </div>

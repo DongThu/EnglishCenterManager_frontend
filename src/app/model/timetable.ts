@@ -17,8 +17,6 @@ export class TimeTableInput {
     id!: number;
     courseId!: number;
     classroom!: String;
-    // program!: String;
-    // openning!: Date;
     teacherId!: number;
 
 }

@@ -50,7 +50,21 @@
                                     </tr>
                                     <tr>
                                       <td><span>Lịch học</span></td>
-                              <td><input type="text" [(ngModel)]="courses.schedule" name="schedule" id="schedule"  required >
+                              <td>
+                                <select [(ngModel)]="courses.schedule" name="schedule" id="schedule" required>
+                                  <option value="7h (Thứ 3-5-7)">7h (Thứ 3-5-7)</option>
+                                  <option value="9h (Thứ 3-5-7)">9h (Thứ 3-5-7)</option>
+                                  <option value="13h (Thứ 3-5-7)">13h (Thứ 3-5-7)</option>
+                                  <option value="15h (Thứ 3-5-7)">15h (Thứ 3-5-7)</option>
+                                  <option value="18h (Thứ 3-5-7)">18h (Thứ 3-5-7)</option>
+                                  <option value="20h (Thứ 3-5-7)">20h (Thứ 3-5-7)</option>
+                                  <option value="7h (Thứ 2-4-6)">7h (Thứ 2-4-6)</option>
+                                  <option value="9h (Thứ 2-4-6)">9h (Thứ 2-4-6)</option>
+                                  <option value="13h (Thứ 2-4-6)">13h (Thứ 2-4-6)</option>
+                                  <option value="15h (Thứ 2-4-6)">15h (Thứ 2-4-6)</option>
+                                  <option value="18h (Thứ 2-4-6)">18h (Thứ 2-4-6)</option>
+                                  <option value="20h (Thứ 2-4-6)">20h (Thứ 2-4-6)</option>
+                                </select>
                               </td>
 
                               <td><span>Ngày khai giảng dự kiến</span></td>

@@ -98,9 +98,16 @@
                     <td>
                       {{course?.time}}
                     </td>
-                    <td>
-                      <a class="text-success" (click)="updateCourse(course.course_id)">Đăng ký ngay!</a>
-                    </td>
+                    <ng-container *ngIf="loggedIn" >
+                      <td>
+                        <a class="text-success" (click)="updateCourse(course.course_id)">Đăng ký ngay!</a>
+                      </td>
+                    </ng-container>
+                    <ng-container *ngIf="!loggedIn">
+                      <td>
+                        <a class="text-danger" routerLink="/login-user" >Đăng nhập để đăng ký!</a>
+                      </td>
+                    </ng-container>
                   </tbody>
               </table>
             </div>

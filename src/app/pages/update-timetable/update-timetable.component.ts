@@ -25,18 +25,19 @@ export class UpdateTimetableComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private timetableService: TimetableService){
-    this.timetable = new TimeTableInput();
-    // this.teacher = new Teacher();
+      this.timetable = new TimeTableInput();
+      //this.teacher = new Teacher();
   }
 
   ngOnInit(): void {
+    this.getCourse();
+    this.getTeacher();
     this.id = this.route.snapshot.params['id'];
 
     this.timetableService.getTimeTableInputId(this.id).subscribe(data => {
       this.timetable = data;
     }, error => console.log(error));
-    this.getCourse();
-    this.getTeacher();
+
   }
 
   onSubmit(){

@@ -25,8 +25,10 @@ export class AddToiecComponent {
       console.log(data);
       this.goToCourseList();
     },
-    error => console.log(error));
-  }
+    error => {
+      console.log(error);
+      alert('Thêm khóa học thất bại do nhập sai định dạng, vui lòng kiểm tra lại!');
+    })  }
 
   goToCourseList(){
     this.router.navigate(['/young-english-ad']);

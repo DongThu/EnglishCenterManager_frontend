@@ -139,7 +139,7 @@ const routes: Routes = [
   {path: 'timetable-salary/:timetableId', component: TimetableSalaryComponent},
   {path: 'report', component: ReportComponent},
   {path: 'update-user/:id', component: UpdateUserComponent},
-  {path: 'update-timetable:/id', component: UpdateTimetableComponent}
+  {path: 'update-timetable/:id', component: UpdateTimetableComponent}
 ];
 
 @NgModule({
