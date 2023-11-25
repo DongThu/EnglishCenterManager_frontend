@@ -31,7 +31,7 @@ export class AddYoungEnglishComponent {
     })  }
 
   goToCourseList(){
-    this.router.navigate(['/toeic-english-ad']);
+    this.router.navigate(['/young-english-ad']);
   }
 
   onSubmit(){

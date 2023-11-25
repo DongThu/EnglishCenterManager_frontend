@@ -83,5 +83,15 @@ export class ResultStudyComponent implements OnInit{
       this.examStudent = data;
     });
   }
-
+  public deleteExamStudents(timetableId: number): void {
+    this.examCourseService.deleteExamStudents(timetableId).subscribe(
+      (response: void) => {
+        console.log(response);
+        this.getExamStudent();
+      },
+      (error: HttpErrorResponse) => {
+        alert(error.message);
+      }
+    );
+  }
 }

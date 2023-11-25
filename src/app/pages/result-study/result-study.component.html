@@ -62,6 +62,7 @@
                           <th><span class="las la-sort"></span> CHƯƠNG TRÌNH</th>
                           <th><span class="las la-sort"></span> BÀI THI</th>
                           <th><span class="las la-sort"></span> KẾT QUẢ</th>
+                          <th><span class="las la-sort"></span> THAO TÁC</th>
                       </tr>
                       </thead>
                       <!-- <div *ngIf="examStudent && examStudent.length"> -->
@@ -86,6 +87,13 @@
                             <td>
                               {{examStudent.score}}
                             </td>
+                            <td>
+                              <div class="actions">
+                                <!-- <button (click)="updateTimetable(timetable.id)" class="btn" type="submit"><span class="las la-edit"></span></button> -->
+                                <button (click)="deleteExamStudents(examStudent.id)" class="btn" type="submit"><span class="las la-trash-alt"></span></button>
+                              </div>
+                          </td>
+                      </tr>
                           </tbody>
                           <!-- </div> -->
                         <!-- </div> -->

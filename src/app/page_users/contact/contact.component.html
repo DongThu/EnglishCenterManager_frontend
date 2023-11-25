@@ -1,46 +1,5 @@
 <body>
-  <!-- ======= Header ======= -->
-  <!-- <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center">
-
-      <h1 class="logo me-auto">
-        <a href="index.html">
-          <img  src="../../../assets/img/logo-trung-tam-hsk.png" alt="">
-        </a></h1>
-      <a href="index.html" class="logo me-auto"><img src="../../../assets/img/img/logo.png" alt="" class="img-fluid"></a>
-
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a  routerLink="/home-user">Trang chủ</a></li>
-          <li><a routerLink="/about">Giới thiệu</a></li>
-          <li class="dropdown"><a routerLink="/child-english"><span>Chương trình học</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a routerLink="/child-english">Tiếng Anh thiếu nhi</a></li>
-              <li><a routerLink="/young-english">Tiếng Anh thiếu niên</a></li>
-              <li><a routerLink="/ielts">Luyện thi IELTS</a></li>
-              <li><a routerLink="/toiec">Luyện thi TOEFL - TOEIC & CHỨNG CHỈ QUỐC TẾ</a></li>
-              <li><a routerLink="/basic-english">Tiếng Anh Căn Bản - Giao tiếp & Tiếng Anh cho người đi làm</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a routerLink="/child-schedule"><span>Lịch Khai Giảng</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a routerLink="/child-schedule">Tiếng Anh thiếu nhi</a></li>
-              <li><a routerLink="/young-schedule">Tiếng Anh thiếu niên</a></li>
-              <li><a routerLink="/ielts-schedule">Luyện thi IELTS</a></li>
-              <li><a routerLink="/toiec-schedule">Luyện thi TOEFL - TOEIC & CHỨNG CHỈ QUỐC TẾ</a></li>
-              <li><a routerLink="/basic-schedule">Tiếng Anh Căn Bản - Giao tiếp & Tiếng Anh cho người đi làm</a></li>
-            </ul>
-          </li>
-          <li><a class="active" routerLink="/contact">Liên hệ</a></li>
-          <li><a *ngIf="!loggedIn" routerLink="/login-user">Đăng nhập</a></li>
-          <li><a *ngIf="loggedIn" (click)="handleLogout()">Đăng xuất</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-    </div>
-  </header> -->
-  <!-- End Header -->
-  <app-navbar-user></app-navbar-user>
+   <app-navbar-user></app-navbar-user>
 
   <main id="main">
     <!-- ======= Contact Section ======= -->
@@ -61,14 +20,22 @@
                 <h4>Địa điểm:</h4>
                 <p>Khu II, Đ. 3 Tháng 2, Xuân Khánh, Ninh Kiều, Cần Thơ</p>
               </div>
+            </div>
 
-              <div class="email">
+          </div>
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
                 <p>hsk@support.com</p>
               </div>
+            </div>
 
-              <div class="phone">
+          </div>
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
                 <i class="bi bi-phone"></i>
                 <h4>Điện thoại:</h4>
                 <p>0946 830 303</p>
@@ -77,8 +44,7 @@
             </div>
 
           </div>
-
-          <div class="col-lg-8 mt-5 mt-lg-0">
+          <!-- <div class="col-lg-8 mt-5 mt-lg-0">
 
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="row">
@@ -95,15 +61,15 @@
               <div class="form-group mt-3">
                 <textarea class="form-control" name="message" rows="5" placeholder="Nội dung " required></textarea>
               </div>
-              <!-- <div class="my-3">
+              !-- <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div> -->
+              </div> --
               <div class="text-center"><button type="submit">Gửi</button></div>
             </form>
 
-          </div>
+          </div> -->
 
         </div>
 
