@@ -69,6 +69,10 @@ import { TimetableSalaryComponent } from './pages/timetable-salary/timetable-sal
 import { ReportComponent } from './pages/report/report.component';
 import { UpdateUserComponent } from './pages/update-user/update-user.component';
 import { UpdateTimetableComponent } from './pages/update-timetable/update-timetable.component';
+import { UpdateYoungEnglishComponent } from './pages/update-young-english/update-young-english.component';
+import { UpdateIeltsEnglishComponent } from './pages/update-ielts-english/update-ielts-english.component';
+import { UpdateBasicEnglishComponent } from './pages/update-basic-english/update-basic-english.component';
+import { UpdateToeicEnglishComponent } from './pages/update-toeic-english/update-toeic-english.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -139,7 +143,11 @@ const routes: Routes = [
   {path: 'timetable-salary/:timetableId', component: TimetableSalaryComponent},
   {path: 'report', component: ReportComponent},
   {path: 'update-user/:id', component: UpdateUserComponent},
-  {path: 'update-timetable/:id', component: UpdateTimetableComponent}
+  {path: 'update-timetable/:id', component: UpdateTimetableComponent},
+  {path: 'update-young-english/:id', component: UpdateYoungEnglishComponent},
+  {path: 'update-ielts-english/:id', component: UpdateIeltsEnglishComponent},
+  {path: 'update-basic-english/:id', component: UpdateBasicEnglishComponent},
+  {path: 'update-toeic-english/:id', component: UpdateToeicEnglishComponent}
 ];
 
 @NgModule({

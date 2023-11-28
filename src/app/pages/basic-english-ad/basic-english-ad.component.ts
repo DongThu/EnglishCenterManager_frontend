@@ -34,7 +34,7 @@ export class BasicEnglishAdComponent implements OnInit{
   }
 
   updateCourse(id: number){
-    this.router.navigate(['update-course', id]);
+    this.router.navigate(['update-basic-english', id]);
   }
   public onDeleteCourse(courseId: number): void {
     this.AddCourseService.deleteCourse(courseId).subscribe(

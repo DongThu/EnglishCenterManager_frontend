@@ -35,7 +35,7 @@ export class IeltsEnglishAdComponent implements OnInit{
   }
 
   updateCourse(id: number){
-    this.router.navigate(['update-course', id]);
+    this.router.navigate(['update-ielts-english', id]);
   }
   public onDeleteCourse(courseId: number): void {
     this.AddCourseService.deleteCourse(courseId).subscribe(

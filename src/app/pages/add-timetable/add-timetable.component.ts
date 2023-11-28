@@ -62,7 +62,10 @@ export class AddTimetableComponent implements OnInit{
       console.log(data);
       this.goToCourseList();
     },
-    error => console.log(error));
+    error =>{
+      console.log(error);
+      alert("Khóa học có thể được xếp rồi hoặc thông tin bị thiếu, vui lòng kiểm tra lại!")
+    })
   }
 
   goToCourseList(){
