@@ -24,7 +24,7 @@
                                   <td><input type="text" [(ngModel)]="teacher.levelSalary" name="levelSalary" id="levelSalary" ></td>
                                   <td><span>Sinh nhật</span></td>
                                   <td>
-                                    <input type="text" [(ngModel)]="teacher.birthDay" name="birthDay" id="birthDay" >
+                                    <input type="datetime-local" [(ngModel)]="teacher.birthDay" name="birthDay" id="birthDay" >
                                   </td>
                                 </div>
                                 </table>
@@ -58,7 +58,16 @@
                               left: 25px;">
                                 <td><span>Chương trình dạy</span></td>
                                 <td>
-                                  <input type="text" [(ngModel)]="teacher.teachProgram" name="teachProgram" id="teachProgram" >
+                                  <!-- <input type="text" [(ngModel)]="teacher.teachProgram" name="teachProgram" id="teachProgram" > -->
+                                  <select  [(ngModel)]="teacher.teachProgram"   name="teachProgram" id="teachProgram" class="form-select" aria-label="Default select example" required>
+                                    <option  disabled >-- Chọn chương trình --</option>
+                                    <option value="Tiếng Anh Thiếu nhi">Tiếng Anh Thiếu nhi</option>
+                                    <option value="Tiếng Anh Thiếu Niên">Tiếng Anh Thiếu Niên</option>
+                                    <option value="Luyện thi IELTS">Luyện thi IELTS</option>
+                                    <option value="Luyện thi TOEFL-TOEIC">Luyện thi TOEFL-TOEIC</option>
+                                    <option value="Giao tiếp-Căn bản">Giao tiếp-Căn bản</option>
+                                  </select>
+
                                 </td>
                               <td><button  type="submit">Thêm</button></td>
                             </div>
