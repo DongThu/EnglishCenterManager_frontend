@@ -16,12 +16,12 @@
               <tr>
               <td><h3>Tổng phải trả: {{salary | currency:'VND'}} </h3></td>
               <td>
-                <!-- <div *ngIf="timetables.status == 1">
+                <div *ngIf="timetables.status == 1">
                   Đã thanh toán
                 </div>
-                <div *ngIf="timetables.status == 0"> -->
+                <div *ngIf="timetables.status == 0">
                   <a (click)="getPaymentService(salary, timetableId)">Thanh toán ngay!</a>
-                <!-- </div> -->
+                </div>
                 <!-- <a (click)="getPaymentService(salary, timetableId)">Thanh toán ngay!</a> -->
               </td>
 

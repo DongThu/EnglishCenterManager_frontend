@@ -26,7 +26,7 @@ export class TimetableSalaryComponent implements OnInit {
     this.timetableId = this.route.snapshot.params['timetableId'];
     console.log("timetableId:", this.timetableId);
     this.calculateSalary(this.timetableId);
-    // this.getTimeTableId(this.timetableId);
+    this.getTimeTableId(this.timetableId);
   }
 
   calculateSalary(timetableId: number) {
@@ -41,16 +41,16 @@ export class TimetableSalaryComponent implements OnInit {
     );
   }
 
-  // public getTimeTableId(id: number): void {
-  //   this.timetableService.getTimeTableId(id).subscribe(
-  //     (response: TimeTable) => {
-  //       this.timetables = response;
-  //     },
-  //     (error: HttpErrorResponse) => {
-  //       alert(error.message);
-  //     }
-  //   );
-  // }
+  public getTimeTableId(id: number): void {
+    this.timetableService.getTimeTableId(id).subscribe(
+      (response: TimeTable) => {
+        this.timetables = response;
+      },
+      (error: HttpErrorResponse) => {
+        alert(error.message);
+      }
+    );
+  }
 
   getPaymentService(price: number, id: number) {
 
