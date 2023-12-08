@@ -8,6 +8,12 @@ input{
 tr td, th{
   text-align: center;
 }
-option{
-  width: 500px;
+.option {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dropdown-column {
+  flex: 1;
+  margin-right: 5px;
 }

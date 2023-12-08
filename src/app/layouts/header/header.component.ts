@@ -12,7 +12,7 @@ export class HeaderComponent {
 
   ngOnInit(): void {
       if(!localStorage.getItem('accessToken')){
-        this.router.navigate(['/login-user']);
+        this.router.navigate(['/login']);
       }
       console.log(localStorage.getItem('accessToken'));
   }

@@ -20,7 +20,14 @@
                                     <td>
                                         <select  [(ngModel)]="timetable.courseId" style="width: 350px;"   name="program" id="program" class="form-select" aria-label="Default select example" required>
                                           <option value="1" disabled >-- Chọn khóa học --</option>
-                                          <option  *ngFor="let course of courses" value="{{course.course_id}}">{{course.english.englishName}} | {{course.program}} | {{course.openning}}</option>
+                                          <option  *ngFor="let course of courses" value="{{course.course_id}}">
+                                            <div>
+                                              <span>{{ course.english.englishName }}          | </span>
+                                              <span>{{ course.program }}          | </span>
+                                              <span>{{ course.openning }}         | </span>
+                                              <span>{{ course.schedule }}</span>
+                                            </div>
+                                          </option>
                                         </select>
                                         <!-- <input type="text" [(ngModel)]="timetable.courseId" name="id" id="id"> -->
                                     </td>
@@ -62,7 +69,7 @@
                                     <select [(ngModel)]="timetable.teacherId" style="width: 350px;" name="fullName" id="fullName" class="form-select" aria-label="Default select example" required>
 
                                       <option value="1" disabled >-- Chọn giảng viên --</option>
-                                      <option value="{{teachers.id}}" *ngFor="let teachers of teachers">{{teachers.fullName}}</option>
+                                      <option value="{{teachers.id}}" *ngFor="let teachers of teachers">{{teachers.fullName}} | {{teachers.teachProgram}}</option>
 
                                     </select>
                                     <!-- <input type="text" [(ngModel)]="timetable.teacherId" name="fullName" id="fullName" > -->
