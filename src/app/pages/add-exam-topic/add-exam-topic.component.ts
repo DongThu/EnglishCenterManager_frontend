@@ -26,7 +26,11 @@ export class AddExamTopicComponent {
       console.log(data);
       this.goToCourseList();
     },
-    error => console.log(error));
+    error =>{
+      console.log(error);
+      this.goToCourseList();
+    });
+
   }
 
   goToCourseList(){

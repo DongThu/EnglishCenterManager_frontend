@@ -56,7 +56,7 @@ export class RegisterCourseComponent implements OnInit {
     },
     error => {
       console.log(error);
-      alert('Vui lòng nhập email đúng với email đăng ký');
+      alert('Lỗi, Vui lòng kiểm tra thông tin đăng ký!');
     })
   }
 
