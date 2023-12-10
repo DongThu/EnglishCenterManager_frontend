@@ -30,6 +30,7 @@
                           <tr>
                               <th>#</th>
                               <th><span class="las la-sort"></span> CHƯƠNG TRÌNH</th>
+                              <th><span class="las la-sort"></span> KHAI GIẢNG</th>
                               <th><span class="las la-sort"></span> GIÁO VIÊN</th>
                               <th><span class="las la-sort"></span> TRẠNG THÁI THANH TOÁN</th>
                               <th><span class="las la-sort"></span> THAO TÁC</th>
@@ -43,8 +44,12 @@
                                 {{timetable.course.program}}
                               </td>
                               <td>
+                                {{timetable.course.openning}}
+                              </td>
+                              <td>
                                   {{timetable.teacher.fullName}}
                               </td>
+
                               <td>
                                 <div *ngIf="timetable.status == 1">
                                         Đã thanh toán
